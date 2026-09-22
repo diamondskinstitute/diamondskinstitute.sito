@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================================================================
+   Brand CSS variables. Mirror of the Tailwind tokens for the few
+   places that need raw CSS (gradients, clip-path text, shadows).
+   =================================================================== */
+:root {
+  --ink: #0b0906;
+  --ink-soft: #15110c;
+  --ink-raised: #1e1810;
+  --ink-line: #2c241a;
+
+  --gold-light: #f6de8d;
+  --gold: #d9ae45;
+  --gold-deep: #a77b24;
+  --gold-dark: #6e4e14;
+
+  --diamond: #f5f5f7;
+  --silver: #c8cbd2;
+
+  --cream: #f3ebdd;
+  --cream-light: #f8f3ea;
+
+  --gold-sheen: linear-gradient(
+    105deg,
+    #6e4e14 0%,
+    #a77b24 18%,
+    #d9ae45 38%,
+    #f6de8d 52%,
+    #d9ae45 68%,
+    #a77b24 86%,
+    #f6de8d 100%
+  );
+
+  --header-h: 104px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink font-sans text-cream antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  /* Gold scrollbar on dark, discreet */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--ink);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--ink-line);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-dark);
+  }
+}
+
+@layer components {
+  .container-luxe {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-10;
+  }
+
+  /* Small spaced uppercase label — boutique style */
+  .eyebrow {
+    @apply inline-block text-[0.68rem] uppercase tracking-luxe text-gold;
+  }
+
+  .eyebrow-dark {
+    @apply inline-block text-[0.68rem] uppercase tracking-luxe text-gold-deep;
+  }
+
+  .heading-xl {
+    @apply font-serif font-light leading-[1.05] text-4xl sm:text-5xl lg:text-6xl;
+  }
+
+  .heading-lg {
+    @apply font-serif font-light leading-[1.1] text-3xl sm:text-4xl lg:text-5xl;
+  }
+
+  .heading-md {
+    @apply font-serif font-light leading-[1.15] text-2xl sm:text-3xl;
+  }
+
+  /* --- Buttons ---------------------------------------------------- */
+
+  /* Primary — metallic gold, dark text. The main call to action. */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-luxe px-7 py-3.5
+      text-[0.78rem] font-semibold uppercase tracking-wide2 text-ink
+      transition-all duration-500 ease-luxe hover:shadow-gold
+      focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+    background-image: var(--gold-sheen);
+    background-size: 220% auto;
+    background-position: 0% center;
+  }
+  .btn-primary:hover {
+    background-position: 100% center;
+  }
+
+  /* Secondary — gold hairline on dark */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-luxe border border-gold/45 px-7 py-3.5
+      text-[0.78rem] font-semibold uppercase tracking-wide2 text-gold-light
+      transition-all duration-500 ease-luxe hover:border-gold hover:bg-gold/10
+      hover:shadow-gold-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  /* Secondary on cream sections */
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-luxe border border-ink/25 px-7 py-3.5
+      text-[0.78rem] font-semibold uppercase tracking-wide2 text-ink
+      transition-all duration-500 ease-luxe hover:border-ink hover:bg-ink hover:text-gold-light
+      focus-visible:outline-none;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-luxe px-5 py-2.5
+      text-[0.78rem] font-medium uppercase tracking-wide2 text-cream/75
+      transition-colors duration-300 hover:bg-white/5 hover:text-gold-light
+      focus-visible:outline-none;
+  }
+
+  /* --- Surfaces --------------------------------------------------- */
+
+  /* Card on the dark ground, with a gold glow on hover */
+  .card-luxe {
+    @apply relative rounded-card border border-ink-line bg-ink-soft
+      transition-all duration-500 ease-luxe hover:border-gold/45 hover:shadow-gold;
+  }
+
+  .field {
+    @apply w-full rounded-luxe border border-ink-line bg-ink px-4 py-3 text-sm text-cream
+      placeholder:text-cream/35 transition-colors duration-300
+      focus:border-gold/60 focus:outline-none;
+  }
+
+  .field-dark {
+    @apply w-full rounded-luxe border border-ink/20 bg-white px-4 py-3 text-sm text-ink
+      placeholder:text-ink/35 transition-colors duration-300
+      focus:border-gold focus:outline-none;
+  }
+
+  .label-luxe {
+    @apply mb-2 block text-[0.7rem] uppercase tracking-wide2 text-cream/60;
+  }
+
+  /* --- Gold text & rules ------------------------------------------ */
+
+  .text-gold-gradient {
+    background-image: var(--gold-sheen);
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Slow travelling sheen — hero headings only, sparingly */
+  .text-gold-anim {
+    background-image: var(--gold-sheen);
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: goldSheen 9s linear infinite;
+  }
+
+  .gold-rule {
+    height: 1px;
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgba(217, 174, 69, 0.75),
+      transparent
+    );
+  }
+
+  .link-quiet {
+    @apply text-cream/70 transition-colors duration-300 hover:text-gold-light;
+  }
+}
+
+@layer utilities {
+  /* Fine guilloche pattern for dark sections */
+  .pattern-lux {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%23D9AE45' stroke-opacity='0.055' stroke-width='0.7'%3E%3Ccircle cx='24' cy='24' r='11'/%3E%3Ccircle cx='0' cy='0' r='11'/%3E%3Ccircle cx='48' cy='0' r='11'/%3E%3Ccircle cx='0' cy='48' r='11'/%3E%3Ccircle cx='48' cy='48' r='11'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 48px 48px;
+  }
+
+  /* Fine lozenge pattern — echoes the diamond facets */
+  .pattern-diamond {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M20 0 40 20 20 40 0 20Z' fill='none' stroke='%23D9AE45' stroke-opacity='0.06' stroke-width='0.7'/%3E%3C/svg%3E");
+    background-size: 40px 40px;
+  }
+
+  /* The logo file has a black background: blend it into the ink ground */
+  .logo-blend {
+    mix-blend-mode: lighten;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Shimmer used by image placeholders */
+.shimmer {
+  background-image: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgba(246, 222, 141, 0.16) 40%,
+    rgba(246, 222, 141, 0.16) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes goldSheen {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 220% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

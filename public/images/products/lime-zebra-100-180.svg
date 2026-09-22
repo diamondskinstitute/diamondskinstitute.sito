@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Lime Zebra">
+
+  <defs>
+    <linearGradient id="bgq16" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#15110C"/>
+      <stop offset="60%" stop-color="#241C12"/>
+      <stop offset="100%" stop-color="#15110C"/>
+    </linearGradient>
+    <radialGradient id="haloq16" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#D9AE45" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldq16" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6E4E14"/>
+      <stop offset="45%" stop-color="#F6DE8D"/>
+      <stop offset="100%" stop-color="#6E4E14"/>
+    </linearGradient>
+    <pattern id="lozengeq16" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20 0 40 20 20 40 0 20Z" fill="none" stroke="#D9AE45" stroke-opacity="0.07" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="900" fill="url(#bgq16)"/>
+  <rect width="900" height="900" fill="url(#lozengeq16)"/>
+  <rect width="900" height="900" fill="url(#haloq16)"/>
+  <rect x="41" y="41" width="818" height="818"
+        fill="none" stroke="#D9AE45" stroke-opacity="0.3" stroke-width="1"/>
+
+  <g stroke="url(#goldq16)" fill="none" stroke-linecap="round">
+    <path d="M324 144 L432 414" stroke-width="7"/>
+    <path d="M576 144 L468 414" stroke-width="7"/>
+    <circle cx="450" cy="297" r="25.2" fill="#F6DE8D" stroke="none"/>
+  </g>
+
+  <text x="50%" y="486.00000000000006" text-anchor="middle" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif"
+        font-size="68" fill="#F3EBDD" fill-opacity="0.9">Lime Zebra</text>
+  <path d="M342 522 L558 522" stroke="#D9AE45" stroke-opacity="0.65" stroke-width="1"/>
+  <text x="50%" y="567" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="23" letter-spacing="6.44" fill="#D9AE45"
+        fill-opacity="0.85">K INSTITUTE</text>
+</svg>

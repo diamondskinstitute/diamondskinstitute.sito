@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Base Rubber">
+
+  <defs>
+    <linearGradient id="bgq2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0906"/>
+      <stop offset="60%" stop-color="#2A1F12"/>
+      <stop offset="100%" stop-color="#0B0906"/>
+    </linearGradient>
+    <radialGradient id="haloq2" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#D9AE45" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldq2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6E4E14"/>
+      <stop offset="45%" stop-color="#F6DE8D"/>
+      <stop offset="100%" stop-color="#6E4E14"/>
+    </linearGradient>
+    <pattern id="lozengeq2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20 0 40 20 20 40 0 20Z" fill="none" stroke="#D9AE45" stroke-opacity="0.07" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="900" fill="url(#bgq2)"/>
+  <rect width="900" height="900" fill="url(#lozengeq2)"/>
+  <rect width="900" height="900" fill="url(#haloq2)"/>
+  <rect x="41" y="41" width="818" height="818"
+        fill="none" stroke="#D9AE45" stroke-opacity="0.3" stroke-width="1"/>
+
+  <g>
+    <rect x="346.5" y="252" width="207" height="234" rx="8"
+          fill="url(#goldq2)" fill-opacity="0.2" stroke="#D9AE45" stroke-opacity="0.85" stroke-width="2"/>
+    <rect x="409.5" y="198" width="81" height="63.00000000000001"
+          fill="none" stroke="#D9AE45" stroke-opacity="0.7" stroke-width="2"/>
+    <rect x="382.5" y="144" width="135" height="63.00000000000001" rx="3"
+          fill="url(#goldq2)"/>
+    <path d="M396 315 L396 423" stroke="#FFF6DA" stroke-opacity="0.4" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <text x="50%" y="486.00000000000006" text-anchor="middle" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif"
+        font-size="68" fill="#F3EBDD" fill-opacity="0.9">Base Rubber</text>
+  <path d="M342 522 L558 522" stroke="#D9AE45" stroke-opacity="0.65" stroke-width="1"/>
+  <text x="50%" y="567" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="23" letter-spacing="6.44" fill="#D9AE45"
+        fill-opacity="0.85">K INSTITUTE</text>
+</svg>

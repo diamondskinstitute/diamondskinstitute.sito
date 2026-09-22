@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+
+  <defs>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#6E4E14"/>
+    <stop offset="18%" stop-color="#A77B24"/>
+    <stop offset="40%" stop-color="#D9AE45"/>
+    <stop offset="54%" stop-color="#F6DE8D"/>
+    <stop offset="70%" stop-color="#D9AE45"/>
+    <stop offset="88%" stop-color="#A77B24"/>
+    <stop offset="100%" stop-color="#F6DE8D"/></linearGradient>
+    <linearGradient id="goldH" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#6E4E14"/>
+    <stop offset="18%" stop-color="#A77B24"/>
+    <stop offset="40%" stop-color="#D9AE45"/>
+    <stop offset="54%" stop-color="#F6DE8D"/>
+    <stop offset="70%" stop-color="#D9AE45"/>
+    <stop offset="88%" stop-color="#A77B24"/>
+    <stop offset="100%" stop-color="#F6DE8D"/></linearGradient>
+    <linearGradient id="facetA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.92"/>
+      <stop offset="45%" stop-color="#C8CBD2" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#8E939C" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="facetB" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8CBD2" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#E4E6EB" stop-opacity="0.8"/>
+    </linearGradient>
+    <radialGradient id="glintG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF6DA"/>
+      <stop offset="55%" stop-color="#F6DE8D" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#D9AE45" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#0B0906"/>
+
+  <g opacity="0.9">
+    <!-- pavilion -->
+    <path d="M12 27 L52 27 L32 48.400000000000006 Z"
+          fill="url(#facetA)" stroke="#E8EAEF" stroke-opacity="0.55" stroke-width="2"/>
+    <path d="M22 27 L32 48.400000000000006" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6" fill="none"/>
+    <path d="M42 27 L32 48.400000000000006" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6" fill="none"/>
+    <path d="M12 27 L36 39.4" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.2" fill="none"/>
+    <path d="M52 27 L28 39.4" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.2" fill="none"/>
+    <!-- crown -->
+    <path d="M12 27 L20.6 18.4 L43.4 18.4 L52 27 Z"
+          fill="url(#facetB)" stroke="#E8EAEF" stroke-opacity="0.65" stroke-width="2"/>
+    <!-- bezel facets -->
+    <path d="M12 27 L20.6 18.4" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+    <path d="M18 27 L20.6 18.4" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M24 27 L28.01 18.4" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+    <path d="M46 27 L43.4 18.4" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M40 27 L35.99 18.4" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+    <path d="M52 27 L43.4 18.4" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+    <!-- girdle -->
+    <path d="M12 27 L52 27" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="2.4"/>
+  </g>
+  <text x="32" y="36" text-anchor="middle" dominant-baseline="middle"
+        font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif" font-size="34" font-weight="600" fill="url(#goldG)">K</text>
+</svg>

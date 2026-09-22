@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="K Institute">
+
+  <defs>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#6E4E14"/>
+    <stop offset="18%" stop-color="#A77B24"/>
+    <stop offset="40%" stop-color="#D9AE45"/>
+    <stop offset="54%" stop-color="#F6DE8D"/>
+    <stop offset="70%" stop-color="#D9AE45"/>
+    <stop offset="88%" stop-color="#A77B24"/>
+    <stop offset="100%" stop-color="#F6DE8D"/></linearGradient>
+    <linearGradient id="goldH" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#6E4E14"/>
+    <stop offset="18%" stop-color="#A77B24"/>
+    <stop offset="40%" stop-color="#D9AE45"/>
+    <stop offset="54%" stop-color="#F6DE8D"/>
+    <stop offset="70%" stop-color="#D9AE45"/>
+    <stop offset="88%" stop-color="#A77B24"/>
+    <stop offset="100%" stop-color="#F6DE8D"/></linearGradient>
+    <linearGradient id="facetA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.92"/>
+      <stop offset="45%" stop-color="#C8CBD2" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#8E939C" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="facetB" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8CBD2" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#E4E6EB" stop-opacity="0.8"/>
+    </linearGradient>
+    <radialGradient id="glintG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF6DA"/>
+      <stop offset="55%" stop-color="#F6DE8D" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#D9AE45" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="320" height="320" fill="#0B0906"/>
+
+  <g opacity="1">
+    <!-- pavilion -->
+    <path d="M38 148 L282 148 L160 278.54 Z"
+          fill="url(#facetA)" stroke="#E8EAEF" stroke-opacity="0.55" stroke-width="2"/>
+    <path d="M99 148 L160 278.54" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6" fill="none"/>
+    <path d="M221 148 L160 278.54" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6" fill="none"/>
+    <path d="M38 148 L184.4 223.64" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.2" fill="none"/>
+    <path d="M282 148 L135.6 223.64" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.2" fill="none"/>
+    <!-- crown -->
+    <path d="M38 148 L90.46000000000001 95.53999999999999 L229.54 95.53999999999999 L282 148 Z"
+          fill="url(#facetB)" stroke="#E8EAEF" stroke-opacity="0.65" stroke-width="2"/>
+    <!-- bezel facets -->
+    <path d="M38 148 L90.46000000000001 95.53999999999999" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+    <path d="M74.6 148 L90.46000000000001 95.53999999999999" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M111.2 148 L135.661 95.53999999999999" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+    <path d="M245.4 148 L229.54 95.53999999999999" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M208.8 148 L184.339 95.53999999999999" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+    <path d="M282 148 L229.54 95.53999999999999" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+    <!-- girdle -->
+    <path d="M38 148 L282 148" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="2.4"/>
+  </g>
+  <text x="160" y="190" text-anchor="middle" dominant-baseline="middle"
+        font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif" font-size="215" font-weight="600" fill="url(#goldG)">K</text>
+
+  <g opacity="0.95">
+    <path d="M74 70 Q78.16 91.84 100 96
+             Q78.16 100.16 74 122
+             Q69.84 100.16 48 96
+             Q69.84 91.84 74 70 Z" fill="url(#glintG)"/>
+    <circle cx="74" cy="96" r="3.38" fill="#FFF6DA"/>
+  </g>
+
+  <g opacity="0.95">
+    <path d="M252 88 Q255.2 104.8 272 108
+             Q255.2 111.2 252 128
+             Q248.8 111.2 232 108
+             Q248.8 104.8 252 88 Z" fill="url(#glintG)"/>
+    <circle cx="252" cy="108" r="2.6" fill="#FFF6DA"/>
+  </g>
+</svg>

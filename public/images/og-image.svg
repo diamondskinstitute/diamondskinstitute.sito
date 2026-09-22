@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="K Institute">
+
+  <defs>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#6E4E14"/>
+    <stop offset="18%" stop-color="#A77B24"/>
+    <stop offset="40%" stop-color="#D9AE45"/>
+    <stop offset="54%" stop-color="#F6DE8D"/>
+    <stop offset="70%" stop-color="#D9AE45"/>
+    <stop offset="88%" stop-color="#A77B24"/>
+    <stop offset="100%" stop-color="#F6DE8D"/></linearGradient>
+    <linearGradient id="goldH" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#6E4E14"/>
+    <stop offset="18%" stop-color="#A77B24"/>
+    <stop offset="40%" stop-color="#D9AE45"/>
+    <stop offset="54%" stop-color="#F6DE8D"/>
+    <stop offset="70%" stop-color="#D9AE45"/>
+    <stop offset="88%" stop-color="#A77B24"/>
+    <stop offset="100%" stop-color="#F6DE8D"/></linearGradient>
+    <linearGradient id="facetA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.92"/>
+      <stop offset="45%" stop-color="#C8CBD2" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#8E939C" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="facetB" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8CBD2" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#E4E6EB" stop-opacity="0.8"/>
+    </linearGradient>
+    <radialGradient id="glintG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF6DA"/>
+      <stop offset="55%" stop-color="#F6DE8D" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#D9AE45" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B0906"/>
+  <rect width="1200" height="630" fill="url(#halo)"/>
+
+  <g opacity="1">
+    <!-- pavilion -->
+    <path d="M118 250 L382 250 L250 391.24 Z"
+          fill="url(#facetA)" stroke="#E8EAEF" stroke-opacity="0.55" stroke-width="2"/>
+    <path d="M184 250 L250 391.24" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6" fill="none"/>
+    <path d="M316 250 L250 391.24" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6" fill="none"/>
+    <path d="M118 250 L276.4 331.84000000000003" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.2" fill="none"/>
+    <path d="M382 250 L223.6 331.84000000000003" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.2" fill="none"/>
+    <!-- crown -->
+    <path d="M118 250 L174.76 193.24 L325.24 193.24 L382 250 Z"
+          fill="url(#facetB)" stroke="#E8EAEF" stroke-opacity="0.65" stroke-width="2"/>
+    <!-- bezel facets -->
+    <path d="M118 250 L174.76 193.24" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+    <path d="M157.6 250 L174.76 193.24" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M197.2 250 L223.666 193.24" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+    <path d="M342.4 250 L325.24 193.24" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M302.8 250 L276.334 193.24" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+    <path d="M382 250 L325.24 193.24" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+    <!-- girdle -->
+    <path d="M118 250 L382 250" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="2.4"/>
+  </g>
+  <text x="250" y="300" text-anchor="middle" dominant-baseline="middle"
+        font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif" font-size="212" font-weight="600" fill="url(#goldG)">K</text>
+  <path d="M480 180 L480 450" stroke="#D9AE45" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="540" y="292" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif" font-size="96" fill="url(#goldH)">K Institute</text>
+  <text x="542" y="356" font-family="Helvetica, Arial, sans-serif" font-size="26"
+        letter-spacing="7" fill="#F3EBDD" fill-opacity="0.72">NAIL INSTITUTE & SHOP</text>
+  <path d="M542 400 L1060 400" stroke="#D9AE45" stroke-opacity="0.45" stroke-width="1"/>
+
+  <g opacity="0.95">
+    <path d="M160 112 Q166.08 143.92 198 150
+             Q166.08 156.08 160 188
+             Q153.92 156.08 122 150
+             Q153.92 143.92 160 112 Z" fill="url(#glintG)"/>
+    <circle cx="160" cy="150" r="4.94" fill="#FFF6DA"/>
+  </g>
+
+  <g opacity="0.95">
+    <path d="M352 146 Q356.8 171.2 382 176
+             Q356.8 180.8 352 206
+             Q347.2 180.8 322 176
+             Q347.2 171.2 352 146 Z" fill="url(#glintG)"/>
+    <circle cx="352" cy="176" r="3.9000000000000004" fill="#FFF6DA"/>
+  </g>
+</svg>

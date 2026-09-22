@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img" aria-label="Kara · Atelier">
+
+  <defs>
+    <linearGradient id="bgs4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#120E09"/>
+      <stop offset="60%" stop-color="#1F1912"/>
+      <stop offset="100%" stop-color="#120E09"/>
+    </linearGradient>
+    <radialGradient id="halos4" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#D9AE45" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="golds4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6E4E14"/>
+      <stop offset="45%" stop-color="#F6DE8D"/>
+      <stop offset="100%" stop-color="#6E4E14"/>
+    </linearGradient>
+    <pattern id="lozenges4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20 0 40 20 20 40 0 20Z" fill="none" stroke="#D9AE45" stroke-opacity="0.07" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <rect width="1400" height="1000" fill="url(#bgs4)"/>
+  <rect width="1400" height="1000" fill="url(#lozenges4)"/>
+  <rect width="1400" height="1000" fill="url(#halos4)"/>
+  <rect x="45" y="45" width="1310" height="910"
+        fill="none" stroke="#D9AE45" stroke-opacity="0.3" stroke-width="1"/>
+
+  <g opacity="0.95">
+    <ellipse cx="700" cy="340" rx="80.6" ry="130" fill="url(#golds4)" fill-opacity="0.85"/>
+    <ellipse cx="700" cy="340" rx="80.6" ry="130" fill="none" stroke="#F6DE8D" stroke-opacity="0.7" stroke-width="1.5"/>
+    <path d="M619.4 366 Q700 420.6 780.6 366"
+          fill="none" stroke="#0B0906" stroke-opacity="0.35" stroke-width="2"/>
+    <circle cx="671.4" cy="285.4" r="13" fill="#FFF6DA" fill-opacity="0.9"/>
+    <ellipse cx="453" cy="405" rx="58.5" ry="93.6" fill="#C8CBD2" fill-opacity="0.2"/>
+    <ellipse cx="947" cy="405" rx="58.5" ry="93.6" fill="#C8CBD2" fill-opacity="0.2"/>
+  </g>
+
+  <text x="50%" y="540" text-anchor="middle" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif"
+        font-size="75" fill="#F3EBDD" fill-opacity="0.9">Kara · Atelier</text>
+  <path d="M532 580 L868 580" stroke="#D9AE45" stroke-opacity="0.65" stroke-width="1"/>
+  <text x="50%" y="630" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="26" letter-spacing="7.280000000000001" fill="#D9AE45"
+        fill-opacity="0.85">K INSTITUTE</text>
+</svg>

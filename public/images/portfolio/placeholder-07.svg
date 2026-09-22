@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-label="Ricostruzione">
+
+  <defs>
+    <linearGradient id="bgp6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#15110C"/>
+      <stop offset="60%" stop-color="#241C12"/>
+      <stop offset="100%" stop-color="#15110C"/>
+    </linearGradient>
+    <radialGradient id="halop6" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#D9AE45" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldp6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6E4E14"/>
+      <stop offset="45%" stop-color="#F6DE8D"/>
+      <stop offset="100%" stop-color="#6E4E14"/>
+    </linearGradient>
+    <pattern id="lozengep6" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20 0 40 20 20 40 0 20Z" fill="none" stroke="#D9AE45" stroke-opacity="0.07" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="1200" fill="url(#bgp6)"/>
+  <rect width="900" height="1200" fill="url(#lozengep6)"/>
+  <rect width="900" height="1200" fill="url(#halop6)"/>
+  <rect x="41" y="41" width="818" height="1118"
+        fill="none" stroke="#D9AE45" stroke-opacity="0.3" stroke-width="1"/>
+
+  <g opacity="0.95">
+    <ellipse cx="450" cy="408.00000000000006" rx="72.54" ry="117" fill="url(#goldp6)" fill-opacity="0.85"/>
+    <ellipse cx="450" cy="408.00000000000006" rx="72.54" ry="117" fill="none" stroke="#F6DE8D" stroke-opacity="0.7" stroke-width="1.5"/>
+    <path d="M377.46 431.40000000000003 Q450 480.5400000000001 522.54 431.40000000000003"
+          fill="none" stroke="#0B0906" stroke-opacity="0.35" stroke-width="2"/>
+    <circle cx="424.26" cy="358.86000000000007" r="11.700000000000001" fill="#FFF6DA" fill-opacity="0.9"/>
+    <ellipse cx="227.70000000000002" cy="466.50000000000006" rx="52.65" ry="84.24" fill="#C8CBD2" fill-opacity="0.2"/>
+    <ellipse cx="672.3" cy="466.50000000000006" rx="52.65" ry="84.24" fill="#C8CBD2" fill-opacity="0.2"/>
+  </g>
+
+  <text x="50%" y="648" text-anchor="middle" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif"
+        font-size="68" fill="#F3EBDD" fill-opacity="0.9">Ricostruzione</text>
+  <path d="M342 696 L558 696" stroke="#D9AE45" stroke-opacity="0.65" stroke-width="1"/>
+  <text x="50%" y="756" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="23" letter-spacing="6.44" fill="#D9AE45"
+        fill-opacity="0.85">K INSTITUTE</text>
+</svg>

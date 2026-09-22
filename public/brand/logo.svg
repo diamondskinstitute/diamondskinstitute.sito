@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="K Institute">
+
+  <defs>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#6E4E14"/>
+    <stop offset="18%" stop-color="#A77B24"/>
+    <stop offset="40%" stop-color="#D9AE45"/>
+    <stop offset="54%" stop-color="#F6DE8D"/>
+    <stop offset="70%" stop-color="#D9AE45"/>
+    <stop offset="88%" stop-color="#A77B24"/>
+    <stop offset="100%" stop-color="#F6DE8D"/></linearGradient>
+    <linearGradient id="goldH" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#6E4E14"/>
+    <stop offset="18%" stop-color="#A77B24"/>
+    <stop offset="40%" stop-color="#D9AE45"/>
+    <stop offset="54%" stop-color="#F6DE8D"/>
+    <stop offset="70%" stop-color="#D9AE45"/>
+    <stop offset="88%" stop-color="#A77B24"/>
+    <stop offset="100%" stop-color="#F6DE8D"/></linearGradient>
+    <linearGradient id="facetA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.92"/>
+      <stop offset="45%" stop-color="#C8CBD2" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#8E939C" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="facetB" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8CBD2" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#E4E6EB" stop-opacity="0.8"/>
+    </linearGradient>
+    <radialGradient id="glintG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF6DA"/>
+      <stop offset="55%" stop-color="#F6DE8D" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#D9AE45" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="#0B0906"/>
+  <rect width="1024" height="1024" fill="url(#halo)"/>
+
+  <g opacity="1">
+    <!-- pavilion -->
+    <path d="M244 372 L780 372 L512 658.76 Z"
+          fill="url(#facetA)" stroke="#E8EAEF" stroke-opacity="0.55" stroke-width="2"/>
+    <path d="M378 372 L512 658.76" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6" fill="none"/>
+    <path d="M646 372 L512 658.76" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6" fill="none"/>
+    <path d="M244 372 L565.6 538.16" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.2" fill="none"/>
+    <path d="M780 372 L458.4 538.16" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.2" fill="none"/>
+    <!-- crown -->
+    <path d="M244 372 L359.24 256.76 L664.76 256.76 L780 372 Z"
+          fill="url(#facetB)" stroke="#E8EAEF" stroke-opacity="0.65" stroke-width="2"/>
+    <!-- bezel facets -->
+    <path d="M244 372 L359.24 256.76" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+    <path d="M324.4 372 L359.24 256.76" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M404.79999999999995 372 L458.534 256.76" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+    <path d="M699.6 372 L664.76 256.76" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M619.2 372 L565.466 256.76" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+    <path d="M780 372 L664.76 256.76" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+    <!-- girdle -->
+    <path d="M244 372 L780 372" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="2.4"/>
+  </g>
+
+  <g transform="translate(360 592) scale(1.25 1.25)" fill="none" stroke="url(#goldH)" stroke-linecap="round">
+    <path d="M0 0 C-30 -6 -62 -2 -84 16 C-104 32 -104 60 -84 70 C-68 78 -50 68 -52 50 C-54 36 -70 32 -78 42"
+          stroke-width="9"/>
+    <path d="M-16 22 C-40 24 -58 36 -64 54" stroke-width="5" stroke-opacity="0.75"/>
+    <path d="M-6 -14 C-34 -26 -66 -26 -88 -12" stroke-width="5" stroke-opacity="0.6"/>
+  </g>
+
+  <g transform="translate(664 592) scale(-1.25 1.25)" fill="none" stroke="url(#goldH)" stroke-linecap="round">
+    <path d="M0 0 C-30 -6 -62 -2 -84 16 C-104 32 -104 60 -84 70 C-68 78 -50 68 -52 50 C-54 36 -70 32 -78 42"
+          stroke-width="9"/>
+    <path d="M-16 22 C-40 24 -58 36 -64 54" stroke-width="5" stroke-opacity="0.75"/>
+    <path d="M-6 -14 C-34 -26 -66 -26 -88 -12" stroke-width="5" stroke-opacity="0.6"/>
+  </g>
+  <text x="512" y="470" text-anchor="middle" dominant-baseline="middle"
+        font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif" font-size="430" font-weight="600"
+        fill="url(#goldG)" stroke="#6E4E14" stroke-width="3" stroke-opacity="0.5">K</text>
+  <text x="512" y="742" text-anchor="middle"
+        font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif" font-size="118" letter-spacing="4"
+        fill="url(#goldH)">Institute</text>
+
+  <g opacity="0.95">
+    <path d="M300 200 Q309.92 252.08 362 262
+             Q309.92 271.92 300 324
+             Q290.08 271.92 238 262
+             Q290.08 252.08 300 200 Z" fill="url(#glintG)"/>
+    <circle cx="300" cy="262" r="8.06" fill="#FFF6DA"/>
+  </g>
+
+  <g opacity="0.95">
+    <path d="M742 232 Q750.64 277.36 796 286
+             Q750.64 294.64 742 340
+             Q733.36 294.64 688 286
+             Q733.36 277.36 742 232 Z" fill="url(#glintG)"/>
+    <circle cx="742" cy="286" r="7.0200000000000005" fill="#FFF6DA"/>
+  </g>
+
+  <g opacity="0.7">
+    <path d="M556 174 Q561.44 202.56 590 208
+             Q561.44 213.44 556 242
+             Q550.56 213.44 522 208
+             Q550.56 202.56 556 174 Z" fill="url(#glintG)"/>
+    <circle cx="556" cy="208" r="4.42" fill="#FFF6DA"/>
+  </g>
+</svg>

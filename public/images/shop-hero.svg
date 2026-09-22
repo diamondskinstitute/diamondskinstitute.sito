@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Lo Shop">
+
+  <defs>
+    <linearGradient id="bgs2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0906"/>
+      <stop offset="60%" stop-color="#2A1F12"/>
+      <stop offset="100%" stop-color="#0B0906"/>
+    </linearGradient>
+    <radialGradient id="halos2" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#D9AE45" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#D9AE45" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="golds2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6E4E14"/>
+      <stop offset="45%" stop-color="#F6DE8D"/>
+      <stop offset="100%" stop-color="#6E4E14"/>
+    </linearGradient>
+    <pattern id="lozenges2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20 0 40 20 20 40 0 20Z" fill="none" stroke="#D9AE45" stroke-opacity="0.07" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bgs2)"/>
+  <rect width="1600" height="900" fill="url(#lozenges2)"/>
+  <rect width="1600" height="900" fill="url(#halos2)"/>
+  <rect x="41" y="41" width="1518" height="818"
+        fill="none" stroke="#D9AE45" stroke-opacity="0.3" stroke-width="1"/>
+
+  <g opacity="0.95">
+    <ellipse cx="800" cy="306" rx="72.54" ry="117" fill="url(#golds2)" fill-opacity="0.85"/>
+    <ellipse cx="800" cy="306" rx="72.54" ry="117" fill="none" stroke="#F6DE8D" stroke-opacity="0.7" stroke-width="1.5"/>
+    <path d="M727.46 329.4 Q800 378.54 872.54 329.4"
+          fill="none" stroke="#0B0906" stroke-opacity="0.35" stroke-width="2"/>
+    <circle cx="774.26" cy="256.86" r="11.700000000000001" fill="#FFF6DA" fill-opacity="0.9"/>
+    <ellipse cx="577.7" cy="364.5" rx="52.65" ry="84.24" fill="#C8CBD2" fill-opacity="0.2"/>
+    <ellipse cx="1022.3" cy="364.5" rx="52.65" ry="84.24" fill="#C8CBD2" fill-opacity="0.2"/>
+  </g>
+
+  <text x="50%" y="486.00000000000006" text-anchor="middle" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif"
+        font-size="68" fill="#F3EBDD" fill-opacity="0.9">Lo Shop</text>
+  <path d="M608 522 L992 522" stroke="#D9AE45" stroke-opacity="0.65" stroke-width="1"/>
+  <text x="50%" y="567" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="23" letter-spacing="6.44" fill="#D9AE45"
+        fill-opacity="0.85">PRODOTTI PROFESSIONALI</text>
+</svg>
