@@ -1,19 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { site } from "@/data/site";
+import { useDict } from "@/lib/intl/client";
 import { ArrowRight } from "../ui/Icons";
 
 // Iscrizione newsletter — SEGNAPOSTO.
 // Per attivarla davvero: sostituisci `onSubmit` con la chiamata al tuo
 // servizio (Mailchimp, Brevo, Resend…) o a una nuova API route.
 export default function Newsletter() {
+  const site = useDict();
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);
 
   return (
     <div>
-      <h2 className="font-serif text-lg text-cream">{site.newsletter.titolo}</h2>
+      <h2 className="font-serif text-lg text-cream">
+        {site.newsletter.titolo}
+      </h2>
       <p className="mt-2 text-sm leading-relaxed text-cream/55">
         {site.newsletter.testo}
       </p>

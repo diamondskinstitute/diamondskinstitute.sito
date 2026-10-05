@@ -1,14 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import {
-  formatDateISO,
-  isOpenOnWeekday,
-  MONTH_NAMES,
-} from "@/lib/schedule";
+import { formatDateISO, isOpenOnWeekday } from "@/lib/schedule";
+import { useI18n, useDict } from "@/lib/intl/client";
+import { formatMonthYear, weekdayAbbr } from "@/lib/intl/dates";
 import { ArrowRight } from "../ui/Icons";
-
-const ABBR_MON = ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"];
 
 // Calendario mensile. Sono selezionabili solo i giorni futuri in cui
 // l'istituto è aperto (orari in data/salon.ts).
@@ -19,6 +15,10 @@ export default function Calendar({
   selected: string;
   onSelect: (dateISO: string) => void;
 }) {
+  const { locale } = useI18n();
+  const t = useDict();
+  const ABBR_MON = useMemo(() => weekdayAbbr(locale), [locale]);
+
   const today = useMemo(() => {
     const d = new Date();
     d.setHours(0, 0, 0, 0);
@@ -26,7 +26,7 @@ export default function Calendar({
   }, []);
 
   const [cursor, setCursor] = useState(
-    () => new Date(today.getFullYear(), today.getMonth(), 1)
+    () => new Date(today.getFullYear(), today.getMonth(), 1),
   );
 
   const year = cursor.getFullYear();
@@ -40,32 +40,30 @@ export default function Calendar({
     year > today.getFullYear() ||
     (year === today.getFullYear() && month > today.getMonth());
 
-  const shift = (delta: number) =>
-    setCursor(new Date(year, month + delta, 1));
+  const shift = (delta: number) => setCursor(new Date(year, month + delta, 1));
 
   return (
-    <div className="rounded-card border border-ink-line bg-ink-soft p-5">
+    <div className="glass-flat rounded-card p-5">
       <div className="mb-5 flex items-center justify-between">
         <button
           type="button"
           onClick={() => shift(-1)}
           disabled={!canGoBack}
-          className="rounded-luxe p-2 text-cream/60 transition-colors hover:text-gold-light disabled:cursor-not-allowed disabled:opacity-30"
-          aria-label="Mese precedente"
+          className="rounded-pill p-2 text-cream/60 transition-colors hover:text-gold-light disabled:cursor-not-allowed disabled:opacity-30"
+          aria-label={t.booking.mesePrecedente}
         >
-          <ArrowRight className="rotate-180" size={16} />
+          <ArrowRight className="rotate-180 rtl:rotate-0" size={16} />
         </button>
-        <span className="font-serif text-lg text-cream">
-          {MONTH_NAMES[month].charAt(0).toUpperCase() + MONTH_NAMES[month].slice(1)}{" "}
-          {year}
+        <span className="font-serif text-lg capitalize text-cream">
+          {formatMonthYear(cursor, locale)}
         </span>
         <button
           type="button"
           onClick={() => shift(1)}
-          className="rounded-luxe p-2 text-cream/60 transition-colors hover:text-gold-light"
-          aria-label="Mese successivo"
+          className="rounded-pill p-2 text-cream/60 transition-colors hover:text-gold-light"
+          aria-label={t.booking.meseSuccessivo}
         >
-          <ArrowRight size={16} />
+          <ArrowRight size={16} className="rtl:rotate-180" />
         </button>
       </div>
 
@@ -99,10 +97,10 @@ export default function Calendar({
               disabled={disabled}
               onClick={() => onSelect(iso)}
               aria-pressed={attivo}
-              aria-label={`${day} ${MONTH_NAMES[month]} ${year}${
-                chiuso ? " — chiuso" : ""
+              aria-label={`${day} ${formatMonthYear(cursor, locale)}${
+                chiuso ? ` — ${t.common.chiuso}` : ""
               }`}
-              className={`aspect-square rounded-luxe text-sm transition-all duration-300 ${
+              className={`aspect-square rounded-pill text-sm transition-all duration-300 ${
                 attivo
                   ? "bg-gold font-semibold text-ink"
                   : disabled

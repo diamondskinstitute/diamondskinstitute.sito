@@ -108,7 +108,7 @@ export const legalPages: Record<string, LegalPage> = {
       {
         titolo: "Prezzi",
         paragrafi: [
-          "Tutti i prezzi sono espressi in euro e si intendono IVA inclusa. Le spese di spedizione sono indicate nel riepilogo prima dell'invio della richiesta.",
+          "Tutti i prezzi sono espressi in franchi svizzeri (CHF) e si intendono IVA inclusa. Le spese di spedizione non sono ancora attive: verranno comunicate prima della conferma dell'ordine.",
         ],
       },
       {
@@ -141,11 +141,7 @@ export const legalPages: Record<string, LegalPage> = {
       {
         titolo: "Costi di spedizione",
         paragrafi: [
-          `La spedizione costa € ${salon.shop.costoSpedizione
-            .toFixed(2)
-            .replace(".", ",")} ed è gratuita per ordini pari o superiori a € ${
-            salon.shop.spedizioneGratuitaDa
-          }.`,
+          "Coming soon: lo shop online non è ancora attivo e le tariffe di spedizione non sono ancora definite. Verranno pubblicate qui prima dell'apertura degli ordini.",
         ],
       },
       {

@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { site } from "@/data/site";
+import { useDict } from "@/lib/intl/client";
 import { CheckIcon } from "./ui/Icons";
 
 type Campi = Record<string, string>;
 
 export default function ContactForm() {
+  const site = useDict();
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [messaggio, setMessaggio] = useState("");
@@ -30,7 +31,7 @@ export default function ContactForm() {
       });
       const json = await res.json();
       if (!res.ok) {
-        setErrore(json.error ?? "Qualcosa è andato storto.");
+        setErrore(json.error ?? site.common.qualcosaStorto);
         setCampi(json.campi ?? {});
         return;
       }
@@ -39,7 +40,7 @@ export default function ContactForm() {
       setEmail("");
       setMessaggio("");
     } catch {
-      setErrore("Connessione non riuscita. Riprova fra poco.");
+      setErrore(site.common.connessioneFallita);
     } finally {
       setInvio(false);
     }
@@ -57,7 +58,10 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={invia} className="rounded-card border border-ink-line bg-ink-soft p-7">
+    <form
+      onSubmit={invia}
+      className="glass-flat rounded-card p-7"
+    >
       <h2 className="font-serif text-2xl text-cream">{f.titolo}</h2>
 
       {errore && (
@@ -82,7 +86,9 @@ export default function ContactForm() {
             required
             aria-invalid={Boolean(campi.nome)}
           />
-          {campi.nome && <p className="mt-1 text-xs text-red-300">{campi.nome}</p>}
+          {campi.nome && (
+            <p className="mt-1 text-xs text-red-300">{campi.nome}</p>
+          )}
         </div>
         <div>
           <label htmlFor="ct-email" className="label-luxe">
@@ -120,7 +126,11 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <button type="submit" className="btn-primary mt-7 w-full" disabled={invio}>
+      <button
+        type="submit"
+        className="btn-primary mt-7 w-full"
+        disabled={invio}
+      >
         {invio ? f.inviando : f.invia}
       </button>
     </form>

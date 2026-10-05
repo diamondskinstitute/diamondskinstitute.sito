@@ -13,12 +13,12 @@ export default function PageHeader({
   intro?: string;
 }) {
   return (
-    <header className="relative overflow-hidden border-b border-ink-line bg-ink-soft pattern-lux">
+    <header className="relative overflow-hidden border-b border-gold/10 bg-ink-soft/70 pattern-lux">
       <div
         className="pointer-events-none absolute inset-x-0 -top-24 h-64 opacity-60"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 0%, rgba(217,174,69,0.16), transparent 70%)",
+            "radial-gradient(ellipse at 50% 0%, rgba(217,174,69,0.2), transparent 70%)",
         }}
         aria-hidden="true"
       />

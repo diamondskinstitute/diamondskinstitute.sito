@@ -1,0 +1,1075 @@
+{
+  "topBar": {
+    "testo": "Lieferung in {tempiConsegna}",
+    "linkLabel": "Zum Shop"
+  },
+  "nav": {
+    "home": "Start",
+    "shop": "Shop",
+    "trattamenti": "Behandlungen",
+    "lavori": "Arbeiten",
+    "prenota": "Termin",
+    "chiSiamo": "Über uns",
+    "contatti": "Kontakt",
+    "prenotaBreve": "Termin",
+    "menuPrincipale": "Hauptmenü",
+    "menuMobile": "Mobiles Hauptmenü",
+    "apriMenu": "Menü öffnen",
+    "chiudiMenu": "Menü schliessen",
+    "categorieShop": "Shop-Kategorien",
+    "mostraCategorie": "Shop-Kategorien anzeigen",
+    "areaRiservata": "Interner Bereich",
+    "lingua": "Sprache",
+    "cambiaLingua": "Sprache wechseln",
+    "percorso": "Navigationspfad",
+    "colonnaIstituto": "Das Studio",
+    "colonnaShop": "Der Shop",
+    "footerLinks": {
+      "iTrattamenti": "Behandlungen",
+      "prenotaAppuntamento": "Termin buchen",
+      "iNostriLavori": "Unsere Arbeiten",
+      "chiSiamo": "Über uns",
+      "doveTrovarci": "So finden Sie uns",
+      "tuttiIProdotti": "Alle Produkte"
+    },
+    "legale": {
+      "privacy": "Datenschutz",
+      "cookie": "Cookies",
+      "termini": "Verkaufsbedingungen",
+      "spedizioni": "Versand und Rückgabe"
+    }
+  },
+  "common": {
+    "scopriIlTrattamento": "Behandlung ansehen",
+    "tuttiITrattamenti": "Alle Behandlungen",
+    "chiediInformazioni": "Informationen anfragen",
+    "tornaAlCarrello": "Zurück zum Warenkorb",
+    "caricoIlModulo": "Formular wird geladen…",
+    "caricoIlCarrello": "Warenkorb wird geladen…",
+    "aggiunto": "Hinzugefügt",
+    "categorie": "Kategorien",
+    "tuttoLoShop": "Ganzer Shop",
+    "inEvidenza": "Empfohlen",
+    "sfogliaPerCategoria": "Nach Kategorie stöbern",
+    "ivaInclusa": "inkl. MwSt.",
+    "diminuisciQuantita": "Menge verringern",
+    "aumentaQuantita": "Menge erhöhen",
+    "chiudiCarrello": "Warenkorb schliessen",
+    "prodottiPrecedenti": "Vorherige Produkte",
+    "prodottiSuccessivi": "Nächste Produkte",
+    "scriviWhatsapp": "Schreiben Sie uns auf WhatsApp",
+    "informativaCookie": "Cookie-Hinweis",
+    "chiuso": "Geschlossen",
+    "appuntamentoIn": "Der Termin findet im Studio statt:",
+    "qualcosaStorto": "Etwas ist schiefgelaufen.",
+    "connessioneFallita": "Verbindung fehlgeschlagen. Bitte gleich nochmals versuchen.",
+    "tempiConsegna": "2–4 Werktagen",
+    "paese": "Schweiz"
+  },
+  "giorni": {
+    "Lunedì": "Montag",
+    "Martedì": "Dienstag",
+    "Mercoledì": "Mittwoch",
+    "Giovedì": "Donnerstag",
+    "Venerdì": "Freitag",
+    "Sabato": "Samstag",
+    "Domenica": "Sonntag"
+  },
+  "hero": {
+    "eyebrow": "Nagelstudio & Shop",
+    "titolo": "Die Kunst der Nägel,",
+    "titoloAccento": "gepflegt wie ein Schmuckstück",
+    "sottotitolo": "Massgeschneiderte Behandlungen in unserem Studio und ausgewählte Profiprodukte – für alle, die mit Nägeln arbeiten, und für alle, die sie makellos wollen.",
+    "ctaPrimaria": {
+      "label": "Behandlung buchen"
+    },
+    "ctaSecondaria": {
+      "label": "Shop entdecken"
+    }
+  },
+  "highlights": [
+    {
+      "titolo": "Profiprodukte",
+      "testo": "Nur Produkte, die im Studio getestet wurden, bevor sie in den Shop kommen."
+    },
+    {
+      "titolo": "Massgeschneiderte Behandlungen",
+      "testo": "Jede Behandlung beginnt mit der Analyse der Nagelplatte: kein Ablauf gleicht dem anderen."
+    },
+    {
+      "titolo": "Geprüfte Hygiene",
+      "testo": "Im Autoklaven sterilisierte Instrumente und Einwegmaterial für alles, was sich nicht sterilisieren lässt."
+    },
+    {
+      "titolo": "Schneller Versand",
+      "testo": "Bestellungen noch am selben Tag bearbeitet, Lieferung in {tempiConsegna}."
+    }
+  ],
+  "sezioniHome": {
+    "prodotti": {
+      "eyebrow": "Der Shop",
+      "titolo": "Die Produkte, die wir täglich verwenden",
+      "intro": "Kein endloser Katalog: Wir verkaufen nur, was wir im Studio wirklich benutzen – weil wir wissen, wie es sich unter den Händen verhält.",
+      "cta": {
+        "label": "Ganzer Shop"
+      }
+    },
+    "trattamenti": {
+      "eyebrow": "Das Studio",
+      "titolo": "Die gefragtesten Behandlungen",
+      "intro": "Vom Semi-Permanent bis zur vollen Gelmodellage: Jede Behandlung hat ihre Seite mit Ablauf, Dauer und Pflegetipps.",
+      "cta": {
+        "label": "Alle Behandlungen"
+      }
+    },
+    "portfolio": {
+      "eyebrow": "Unsere Arbeiten",
+      "titolo": "An echten Kundinnen gemacht",
+      "intro": "Keine Renderings, keine Archivbilder: Das sind die Hände der Menschen, die bei uns sitzen.",
+      "cta": {
+        "label": "Ganze Galerie ansehen"
+      }
+    },
+    "chiSiamo": {
+      "eyebrow": "Über uns",
+      "titolo": "Vom Studio zur Marke",
+      "testo": "K Institute entstand aus der Idee, dass man ein Produkt verstehen muss, bevor man es verkauft. Alles im Shop läuft zuerst über unsere Arbeitsplätze: Was einen Tag im Studio nicht übersteht, kommt nicht in den Katalog.",
+      "cta": {
+        "label": "Unsere Geschichte"
+      }
+    },
+    "testimonianze": {
+      "eyebrow": "Stimmen",
+      "titolo": "Was unsere Kundinnen sagen"
+    },
+    "instagram": {
+      "eyebrow": "Instagram",
+      "titolo": "Folgen Sie jeder neuen Arbeit",
+      "testo": "Wir zeigen jedes fertige Set, den Blick hinter die Kulissen und die Neuheiten im Shop.",
+      "cta": {
+        "label": "Folgen Sie uns auf {instagramHandle}"
+      }
+    },
+    "mappa": {
+      "eyebrow": "So finden Sie uns",
+      "titolo": "Besuchen Sie uns im Studio",
+      "cta": {
+        "label": "Kontakt & Karte"
+      }
+    }
+  },
+  "shop": {
+    "eyebrow": "Shop",
+    "titolo": "Profiprodukte",
+    "intro": "Gele, Farben, Werkzeuge und Lampen – Stück für Stück ausgewählt.",
+    "filtri": {
+      "categoria": "Kategorie",
+      "prezzo": "Höchstpreis",
+      "ordina": "Sortieren nach",
+      "tutte": "Alle Kategorien",
+      "azzera": "Filter zurücksetzen",
+      "nessunRisultato": "Kein Produkt entspricht den gewählten Filtern. Versuchen Sie, die Suche zu erweitern."
+    },
+    "ordinamenti": [
+      {
+        "id": "rilevanza",
+        "label": "Relevanz"
+      },
+      {
+        "id": "prezzo-asc",
+        "label": "Preis aufsteigend"
+      },
+      {
+        "id": "prezzo-desc",
+        "label": "Preis absteigend"
+      },
+      {
+        "id": "nome",
+        "label": "Name A–Z"
+      }
+    ],
+    "aggiungiAlCarrello": "In den Warenkorb",
+    "comingSoon": "Demnächst",
+    "comingSoonAria": "Der Online-Shop ist noch nicht aktiv: Dieses Produkt kann noch nicht gekauft werden",
+    "esaurito": "Ausverkauft",
+    "correlati": "Das könnte Ihnen auch gefallen",
+    "caratteristiche": "Eigenschaften",
+    "quantita": "Menge",
+    "finoA": "bis"
+  },
+  "carrello": {
+    "titolo": "Ihr Warenkorb",
+    "vuoto": "Der Warenkorb ist leer.",
+    "vuotoCta": {
+      "label": "Shop entdecken"
+    },
+    "subtotale": "Zwischensumme",
+    "spedizione": "Versand",
+    "spedizioneComingSoon": "Demnächst",
+    "totale": "Total",
+    "vaiAlCheckout": "Zur Kasse",
+    "continuaAcquisti": "Weiter einkaufen",
+    "rimuovi": "Entfernen"
+  },
+  "checkout": {
+    "titolo": "Kasse",
+    "intro": "Füllen Sie Ihre Angaben aus: Sie erhalten eine Bestätigungs-E-Mail mit der Übersicht und den Zahlungshinweisen.",
+    "sezioneDati": "Ihre Angaben",
+    "sezioneSpedizione": "Lieferadresse",
+    "sezioneRiepilogo": "Bestellübersicht",
+    "invia": "Bestellanfrage senden",
+    "inviando": "Wird gesendet…",
+    "notaPagamento": "Die Online-Zahlung ist noch nicht aktiv. Nach Eingang Ihrer Anfrage melden wir uns innerhalb von 24 Stunden mit den Zahlungsmodalitäten und der Verfügbarkeit.",
+    "privacyPrefisso": "Ich habe die",
+    "privacyCongiunzione": "und die",
+    "campi": {
+      "nome": "Vor- und Nachname *",
+      "telefono": "Telefon *",
+      "email": "E-Mail *",
+      "indirizzo": "Strasse und Nummer *",
+      "cap": "PLZ *",
+      "citta": "Ort *",
+      "paese": "Land *"
+    }
+  },
+  "ordineConfermato": {
+    "eyebrow": "Danke",
+    "titolo": "Bestellanfrage erhalten",
+    "testo": "Wir haben Ihnen eine Übersicht per E-Mail geschickt. Wir melden uns innerhalb von 24 Stunden, um Verfügbarkeit und Zahlung zu bestätigen.",
+    "numeroOrdine": "Nummer der Anfrage",
+    "cta": {
+      "label": "Zurück zum Shop"
+    }
+  },
+  "trattamenti": {
+    "eyebrow": "Das Studio",
+    "titolo": "Behandlungen",
+    "intro": "Jede Behandlung hat eine eigene Seite: wofür sie gut ist, wie sie abläuft, wie lange sie dauert und wie Sie sie zu Hause pflegen. Wählen Sie Ihre und buchen Sie online.",
+    "prenotaQuesto": "Diese Behandlung buchen",
+    "aCosaServe": "Für wen sie geeignet ist",
+    "comeSiSvolge": "Ablauf",
+    "mantenimento": "Pflege zu Hause",
+    "domande": "Häufige Fragen",
+    "durata": "Dauer",
+    "prezzoDa": "Preis",
+    "altriTrattamenti": "Weitere Behandlungen",
+    "da": "ab",
+    "suRichiesta": "Auf Anfrage",
+    "misureTitolo": "Preise nach Grösse",
+    "nonSaiQuale": "Unsicher, welche Behandlung passt?",
+    "nonSaiQualeTesto": "Schreiben Sie uns: Wir helfen Ihnen, die richtige Behandlung für den Zustand Ihrer Nägel und das gewünschte Ergebnis zu finden.",
+    "prenotaAppuntamento": "Termin buchen",
+    "contattaci": "Kontakt"
+  },
+  "listino": {
+    "eyebrow": "Preise",
+    "titolo": "Preisliste",
+    "intro": "Alle Preise in Schweizer Franken. Positionen mit dem Vermerk «auf Anfrage» werden vor Beginn im Studio offeriert.",
+    "gratis": "Gratis",
+    "suRichiesta": "Auf Anfrage",
+    "gruppi": {
+      "unghie": {
+        "titolo": "Nägel"
+      },
+      "gel-pose-completa": {
+        "titolo": "Gelnägel — Neumodellage",
+        "sottotitolo": "Preis nach Grösse"
+      },
+      "gel-riempimento": {
+        "titolo": "Gelnägel — Auffüllen",
+        "sottotitolo": "Preis nach Grösse"
+      },
+      "extra": {
+        "titolo": "Extras"
+      },
+      "pedicure": {
+        "titolo": "Pediküre"
+      },
+      "treccine": {
+        "titolo": "Zöpfe"
+      }
+    },
+    "voci": {
+      "unghie.semipermanente": "Semi-Permanent",
+      "unghie.manicure-uomo": "Herren-Maniküre",
+      "unghie.rimozione": "Entfernung",
+      "extra.unghia-rotta": "Ein gebrochener Nagel",
+      "extra.piu-unghie-rotte": "Mehr als ein gebrochener Nagel",
+      "extra.babycolors": "BabyColors",
+      "extra.babyboomer": "BabyBoomer",
+      "extra.french": "French",
+      "extra.strass": "Einzelner Strass",
+      "extra.altri-extra": "Weitere Extras",
+      "pedicure.semipermanente": "Semi-Permanent Lack",
+      "pedicure.acrygel": "Acrygel-Nägel",
+      "pedicure.cura-piedi": "Fusspflege",
+      "treccine.treccine": "Zöpfe"
+    }
+  },
+  "lavori": {
+    "eyebrow": "Portfolio",
+    "titolo": "Unsere Arbeiten",
+    "intro": "Eine Auswahl von Sets aus dem Studio. Nach Art filtern und ein Foto anklicken, um es zu vergrössern.",
+    "tutte": "Alle",
+    "chiudi": "Schliessen",
+    "precedente": "Zurück",
+    "successiva": "Weiter"
+  },
+  "galleryCategories": {
+    "Nail Art": "Nail Art",
+    "Semipermanente": "Semi-Permanent",
+    "Ricostruzione": "Modellage",
+    "Treccine": "Zöpfe",
+    "Pedicure": "Pediküre"
+  },
+  "treatmentCategories": {
+    "Mani": "Hände",
+    "Colore": "Farbe",
+    "Estensioni": "Verlängerung",
+    "Piedi": "Füsse",
+    "Capelli": "Haare"
+  },
+  "treatments": {
+    "semipermanente": {
+      "nome": "Semi-Permanent",
+      "descrizioneBreve": "Strahlende, makellose Farbe, die bis zu drei Wochen hält.",
+      "descrizione": "Das Semi-Permanent verbindet die Einfachheit von Nagellack mit dem Halt von Gel: volle Farbe, Glanz wie am ersten Tag und mindestens drei Wochen ohne Abplatzer. Der Auftrag ist millimetergenau, die Nagelhaut bleibt frei und der Rand wird versiegelt, damit nichts abhebt.",
+      "perChi": "Ideal für alle, die wenig Zeit für die Nägel haben und trotzdem immer gepflegte Farbe wollen, und für alle, die viel mit den Händen arbeiten.",
+      "fasi": [
+        {
+          "titolo": "Vorbereitung der Nagelplatte",
+          "testo": "Sanftes Mattieren und Entfeuchten: die Grundlage für langen Halt."
+        },
+        {
+          "titolo": "Basis und Struktur",
+          "testo": "Rubber Base dünn aufgetragen und ausnivelliert, um Unebenheiten auszugleichen."
+        },
+        {
+          "titolo": "Farbe",
+          "testo": "Zwei dünne, einzeln ausgehärtete Schichten für volle Farbe ohne Auftragen."
+        },
+        {
+          "titolo": "Versiegelung",
+          "testo": "Glänzender Top Coat und Versiegelung der freien Kante gegen Abheben."
+        }
+      ],
+      "aftercare": [
+        "Warten Sie mindestens 12 Stunden, bevor Sie die Hände länger in heisses Wasser halten",
+        "Benutzen Sie die Nägel nicht als Werkzeug: das ist die häufigste Ursache für Abheben",
+        "Ziehen Sie das Semi-Permanent niemals ab"
+      ],
+      "faq": [
+        {
+          "domanda": "Schadet Semi-Permanent dem Nagel?",
+          "risposta": "Nein, wenn es richtig aufgetragen und entfernt wird. Schäden entstehen fast immer durch zu starkes Feilen bei der Vorbereitung oder durch Abziehen."
+        },
+        {
+          "domanda": "Wie oft muss es erneuert werden?",
+          "risposta": "Etwa alle 3 Wochen. Nach mehr als 4 Wochen hebelt das Herauswachsen an der Kante und das Risiko des Abhebens steigt."
+        }
+      ]
+    },
+    "ricostruzione-gel": {
+      "nome": "Gelnägel – Neumodellage",
+      "descrizioneBreve": "Struktur, Halt und massgeschneiderte Form, von Hand aufgebaut.",
+      "descrizione": "Die Neumodellage baut den Nagel dort auf, wo keiner ist: Verlängerung, Apex und Wölbung werden von Hand modelliert, für eine harmonische Form und vor allem eine Struktur, die hält. Das Ergebnis ist widerstandsfähig, aber dünn, natürlich im Gefühl und im Gewicht.",
+      "perChi": "Für alle mit brüchigen Nägeln, die brechen, bevor sie wachsen, für alle, die Länge möchten, und für alle, die eine Form wollen, die der eigene Nagel nicht zulassen würde.",
+      "fasi": [
+        {
+          "titolo": "Vorbereitung",
+          "testo": "Analyse der Nagelplatte, Grundform und Vorbereitung der Oberfläche."
+        },
+        {
+          "titolo": "Aufbau",
+          "testo": "Gel auf Schablone oder Dual Form, mit dem Apex an der am stärksten belasteten Stelle."
+        },
+        {
+          "titolo": "Strukturfeilen",
+          "testo": "Profil, Wölbung und Stärken ausarbeiten: hier entscheidet sich die Haltbarkeit."
+        },
+        {
+          "titolo": "Farbe und Finish",
+          "testo": "Farbe, auf Wunsch Nail Art, Versiegelung und Nagelhautöl."
+        }
+      ],
+      "aftercare": [
+        "Kommen Sie innerhalb von 3–4 Wochen zum Auffüllen: warten Sie nicht, bis etwas abhebt",
+        "Wenn ein Nagel bricht, nicht daran ziehen: Termin vereinbaren",
+        "Täglich Nagelhautöl, auch auf der Modellage"
+      ],
+      "faq": [
+        {
+          "domanda": "Wie lange hält eine Neumodellage?",
+          "risposta": "Die Struktur hält Monate; was sich ändert, ist das Herauswachsen. Deshalb füllt man alle 3–4 Wochen auf, statt alles neu zu machen."
+        },
+        {
+          "domanda": "Kann ich jederzeit zu Naturnägeln zurück?",
+          "risposta": "Ja. Die Entfernung erfolgt im Studio: die Stärke wird abgefeilt und ein schützender Schleier bleibt, der mit dem Wachstum dünner wird."
+        }
+      ]
+    },
+    "refill": {
+      "nome": "Gelnägel – Auffüllen",
+      "descrizioneBreve": "Die Pflege, die die Modellage dauerhaft perfekt hält.",
+      "descrizione": "Das Auffüllen schliesst die herausgewachsene Zone und bringt die Struktur wieder ins Gleichgewicht, indem der Apex an die richtige Stelle rückt, während der Nagel wächst. Regelmässig gemacht, muss die Modellage nie von Grund auf neu aufgebaut werden.",
+      "perChi": "Für alle, die bereits eine Modellage oder eine Gelverstärkung haben und sie gepflegt, gesund und korrekt strukturiert halten möchten.",
+      "fasi": [
+        {
+          "titolo": "Kontrolle",
+          "testo": "Prüfen auf Abhebungen und auf den Zustand der Nagelplatte unter dem Gel."
+        },
+        {
+          "titolo": "Feilen der herausgewachsenen Zone",
+          "testo": "Das alte Gel wird dünner gefeilt und der neue Bereich vorbereitet."
+        },
+        {
+          "titolo": "Neues Gleichgewicht",
+          "testo": "Neues Gel in der herausgewachsenen Zone, Apex zurück an die richtige Stelle."
+        },
+        {
+          "titolo": "Finish",
+          "testo": "Profil feilen, Farbe und abschliessende Versiegelung."
+        }
+      ],
+      "aftercare": [
+        "Halten Sie den Rhythmus von 3–4 Wochen ein: das ist der Schlüssel",
+        "Melden Sie Beschwerden oder Abhebungen sofort",
+        "Weiterhin täglich Nagelhautöl verwenden"
+      ],
+      "faq": [
+        {
+          "domanda": "Kann ich auf eine anderswo gemachte Arbeit auffüllen lassen?",
+          "risposta": "Ja, nach einer Beurteilung. Lässt sich die bestehende Struktur nicht retten, schlagen wir die Entfernung und eine neue Modellage vor."
+        },
+        {
+          "domanda": "Wie oft lässt es sich wiederholen?",
+          "risposta": "Unbegrenzt, solange der Naturnagel darunter gesund bleibt. Wir kontrollieren ihn bei jedem Termin."
+        }
+      ]
+    },
+    "treccine": {
+      "nome": "Zöpfe",
+      "descrizioneBreve": "Zöpfe im Studio, nach Vereinbarung.",
+      "descrizione": "Zöpfe machen wir nach Vereinbarung. Grösse, Anzahl und Länge werden vorher gemeinsam festgelegt, ebenso der Zeitaufwand: der Preis wird in der Beratung bestimmt, bevor die Arbeit beginnt.",
+      "perChi": "Für alle, die gepflegte Zöpfe möchten und Stil und Grösse vorher gemeinsam festlegen wollen.",
+      "fasi": [
+        {
+          "titolo": "Beratung",
+          "testo": "Wir legen gemeinsam Grösse, Anzahl und Länge der Zöpfe fest und wie viel Zeit die Arbeit braucht."
+        },
+        {
+          "titolo": "Vorbereitung",
+          "testo": "Waschen und Entwirren, danach die Einteilung in saubere Partien."
+        },
+        {
+          "titolo": "Flechten",
+          "testo": "Die Zöpfe entstehen einer nach dem anderen, mit kontrollierter Spannung, um den Ansatz nicht zu belasten."
+        },
+        {
+          "titolo": "Finish",
+          "testo": "Spitzen schliessen, Konturen ausarbeiten und Tipps für die ersten Tage."
+        }
+      ],
+      "aftercare": [
+        "Schützen Sie die Zöpfe nachts mit einer Haube oder einem Satinkissenbezug",
+        "Pflegen Sie die Kopfhaut mit einem leichten Öl, ohne zu beschweren",
+        "Tragen Sie sie nicht länger als in der Beratung empfohlen"
+      ],
+      "faq": [
+        {
+          "domanda": "Wie lange halten die Zöpfe?",
+          "risposta": "Das hängt von der Art der Arbeit und vom Haarwachstum ab. Die empfohlene Tragedauer nennen wir in der Beratung, zusammen mit dem richtigen Zeitpunkt zum Erneuern."
+        },
+        {
+          "domanda": "Kann ich die Haare mit Zöpfen waschen?",
+          "risposta": "Ja, vorsichtig und mit geeigneten Produkten. In der Beratung erklären wir, wie es geht, ohne die Arbeit zu beschädigen."
+        },
+        {
+          "domanda": "Ändert sich der Preis je nach Länge?",
+          "risposta": "Der Listenpreis beträgt CHF 90. Für besondere Arbeiten legen wir vorher gemeinsam einen Preis fest."
+        }
+      ]
+    }
+  },
+  "shopCategories": {
+    "gel-base": {
+      "nome": "Gele & Basis",
+      "sottotitolo": "Aufbaugele, Rubber Base und Top Coat"
+    },
+    "nail-art": {
+      "nome": "Nail Art",
+      "sottotitolo": "Farben, Glitzer und eigene Dekore"
+    },
+    "pennelli": {
+      "nome": "Pinsel",
+      "sottotitolo": "Ausgewählte Borsten für jede Technik"
+    },
+    "lampade-fresette": {
+      "nome": "Lampen & Fräser",
+      "sottotitolo": "Professionelle Elektrogeräte"
+    },
+    "tips-estensioni": {
+      "nome": "Tips & Verlängerung",
+      "sottotitolo": "Tips, Dual Forms und Schablonen"
+    },
+    "lime-buffer": {
+      "nome": "Feilen & Buffer",
+      "sottotitolo": "Die passende Körnung für jeden Arbeitsschritt"
+    },
+    "attrezzi": {
+      "nome": "Werkzeuge",
+      "sottotitolo": "Instrumente aus Stahl, sterilisierbar"
+    },
+    "oli-liquidi": {
+      "nome": "Öle & Flüssigkeiten",
+      "sottotitolo": "Pflege, Vorbereitung und Entfernung"
+    },
+    "pedicure": {
+      "nome": "Pediküre",
+      "sottotitolo": "Alles für die Fusspflege"
+    }
+  },
+  "products": {
+    "gel-costruttore-diamond-clear": {
+      "nome": "Aufbaugel Diamond Clear",
+      "descrizioneBreve": "Transparentes, selbstnivellierendes Aufbaugel für strukturierte Verlängerungen.",
+      "descrizione": "Ein mitteldichtes Aufbaugel, das sich von selbst verläuft, ohne zu laufen – perfekt, um den Apex aufzubauen und die Struktur leicht zu halten. Die kristallklare Transparenz macht es ideal unter jeder Farbe oder Nail Art, ohne mit der Zeit zu vergilben.",
+      "caratteristiche": [
+        "Mittlere Viskosität, selbstverlaufend",
+        "Härtet in 60 Sekunden in der LED-Lampe",
+        "Vergilbt nicht, stabile Transparenz",
+        "Geeignet für Verlängerungen bis 2 Grössen"
+      ]
+    },
+    "base-rubber-gold-touch": {
+      "nome": "Rubber Base Gold Touch",
+      "descrizioneBreve": "Nude Rubber Base mit goldenem Mikroschimmer, ausgleichend und schützend.",
+      "descrizione": "Eine elastische Basis, die Unebenheiten der Nagelplatte ausgleicht und den Naturnagel schützt. Der goldene Mikroschimmer macht sie schon allein wunderschön – für eine weiche French oder ein edles Nude.",
+      "caratteristiche": [
+        "Elastisch, hebt auf flexiblen Nägeln nicht ab",
+        "Gleicht die Nagelplatte ohne aggressives Feilen aus",
+        "Nude-Finish mit Goldschimmer",
+        "Hält bis zu 3 Wochen"
+      ]
+    },
+    "top-coat-no-wipe-brillante": {
+      "nome": "Top Coat No-Wipe Glänzend",
+      "descrizioneBreve": "Glänzender Versiegler ohne Schwitzschicht, mit Spiegelglanz.",
+      "descrizione": "Der Top Coat, der die Arbeit mit Schaufenster-Glanz abschliesst und ohne Cleaner auskommt. Er ist kratzfest und behält den Glanz über die ganze Tragezeit.",
+      "caratteristiche": [
+        "Keine Schwitzschicht zu entfernen",
+        "Sofortiger Spiegelglanz",
+        "Beständig gegen Kratzer und Reinigungsmittel",
+        "Vergilbt nicht"
+      ]
+    },
+    "set-glitter-diamond": {
+      "nome": "Glitzer-Set Diamond — 12 Stk.",
+      "descrizioneBreve": "Zwölf ultrafeine Glitzer in Gold-, Champagner- und Diamanttönen.",
+      "descrizione": "Eine abgestimmte Palette feinster Glitzer, die sich gleichmässig und ohne Klümpchen verteilen. Gedacht für Verläufe, Akzente auf einem Finger oder vollflächige Glitzer mit Schmuckeffekt.",
+      "caratteristiche": [
+        "12 abgestimmte Töne in Gold / Silber / Diamant",
+        "Ultrafeine Körnung, lässt sich leicht verteilen",
+        "Wiederverschliessbare 2-g-Döschen",
+        "Für Gel und Semi-Permanent geeignet"
+      ]
+    },
+    "gel-paint-linea-oro": {
+      "nome": "Gel Paint Linie Gold",
+      "descrizioneBreve": "Dichtes, deckendes Gel Paint für klare Linien und freihändige Dekore.",
+      "descrizione": "Ein Gel Paint mit cremiger Konsistenz, das nicht verläuft und im ersten Zug deckt. Perfekt für feine Linien, Mikro-Dekore und saubere Konturen, auch mit sehr dünnen Liner-Pinseln.",
+      "caratteristiche": [
+        "Volle Deckkraft in einem Zug",
+        "Läuft nicht: die Linie bleibt, wo sie gesetzt wird",
+        "Härtet in 30 Sekunden",
+        "5-g-Döschen"
+      ]
+    },
+    "pennello-gel-oval": {
+      "nome": "Gelpinsel Oval",
+      "descrizioneBreve": "Ovaler Pinsel aus Synthetikfaser zum Auftragen des Aufbaugels.",
+      "descrizione": "Die ovale Form verteilt das Gel gleichmässig und lässt den Apex mit wenigen Zügen modellieren. Die Synthetikfaser nimmt kein Produkt auf und ist im Nu gereinigt.",
+      "caratteristiche": [
+        "Hochwertige Synthetikfaser",
+        "Lackierter Holzgriff mit goldener Zwinge",
+        "Verliert keine Haare",
+        "Schutzkappe inklusive"
+      ]
+    },
+    "set-pennelli-nail-art": {
+      "nome": "Nail-Art-Pinselset — 5 Stk.",
+      "descrizioneBreve": "Fünf Dekorpinsel: Liner, One Stroke, Fächer, Detail und Verblendung.",
+      "descrizione": "Das komplette Set für den Einstieg in die Nail Art, ohne die Pinsel einzeln kaufen zu müssen. Jeder Pinsel ist für eine bestimmte Technik gedacht und kommt in einem festen Etui.",
+      "caratteristiche": [
+        "5 Formen: Liner, One Stroke, Fächer, Detail, Verblender",
+        "Festes Etui inklusive",
+        "Synthetikfasern, für Gel und Acryl geeignet",
+        "Korrosionsfeste goldene Zwinge"
+      ]
+    },
+    "lampada-uv-led-72w-pro": {
+      "nome": "UV/LED-Lampe 72W Pro",
+      "descrizioneBreve": "Professionelle Lampe mit zwei Technologien, Sensor und Display.",
+      "descrizione": "Härtet jedes Gel und jedes Semi-Permanent gleichmässig aus, dank 36 LEDs rund um die Kuppel. Der Bewegungssensor startet den Zyklus von selbst, das Display zeigt die Restzeit.",
+      "caratteristiche": [
+        "36 LEDs mit doppelter Wellenlänge (UV + LED)",
+        "Zyklen von 10 / 30 / 60 / 99 Sekunden",
+        "Bewegungssensor und LCD-Display",
+        "Abnehmbarer Boden für die Pediküre"
+      ]
+    },
+    "fresa-professionale-35000": {
+      "nome": "Profifräser 35’000 U/min",
+      "descrizioneBreve": "Leises, vibrationsfreies Handstück mit stufenloser Drehzahlregelung.",
+      "descrizione": "Ein leichtes Handstück, das auch nach Stunden kühl bleibt und nicht vibriert – die Kontrolle beim Feilen ist vollständig. Die Drehrichtung ist umkehrbar, für dieselbe Präzision an beiden Händen.",
+      "caratteristiche": [
+        "0 – 35’000 U/min, stufenlos regelbar",
+        "Vorwärts-/Rückwärtslauf",
+        "Handstück mit Schnellwechsel",
+        "Unter 55 dB: praktisch geräuschlos"
+      ]
+    },
+    "soft-gel-tips-almond": {
+      "nome": "Soft-Gel-Tips Almond — 504 Stk.",
+      "descrizioneBreve": "Vorgeformte Soft-Gel-Tips, 12 Grössen, für die Express-Modellage.",
+      "descrizione": "Hauchdünne, innen bereits mattierte Tips, bereit zum Kleben mit Gel: die Verlängerung ist in der halben Zeit fertig und fühlt sich natürlich an.",
+      "caratteristiche": [
+        "504 Tips, 12 nummerierte Grössen",
+        "Innen bereits mattiert: kein Feilen nötig",
+        "Ultradünne Kante, auf dem Nagel unsichtbar",
+        "Sortierbox inklusive"
+      ]
+    },
+    "dual-form-popit-12-forme": {
+      "nome": "Dual Form Popit — 12 Formen",
+      "descrizioneBreve": "Wiederverwendbare Schablonen mit vorgeformtem Apex, 296 Stück.",
+      "descrizione": "Dual Forms mit bereits eingearbeiteter Wölbung und Apex: füllen, aufsetzen, aushärten, abziehen. Die Struktur gelingt auch ohne jahrelange Freihand-Erfahrung.",
+      "caratteristiche": [
+        "296 Schablonen in 12 verschiedenen Formen",
+        "Vorgeformter Apex, korrekte Struktur garantiert",
+        "Dutzende Male wiederverwendbar",
+        "Markierungen zum Zentrieren"
+      ]
+    },
+    "lime-zebra-100-180": {
+      "nome": "Zebra-Feilen 100/180 — 10 Stk.",
+      "descrizioneBreve": "Feilen mit doppelter Körnung und stabilem Kern, Zehnerpack.",
+      "descrizione": "Die Feile für jeden Tag: Körnung 100 zum Ausarbeiten der Struktur, 180 für das Profil. Der Kern biegt sich nicht und der Belag hält auch hartem Gel stand.",
+      "caratteristiche": [
+        "Doppelte Körnung 100 / 180",
+        "Stabiler Kern, der sich nicht verformt",
+        "Abwasch- und desinfizierbar",
+        "10er-Packung"
+      ]
+    },
+    "pinza-tronchesina-pro": {
+      "nome": "Profi-Nagelhautzange",
+      "descrizioneBreve": "Gehärteter Edelstahl, sauberer Schnitt, vollständig sterilisierbar.",
+      "descrizione": "Eine von Hand geschliffene Zange, die die Nagelhaut sauber schneidet, ohne zu reissen. Der gehärtete Stahl bleibt lange scharf und übersteht Autoklav-Zyklen ohne matt zu werden.",
+      "caratteristiche": [
+        "Von Hand geschliffener gehärteter Edelstahl",
+        "4-mm-Kopf für Präzisionsarbeit",
+        "Im Autoklaven sterilisierbar",
+        "Doppelblattfeder, weiche Öffnung"
+      ]
+    },
+    "olio-cuticole-argan-oro": {
+      "nome": "Nagelhautöl Argan & Gold",
+      "descrizioneBreve": "Schnell einziehendes Pflegeöl mit goldenen Mikropartikeln.",
+      "descrizione": "Ein leichtes Öl, das ohne Fettfilm einzieht und die Nagelhaut zwischen zwei Terminen geschmeidig hält. Die goldenen Mikropartikel hinterlassen einen edlen Schimmer auf der Haut.",
+      "caratteristiche": [
+        "Argan, Jojoba und Vitamin E",
+        "Zieht schnell ein, fettet nicht",
+        "Präziser Pinselapplikator",
+        "Zarter Vanilleduft"
+      ]
+    },
+    "kit-pedicure-curativo": {
+      "nome": "Pediküre-Set Pflege",
+      "descrizioneBreve": "Alles für die professionelle Fusspflege.",
+      "descrizione": "Ein komplettes Set mit Raspel, Entfetter, keratolytischer Creme und Zehenspreizer – gedacht für die pflegende Pediküre im Studio, aber auch für die Pflege zu Hause zwischen zwei Terminen geeignet.",
+      "caratteristiche": [
+        "Stahlraspel mit Ersatzblättern",
+        "Keratolytische Creme 100 ml",
+        "Entfetter und Abschlusscreme",
+        "Einweg-Zehenspreizer inklusive"
+      ]
+    }
+  },
+  "chiSiamo": {
+    "eyebrow": "Über uns",
+    "titolo": "Unsere Geschichte",
+    "sottotitolo": "Ein Studio, das auch ein Shop wurde – ohne aufzuhören, ein Studio zu sein.",
+    "laStoria": "Die Geschichte",
+    "comeLavoriamo": "Wie wir arbeiten",
+    "iNostriPrincipi": "Unsere Grundsätze",
+    "spazioEyebrow": "Der Raum",
+    "valori": [
+      {
+        "titolo": "Technik vor Ästhetik",
+        "testo": "Eine richtige Struktur hält. Eine falsche bricht – so schön die Nail Art darüber auch ist."
+      },
+      {
+        "titolo": "Auswahl statt Katalog",
+        "testo": "Lieber zehn Produkte, die wir kennen, als tausend, die wir nie geöffnet haben."
+      },
+      {
+        "titolo": "Hygiene ohne Kompromisse",
+        "testo": "Autoklav für alles Sterilisierbare, Einweg für den Rest. Ohne Ausnahme."
+      },
+      {
+        "titolo": "Transparente Preise",
+        "testo": "Die Offerte steht, bevor wir beginnen. Keine Überraschungen beim Bezahlen."
+      }
+    ],
+    "spazio": {
+      "testo": "Zwei Arbeitsplätze, Tageslicht und eine eigene Absaugung an jedem Tisch. Wir arbeiten nach Vereinbarung, damit jede Kundin die Zeit bekommt, die ihre Behandlung braucht.",
+      "titolo": "Der Raum"
+    },
+    "certificazioni": {
+      "testo": "Platzhalterliste: durch die echten Zertifikate ersetzen (Kurse, Diplome, Bewilligungen).",
+      "elenco": [
+        "Berufsnachweis als Nageldesignerin",
+        "Weiterbildung in struktureller Modellage",
+        "HACCP- und Sterilisationsschulung",
+        "Jährliche Auffrischung zu Produkten und Sicherheit"
+      ],
+      "titolo": "Ausbildung und Zertifikate"
+    },
+    "team": {
+      "testo": "Platzhalter: hier die Teammitglieder mit Foto und Spezialisierung ergänzen.",
+      "membri": [
+        {
+          "nome": "Kara",
+          "ruolo": "Gründerin & Nageldesignerin",
+          "bio": "Spezialisiert auf strukturelle Modellage und freihändige Nail Art.",
+          "foto": "/images/kara-ritratto.svg"
+        },
+        {
+          "nome": "Vorname Nachname",
+          "ruolo": "Nageldesignerin",
+          "bio": "Platzhalter: durch die echte Biografie ersetzen.",
+          "foto": "/images/kara-ritratto.svg"
+        }
+      ],
+      "titolo": "Das Team"
+    },
+    "paragrafi": [
+      "K Institute begann als Studio für Nagelpflege. Dahinter steht Kara, die das Handwerk von der Technik her gelernt hat: Struktur, Apex, Halt. Die Ästhetik kam erst danach.",
+      "Über die Jahre war die häufigste Frage der Kundinnen – und später der Kolleginnen – immer dieselbe: «Welches Produkt benutzt du?». Daraus entstand die Idee zum Shop: dieselben Produkte anbieten, die wir täglich verwenden, mit derselben strengen Auswahl.",
+      "Heute befruchten sich Studio und Shop gegenseitig. Jedes neue Produkt wird wochenlang an unseren Arbeitsplätzen getestet, bevor es in den Katalog kommt. Überzeugt es nicht, landet es nicht im Regal."
+    ]
+  },
+  "contatti": {
+    "eyebrow": "So finden Sie uns",
+    "titolo": "Kontakt",
+    "intro": "Schreiben Sie uns für Fragen zu Behandlungen, Produkten oder einer Bestellung. Wir antworten an Öffnungstagen innerhalb von 24 Stunden.",
+    "form": {
+      "titolo": "Schreiben Sie uns",
+      "nome": "Vor- und Nachname",
+      "email": "E-Mail",
+      "messaggio": "Ihre Nachricht",
+      "invia": "Nachricht senden",
+      "inviando": "Wird gesendet…",
+      "successo": "Nachricht gesendet. Wir antworten so schnell wie möglich – danke!"
+    },
+    "orariTitolo": "Öffnungszeiten",
+    "indirizzoTitolo": "Adresse",
+    "scriviWhatsapp": "Schreiben Sie uns auf WhatsApp"
+  },
+  "prenota": {
+    "eyebrow": "Terminbuchung",
+    "titolo": "Buchen Sie Ihren Termin",
+    "intro": "Wählen Sie Behandlung, Tag und Uhrzeit. Sie erhalten sofort die Übersicht – wir bestätigen innerhalb weniger Stunden."
+  },
+  "booking": {
+    "passi": {
+      "1": "Behandlung",
+      "2": "Datum und Zeit",
+      "3": "Ihre Angaben",
+      "4": "Bestätigung"
+    },
+    "scegliTrattamento": "Behandlung wählen",
+    "scegliData": "Datum und Uhrzeit wählen",
+    "iTuoiDati": "Ihre Angaben",
+    "selezionaData": "Wählen Sie zuerst ein Datum",
+    "caricoOrari": "Verfügbare Zeiten werden geladen…",
+    "nessunOrario": "An diesem Tag ist keine Zeit verfügbar. Versuchen Sie ein anderes Datum.",
+    "nessunOrarioPrenotato": "An diesem Tag ist keine Zeit verfügbar (bereits ausgebucht). Versuchen Sie ein anderes Datum.",
+    "erroreOrari": "Die verfügbaren Zeiten können nicht geladen werden. Bitte gleich nochmals versuchen.",
+    "mesePrecedente": "Vorheriger Monat",
+    "meseSuccessivo": "Nächster Monat",
+    "campoNome": "Vor- und Nachname *",
+    "campoTelefono": "Telefon *",
+    "campoEmail": "E-Mail *",
+    "campoNote": "Anmerkungen (optional)",
+    "notePlaceholder": "Allergien, Farbwünsche, besondere Anliegen…",
+    "privacyPrefisso": "Ich habe die",
+    "privacyLink": "Datenschutzerklärung gelesen und akzeptiere sie",
+    "conferma": "Buchung bestätigen",
+    "inviando": "Wird gesendet…",
+    "indietro": "Zurück",
+    "continua": "Weiter",
+    "richiestaRicevuta": "Anfrage erhalten",
+    "tiAspettiamo": "Wir erwarten Sie für {trattamento} am {data} um {ora}.",
+    "confermaEmail": "Sie erhalten innerhalb weniger Stunden eine Bestätigung per E-Mail oder Telefon. Bei einem Verhinderungsfall sagen Sie bitte mindestens 24 Stunden vorher ab.",
+    "tornaHome": "Zurück zur Startseite",
+    "scopriShop": "Shop entdecken"
+  },
+  "cookie": {
+    "testo": "Wir verwenden nur technische Cookies, die für den Betrieb der Website nötig sind (Warenkorb und Einstellungen). Keine Profiling-Cookies, kein Werbe-Tracking.",
+    "accetta": "Verstanden",
+    "dettagli": "Cookie-Richtlinie lesen"
+  },
+  "newsletter": {
+    "titolo": "Neuheiten und Angebote",
+    "testo": "Neue Produkte und Aktionen, eine E-Mail pro Monat. Kein Spam.",
+    "placeholder": "Ihre E-Mail",
+    "cta": "Abonnieren",
+    "conferma": "Danke! Sie stehen jetzt auf der Liste."
+  },
+  "instagramCta": {
+    "lavori": "Mehr Arbeiten auf Instagram entdecken",
+    "contatti": "Folgen Sie uns auf Instagram",
+    "aria": "Instagram-Profil in einem neuen Tab öffnen"
+  },
+  "footer": {
+    "claim": "Nagelstudio und Shop für Profiprodukte. Massgeschneiderte Behandlungen und ausgewählte Produkte, täglich an unseren Arbeitsplätzen getestet.",
+    "contattiTitolo": "Kontakt",
+    "orariTitolo": "Öffnungszeiten",
+    "seguici": "Folgen Sie uns",
+    "copyright": "© {anno} {brand} — {legalName}. Alle Rechte vorbehalten.",
+    "piva": "MwSt-Nr. {piva}"
+  },
+  "errore404": {
+    "titolo": "Seite nicht gefunden",
+    "testo": "Die gesuchte Seite existiert nicht oder wurde verschoben. Zurück zur Startseite oder in den Shop.",
+    "cta": {
+      "label": "Zurück zur Startseite"
+    },
+    "ctaSecondaria": {
+      "label": "Zum Shop"
+    }
+  },
+  "ricerca": {
+    "placeholder": "Produkt oder Behandlung suchen…",
+    "apri": "Suchen",
+    "chiudi": "Suche schliessen",
+    "prodotti": "Produkte",
+    "trattamenti": "Behandlungen",
+    "nessunRisultato": "Keine Ergebnisse. Versuchen Sie einen anderen Begriff.",
+    "suggerimento": "Mindestens zwei Buchstaben eingeben."
+  },
+  "legale": {
+    "eyebrow": "Rechtliche Hinweise",
+    "aggiornamento": "Zuletzt aktualisiert",
+    "privacy": {
+      "titolo": "Datenschutzerklärung",
+      "sottotitolo": "Wie wir die Personendaten der Nutzerinnen und Nutzer dieser Website bearbeiten.",
+      "sezioni": [
+        {
+          "titolo": "Verantwortliche Stelle",
+          "paragrafi": [
+            "Verantwortlich ist {legalName} ({brand}) mit Sitz in {sede}. Für Anliegen zu Ihren Daten schreiben Sie an {email}."
+          ]
+        },
+        {
+          "titolo": "Welche Daten wir erheben",
+          "paragrafi": [
+            "Wir erheben nur die Daten, die Sie uns freiwillig geben: Name, Telefon, E-Mail und Anmerkungen bei einer Terminbuchung oder über das Kontaktformular; dazu die Lieferadresse bei einer Bestellanfrage.",
+            "Wir verwenden keine Profiling-Werkzeuge, verfolgen das Surfverhalten nicht und kaufen keine Adresslisten."
+          ]
+        },
+        {
+          "titolo": "Warum wir sie bearbeiten",
+          "paragrafi": [
+            "Um die Buchung oder die Bestellanfrage abzuwickeln, um Sie bei Bedarf zu kontaktieren und um die gesetzlichen steuerlichen und administrativen Pflichten zu erfüllen."
+          ]
+        },
+        {
+          "titolo": "Wie lange wir sie aufbewahren",
+          "paragrafi": [
+            "So lange, wie es für die gewünschte Leistung nötig ist, und in den vorgesehenen Fällen für die gesetzlichen Fristen. Sie können jederzeit die Löschung verlangen."
+          ]
+        },
+        {
+          "titolo": "Ihre Rechte",
+          "paragrafi": [
+            "Sie können Auskunft, Berichtigung, Löschung, Einschränkung oder Übertragung Ihrer Daten verlangen und der Bearbeitung widersprechen – schreiben Sie an {email}. Zudem haben Sie das Recht, sich bei der zuständigen Aufsichtsbehörde zu beschweren."
+          ]
+        }
+      ]
+    },
+    "cookie": {
+      "titolo": "Cookie-Richtlinie",
+      "sottotitolo": "Welche Cookies diese Website verwendet und wofür.",
+      "sezioni": [
+        {
+          "titolo": "Nur technische Cookies",
+          "paragrafi": [
+            "Diese Website verwendet ausschliesslich technische Cookies und lokalen Speicher, die für den Betrieb nötig sind: den Inhalt des Warenkorbs und die Kenntnisnahme des Cookie-Hinweises.",
+            "Es gibt keine Profiling-Cookies, keine Werbe-Tracker und keine Analysewerkzeuge von Dritten."
+          ]
+        },
+        {
+          "titolo": "Lokaler Speicher",
+          "paragrafi": [
+            "Der Warenkorb wird im Browser (localStorage) unter dem Schlüssel «k-institute-cart» gespeichert und bleibt auf Ihrem Gerät: Er wird an keinen Server gesendet, solange Sie nicht freiwillig eine Bestellanfrage abschliessen."
+          ]
+        },
+        {
+          "titolo": "Dienste von Dritten",
+          "paragrafi": [
+            "Die Karte auf der Kontaktseite ist eingebetteter Inhalt von Google Maps: Beim Laden kann Google gemäss eigener Richtlinie eigene Cookies setzen."
+          ]
+        },
+        {
+          "titolo": "So deaktivieren Sie sie",
+          "paragrafi": [
+            "Sie können die vom Site gespeicherten Daten jederzeit in den Browsereinstellungen löschen. Ohne lokalen Speicher bleibt der Warenkorb zwischen zwei Besuchen nicht erhalten."
+          ]
+        }
+      ]
+    },
+    "termini-di-vendita": {
+      "titolo": "Verkaufsbedingungen",
+      "sottotitolo": "Bedingungen für Bestellungen über diese Website.",
+      "sezioni": [
+        {
+          "titolo": "Bestellanfrage",
+          "paragrafi": [
+            "Das Absenden des Kassenformulars ist derzeit eine Bestellanfrage und kein abgeschlossener Kauf. Sie erhalten innerhalb von 24 Arbeitsstunden eine Bestätigung mit Verfügbarkeit und Zahlungsmodalitäten."
+          ]
+        },
+        {
+          "titolo": "Preise",
+          "paragrafi": [
+            "Alle Preise verstehen sich in Schweizer Franken (CHF) inklusive MwSt. Versandkosten sind noch nicht aktiv: Sie werden vor der Bestätigung der Bestellung mitgeteilt."
+          ]
+        },
+        {
+          "titolo": "Zahlungen",
+          "paragrafi": [
+            "Die Online-Zahlung ist noch nicht aktiv. Die akzeptierten Zahlungsmittel werden in der Bestätigungs-E-Mail genannt."
+          ]
+        },
+        {
+          "titolo": "Verfügbarkeit",
+          "paragrafi": [
+            "Die Produkte sind nur solange verfügbar, wie der Vorrat reicht. Ist etwas nicht verfügbar, schlagen wir eine Alternative vor oder stornieren die Anfrage kostenlos."
+          ]
+        }
+      ]
+    },
+    "spedizioni-e-resi": {
+      "titolo": "Versand und Rückgabe",
+      "sottotitolo": "Fristen, Kosten und Rücksendung eines Produkts.",
+      "sezioni": [
+        {
+          "titolo": "Lieferfristen",
+          "paragrafi": [
+            "Bestellungen, die an Öffnungstagen bis 14:00 Uhr bestätigt werden, bereiten wir am selben Tag vor. Die Lieferung erfolgt in der Regel in {tempiConsegna}."
+          ]
+        },
+        {
+          "titolo": "Versandkosten",
+          "paragrafi": [
+            "Demnächst: Der Online-Shop ist noch nicht aktiv und die Versandtarife stehen noch nicht fest. Sie werden hier veröffentlicht, bevor die Bestellungen öffnen."
+          ]
+        },
+        {
+          "titolo": "Widerrufsrecht",
+          "paragrafi": [
+            "Sie können unversehrte, ungeöffnete Produkte innerhalb von {resiEntroGiorni} Tagen nach Erhalt zurücksenden. Die Rücksendekosten trägt die Käuferin, ausser bei fehlerhafter oder falscher Ware."
+          ]
+        },
+        {
+          "titolo": "Nicht rückgabefähige Produkte",
+          "paragrafi": [
+            "Aus hygienischen Gründen sind geöffnete versiegelte Produkte (Gele, Lacke, Flüssigkeiten) und bereits benutzte Instrumente von der Rückgabe ausgeschlossen."
+          ]
+        },
+        {
+          "titolo": "So beantragen Sie eine Rückgabe",
+          "paragrafi": [
+            "Schreiben Sie an {emailOrdini} und nennen Sie die Nummer der Bestellanfrage und den Grund der Rücksendung: Wir antworten mit der Anleitung."
+          ]
+        }
+      ]
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "K Institute — Nail & Braids Studio in Courtelary",
+      "description": "Nagelstudio und Shop für professionelle Nagelprodukte in Courtelary (Bern). Semi-Permanent, Gelmodellage, Zöpfe und ausgewählte Produkte. Online buchen."
+    },
+    "shop": {
+      "title": "Shop",
+      "description": "Professionelle Gele, Farben, Werkzeuge und Lampen – Stück für Stück ausgewählt."
+    },
+    "trattamenti": {
+      "title": "Behandlungen",
+      "description": "Alle Behandlungen des Studios mit Dauer, Preis und Ablauf."
+    },
+    "lavori": {
+      "title": "Unsere Arbeiten",
+      "description": "Die Galerie der im Studio an echten Kundinnen gemachten Sets."
+    },
+    "prenota": {
+      "title": "Termin",
+      "description": "Buchen Sie Ihren Termin online: Behandlung, Tag und Uhrzeit."
+    },
+    "chiSiamo": {
+      "title": "Über uns",
+      "description": "Die Geschichte des Studios, die Arbeitsweise und der Raum."
+    },
+    "contatti": {
+      "title": "Kontakt",
+      "description": "Adresse, Öffnungszeiten, Telefon und Karte des Studios in Courtelary."
+    },
+    "carrello": {
+      "title": "Warenkorb",
+      "description": "Die von Ihnen gewählten Produkte."
+    },
+    "checkout": {
+      "title": "Kasse",
+      "description": "Schliessen Sie Ihre Bestellanfrage ab."
+    },
+    "errore404": {
+      "title": "Seite nicht gefunden",
+      "description": "Die gesuchte Seite existiert nicht oder wurde verschoben."
+    }
+  },
+  "galleryAlt": {
+    "p01": "Lange Stiletto-Nägel mit mintgrünem Dekor und Schmucksteinen",
+    "p02": "Elektrisch blaue Mandelnägel mit Perlenherzen und Strass",
+    "p03": "Seitliche Zöpfe mit definiertem Baby Hair",
+    "p04": "Rote Stiletto-Nägel mit Herz-Nail-Art auf Nude-Basis",
+    "p05": "Von Hand gemalte Nail Art im Cartoon-Stil",
+    "p06": "Rosa-bordeauxfarbene Mandelnägel mit 3D-Blüten und goldenen Sternen",
+    "p07": "Stiletto-Modellage mit weisser French und transparenten Details",
+    "p08": "Cornrows mit Wellenmuster",
+    "p09": "Nail Art im Superhelden-Stil mit Spinnennetzen",
+    "p10": "Klassische weisse French auf kurzer eckiger Form",
+    "p11": "Rote Coffin-Nägel mit Glitzer und Verlauf",
+    "p12": "Lange eckige Nude-Nägel mit holografischen Kristallen",
+    "p13": "Feine Zöpfe mit offenen Haaren an den Spitzen",
+    "p14": "Stiletto-Nägel mit tiefer weisser French auf rosa Basis",
+    "p15": "Nude Stiletto-Nägel mit Chrom-Details und Charms",
+    "p16": "Eckige Nägel mit neonrosa French",
+    "p17": "Rote Nail Art mit Lippen und goldenen Charms",
+    "p18": "Zöpfe mit Herzmuster",
+    "p19": "Lange eckige Nägel mit Pastell-French und Blüten",
+    "p20": "Extra lange glänzende Nude-Stiletto-Nägel",
+    "p21": "Nude Mandelnägel mit roten Leoparden-Spitzen",
+    "p22": "Weisse French mit Chrom-Details und Schriftzügen",
+    "p23": "Bordeauxfarbene French auf eckiger Form",
+    "p24": "Nude und braune Coffin-Nägel mit Charms",
+    "p25": "Eckige Nägel mit farbiger French in Rot und Orange",
+    "p26": "Nude Mandelnägel mit Punkten und orangen Spitzen",
+    "p27": "Schmuckgrüne Stiletto-Nägel, zweite Perspektive",
+    "p28": "Weisse French mit Leoparden-Akzenten",
+    "p29": "Weisse French auf Stiletto-Nägeln, von oben",
+    "p30": "Rot-goldene Nail Art, fotografiert am See"
+  }
+}

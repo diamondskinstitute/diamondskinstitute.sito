@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/ui/PageHeader";
 import FadeIn from "@/components/FadeIn";
 import ContactForm from "@/components/ContactForm";
-import { site } from "@/data/site";
+import { getDict } from "@/lib/intl/server";
+import { giorno, orarioChiuso } from "@/lib/intl/content";
+import InstagramButton from "@/components/ui/InstagramButton";
 import { salon, whatsappUrl, telUrl, emailUrl } from "@/data/salon";
 import {
   InstagramIcon,
@@ -12,12 +14,14 @@ import {
   WhatsAppIcon,
 } from "@/components/ui/Icons";
 
-export const metadata: Metadata = {
-  title: "Contatti",
-  description: site.contatti.intro,
-};
+// Titolo e descrizione seguono la lingua scelta
+export function generateMetadata(): Metadata {
+  const m = getDict().meta.contatti;
+  return { title: m.title, description: m.description };
+}
 
 export default function ContattiPage() {
+  const site = getDict();
   return (
     <>
       <PageHeader
@@ -68,22 +72,32 @@ export default function ContattiPage() {
               </p>
             </address>
 
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary mt-8"
-            >
-              <WhatsAppIcon size={16} /> {site.contatti.scriviWhatsapp}
-            </a>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                <WhatsAppIcon size={16} /> {site.contatti.scriviWhatsapp}
+              </a>
+              <InstagramButton />
+            </div>
 
             <h2 className="eyebrow mt-12">{site.contatti.orariTitolo}</h2>
             <ul className="mt-5 divide-y divide-ink-line border-y border-ink-line">
               {salon.orari.map((o) => (
-                <li key={o.giorno} className="flex justify-between py-3 text-sm">
-                  <span className="text-cream/70">{o.giorno}</span>
-                  <span className={o.chiuso ? "text-cream/35" : "text-gold-light"}>
-                    {o.orario}
+                <li
+                  key={o.giorno}
+                  className="flex justify-between py-3 text-sm"
+                >
+                  <span className="text-cream/70">
+                    {giorno(site, o.giorno)}
+                  </span>
+                  <span
+                    className={o.chiuso ? "text-cream/35" : "text-gold-light"}
+                  >
+                    {orarioChiuso(site, o.orario)}
                   </span>
                 </li>
               ))}

@@ -19,7 +19,15 @@ export const salon = {
   legalName: "Kara Nails Studio",
 
   claim: "Nail institute & shop professionale",
-  citta: "Zürich",
+  // Tagline ufficiale dal profilo Instagram. Non è ancora mostrata nel sito
+  // (il claim sopra resta quello del logo): dillo e la sostituiamo.
+  // TODO: confermare quale delle due usare in homepage e nel logo.
+  claimUfficiale: "Nails & Braids Studio",
+  // Nome completo dal profilo Instagram ufficiale. Il sito mostra `brandName`
+  // ("K Institute"): non è stato cambiato di proposito.
+  // TODO: confermare se il sito deve chiamarsi "Diamonds K Institute".
+  nomeUfficiale: "Diamonds K Institute",
+  citta: "Courtelary",
 
   // --- Logo -----------------------------------------------------------
   // Il file ha lo sfondo nero: va usato SOLO su fondo scuro (oppure con
@@ -27,34 +35,44 @@ export const salon = {
   //
   // ➜ Appena il logo definitivo è in public/brand/logo.jpg, cambia
   //   questa singola riga in: logoSrc: "/brand/logo.jpg"
-  logoSrc: "/brand/logo.svg",
+  logoSrc: "/brand/logo.jpg",
   logoMarkSrc: "/brand/logo-mark.svg",
 
   indirizzo: {
-    via: "Bahnhofstrasse 24",
-    cap: "8001",
-    citta: "Zürich",
-    provincia: "ZH",
-    completo: "Bahnhofstrasse 24, 8001 Zürich",
+    via: "Rue le Moulin 1",
+    cap: "2608",
+    citta: "Courtelary",
+    provincia: "BE", // Canton Berna
+    paese: "Svizzera",
+    paeseCodice: "CH",
+    completo: "Rue le Moulin 1, 2608 Courtelary",
+    completoConPaese: "Rue le Moulin 1, 2608 Courtelary, Svizzera",
   },
 
   // Telefono in formato internazionale, senza spazi, per link tel: e WhatsApp
-  telefono: "+39 345 678 9012",
-  telefonoLink: "+393456789012",
-  whatsapp: "+393456789012",
+  // TODO: numero segnaposto svizzero — sostituire con quello reale.
+  telefono: "+41 32 000 00 00",
+  telefonoLink: "+41320000000",
+  whatsapp: "+41320000000",
   whatsappMessaggio:
     "Ciao! Vorrei informazioni su un trattamento da K Institute.",
 
+  // TODO: indirizzi segnaposto (dominio .it) — sostituire con quelli reali.
   email: "info@kinstitute.it",
   emailOrdini: "ordini@kinstitute.it",
 
+  // --- Social ufficiali -------------------------------------------------
   instagram: {
-    handle: "@kinstitute",
-    url: "https://instagram.com/kinstitute",
+    handle: "@diamonds_k_institute",
+    url: "https://www.instagram.com/diamonds_k_institute",
   },
-  facebook: {
-    handle: "K Institute",
-    url: "https://facebook.com/kinstitute",
+  tiktok: {
+    handle: "@diamonds_institute",
+    url: "https://www.tiktok.com/@diamonds_institute",
+  },
+  threads: {
+    handle: "@diamonds_k_institute",
+    url: "https://www.threads.net/@diamonds_k_institute",
   },
 
   // Orari di apertura. `chiuso: true` mostra "Chiuso" ed esclude il giorno
@@ -82,13 +100,13 @@ export const salon = {
   } as Record<number, { apertura: string; chiusura: string } | null>,
 
   mappaEmbedUrl:
-    "https://www.google.com/maps?q=Bahnhofstrasse+24,+8001+Z%C3%BCrich&output=embed",
+    "https://www.google.com/maps?q=Rue+le+Moulin+1,+2608+Courtelary&output=embed",
   mappaLink:
-    "https://www.google.com/maps/search/?api=1&query=Bahnhofstrasse+24,+8001+Z%C3%BCrich",
+    "https://www.google.com/maps/search/?api=1&query=Rue+le+Moulin+1,+2608+Courtelary",
 
   // --- Shop ------------------------------------------------------------
   shop: {
-    valuta: "€",
+    valuta: "CHF",
     // Soglia per la spedizione gratuita (come sul sito di riferimento)
     spedizioneGratuitaDa: 99,
     costoSpedizione: 7.9,
@@ -98,23 +116,25 @@ export const salon = {
 
   // --- Dati legali (segnaposto) ----------------------------------------
   legale: {
-    partitaIva: "IT00000000000",
-    rea: "ZH-0000000",
-    sede: "Bahnhofstrasse 24, 8001 Zürich",
+    // TODO: dati segnaposto — sostituire con IDE/IVA reali.
+    partitaIva: "CHE-000.000.000",
+    rea: "",
+    sede: "Rue le Moulin 1, 2608 Courtelary, Svizzera",
   },
 
   seo: {
-    title: "K Institute — Nail Institute & Shop Professionale",
+    title: "K Institute — Nail & Braids Studio a Courtelary",
     description:
-      "Nail institute e shop di prodotti professionali per unghie. Trattamenti su misura, gel, nail art, attrezzi e lampade. Prenota online o acquista nello shop.",
+      "Nail institute e shop di prodotti professionali per unghie a Courtelary (Berna). Semipermanente, ricostruzione gel, treccine e prodotti selezionati. Prenota online.",
+    // TODO: sostituire con il dominio definitivo prima della pubblicazione.
     url: "http://localhost:3018",
     keywords: [
-      "prodotti professionali unghie",
-      "gel ricostruzione",
+      "unghie Courtelary",
+      "nail salon Courtelary",
+      "treccine Courtelary",
       "semipermanente",
-      "nail art",
-      "shop nail",
-      "nail institute",
+      "ricostruzione gel",
+      "prodotti professionali unghie",
       "K Institute",
     ],
   },

@@ -2,15 +2,18 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { BLUR_DARK } from "@/lib/blur";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/lib/cart/context";
-import { site } from "@/data/site";
+import { useDict } from "@/lib/intl/client";
 import { formatPrice } from "@/lib/format";
+import { SHOP_ATTIVO } from "@/lib/shop-status";
 
 type Campi = Record<string, string>;
 
 export default function CheckoutForm() {
+  const site = useDict();
   const cart = useCart();
   const router = useRouter();
 
@@ -21,7 +24,7 @@ export default function CheckoutForm() {
     indirizzo: "",
     cap: "",
     citta: "",
-    paese: "Italia",
+    paese: "Svizzera",
     note: "",
   });
   const [privacy, setPrivacy] = useState(false);
@@ -29,16 +32,20 @@ export default function CheckoutForm() {
   const [errore, setErrore] = useState("");
   const [campi, setCampi] = useState<Campi>({});
 
-  const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setForm((f) => ({ ...f, [k]: e.target.value }));
+  const set =
+    (k: keyof typeof form) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setForm((f) => ({ ...f, [k]: e.target.value }));
 
   if (!cart.hydrated) {
-    return <p className="py-20 text-center text-cream/50">Carico il carrello…</p>;
+    return (
+      <p className="py-20 text-center text-cream/50">Carico il carrello…</p>
+    );
   }
 
   if (cart.items.length === 0) {
     return (
-      <div className="rounded-card border border-ink-line bg-ink-soft py-20 text-center">
+      <div className="glass-flat rounded-card py-20 text-center">
         <p className="text-cream/60">{site.carrello.vuoto}</p>
         <Link href="/shop" className="btn-primary mt-7">
           {site.carrello.vuotoCta.label}
@@ -88,7 +95,10 @@ export default function CheckoutForm() {
   };
 
   return (
-    <form onSubmit={invia} className="grid gap-10 lg:grid-cols-[1fr_340px] lg:gap-12">
+    <form
+      onSubmit={invia}
+      className="grid gap-10 lg:grid-cols-[1fr_340px] lg:gap-12"
+    >
       <div>
         <p className="rounded-luxe border border-gold/25 bg-gold/5 px-4 py-3 text-sm text-gold-light">
           {site.checkout.notaPagamento}
@@ -108,7 +118,7 @@ export default function CheckoutForm() {
           <div className="mt-5 grid gap-5 sm:grid-cols-2">
             <Field
               id="c-nome"
-              label="Nome e cognome *"
+              label={site.checkout.campi.nome}
               value={form.nome}
               onChange={set("nome")}
               error={campi.nome}
@@ -116,7 +126,7 @@ export default function CheckoutForm() {
             />
             <Field
               id="c-tel"
-              label="Telefono *"
+              label={site.checkout.campi.telefono}
               type="tel"
               value={form.telefono}
               onChange={set("telefono")}
@@ -126,7 +136,7 @@ export default function CheckoutForm() {
             <div className="sm:col-span-2">
               <Field
                 id="c-email"
-                label="Email *"
+                label={site.checkout.campi.email}
                 type="email"
                 value={form.email}
                 onChange={set("email")}
@@ -143,7 +153,7 @@ export default function CheckoutForm() {
             <div className="sm:col-span-2">
               <Field
                 id="c-indirizzo"
-                label="Indirizzo e numero civico *"
+                label={site.checkout.campi.indirizzo}
                 value={form.indirizzo}
                 onChange={set("indirizzo")}
                 error={campi.indirizzo}
@@ -152,7 +162,7 @@ export default function CheckoutForm() {
             </div>
             <Field
               id="c-cap"
-              label="CAP *"
+              label={site.checkout.campi.cap}
               value={form.cap}
               onChange={set("cap")}
               error={campi.cap}
@@ -160,7 +170,7 @@ export default function CheckoutForm() {
             />
             <Field
               id="c-citta"
-              label="Città *"
+              label={site.checkout.campi.citta}
               value={form.citta}
               onChange={set("citta")}
               error={campi.citta}
@@ -169,7 +179,7 @@ export default function CheckoutForm() {
             <div className="sm:col-span-2">
               <Field
                 id="c-paese"
-                label="Paese *"
+                label={site.checkout.campi.paese}
                 value={form.paese}
                 onChange={set("paese")}
                 error={campi.paese}
@@ -201,7 +211,10 @@ export default function CheckoutForm() {
           />
           <span>
             {site.checkout.privacyPrefisso}{" "}
-            <Link href="/privacy" className="text-gold underline-offset-4 hover:underline">
+            <Link
+              href="/privacy"
+              className="text-gold underline-offset-4 hover:underline"
+            >
               privacy policy
             </Link>{" "}
             {site.checkout.privacyCongiunzione}{" "}
@@ -221,7 +234,7 @@ export default function CheckoutForm() {
 
       {/* Riepilogo ordine */}
       <aside className="lg:sticky lg:top-28 lg:self-start">
-        <div className="rounded-card border border-ink-line bg-ink-soft p-6">
+        <div className="glass-flat rounded-card p-6">
           <h2 className="font-serif text-xl text-cream">
             {site.checkout.sezioneRiepilogo}
           </h2>
@@ -230,7 +243,15 @@ export default function CheckoutForm() {
             {cart.items.map((i) => (
               <li key={i.key} className="flex items-center gap-3 py-3">
                 <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-luxe border border-ink-line">
-                  <Image src={i.immagine} alt="" fill sizes="56px" className="object-cover" />
+                  <Image
+                    src={i.immagine}
+                    alt=""
+                    fill
+                    sizes="56px"
+                    className="object-cover"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DARK}
+                  />
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm text-cream">
@@ -254,11 +275,7 @@ export default function CheckoutForm() {
             </div>
             <div className="flex justify-between text-cream/70">
               <dt>{site.carrello.spedizione}</dt>
-              <dd>
-                {cart.spedizione === 0
-                  ? site.carrello.spedizioneGratuita
-                  : formatPrice(cart.spedizione)}
-              </dd>
+              <dd>{site.carrello.spedizioneComingSoon}</dd>
             </div>
             <div className="flex justify-between border-t border-ink-line pt-3 text-lg">
               <dt className="font-serif text-cream">{site.carrello.totale}</dt>
@@ -266,14 +283,24 @@ export default function CheckoutForm() {
             </div>
           </dl>
 
-          <button type="submit" className="btn-primary mt-7 w-full" disabled={invio}>
-            {invio ? site.checkout.inviando : site.checkout.invia}
+          <button
+            type="submit"
+            className="btn-primary mt-7 w-full"
+            disabled={invio || !SHOP_ATTIVO}
+            aria-disabled={!SHOP_ATTIVO}
+            title={!SHOP_ATTIVO ? site.shop.comingSoonAria : undefined}
+          >
+            {!SHOP_ATTIVO
+              ? `${site.checkout.invia} · ${site.shop.comingSoon}`
+              : invio
+                ? site.checkout.inviando
+                : site.checkout.invia}
           </button>
           <Link
             href="/carrello"
             className="mt-4 block text-center text-xs uppercase tracking-wide2 text-cream/55 transition-colors hover:text-gold-light"
           >
-            Torna al carrello
+            {site.common.tornaAlCarrello}
           </Link>
         </div>
       </aside>

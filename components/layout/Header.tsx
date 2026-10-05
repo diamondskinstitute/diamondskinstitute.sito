@@ -7,7 +7,9 @@ import { AnimatePresence } from "framer-motion";
 import { mainNav } from "@/data/navigation";
 import { shopCategories } from "@/data/shop-categories";
 import { salon } from "@/data/salon";
-import { site } from "@/data/site";
+import { useDict } from "@/lib/intl/client";
+import { nomeCategoria } from "@/lib/intl/content";
+import LocaleSwitcher from "./LocaleSwitcher";
 import { useCart } from "@/lib/cart/context";
 import BrandLogo from "../ui/BrandLogo";
 import MegaMenu from "./MegaMenu";
@@ -22,6 +24,8 @@ import {
 } from "../ui/Icons";
 
 export default function Header() {
+  const site = useDict();
+  const nav = site.nav as unknown as Record<string, string>;
   const pathname = usePathname();
   const cart = useCart();
   const [scrolled, setScrolled] = useState(false);
@@ -65,20 +69,26 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 border-b transition-all duration-500 ease-luxe ${
-          scrolled
-            ? "border-ink-line bg-ink/95 shadow-lift backdrop-blur-md"
-            : "border-transparent bg-ink/80 backdrop-blur-sm"
-        }`}
+        className="sticky top-0 z-50 px-3 pb-3 pt-3 sm:px-5 sm:pt-4"
         onMouseLeave={() => setMegaOpen(false)}
       >
-        <div className="container-luxe flex items-center justify-between gap-6 py-4">
+        {/* Barra flottante in vetro liquido: diventa più opaca scorrendo */}
+        <div
+          className={`glass mx-auto flex w-full max-w-content items-center justify-between gap-6 rounded-glass px-4 transition-all duration-500 ease-luxe sm:px-5 ${
+            scrolled ? "py-2.5 shadow-lift" : "py-3.5"
+          }`}
+          style={
+            scrolled
+              ? { backgroundColor: "var(--glass-bg-strong)" }
+              : undefined
+          }
+        >
           <BrandLogo />
 
           {/* Menu desktop */}
           <nav
-            className="hidden items-center gap-7 lg:flex"
-            aria-label="Menu principale"
+            className="hidden items-center gap-5 lg:flex xl:gap-6"
+            aria-label={site.nav.menuPrincipale}
           >
             {mainNav.map((link) =>
               link.megaMenu ? (
@@ -95,14 +105,14 @@ export default function Header() {
                         : "text-cream/75 hover:text-gold-light"
                     }`}
                   >
-                    {link.label}
+                    {nav[link.key]}
                   </Link>
                   <button
                     type="button"
                     onClick={() => setMegaOpen((v) => !v)}
                     aria-expanded={megaOpen}
-                    aria-label="Mostra le categorie dello shop"
-                    className="ml-1 p-1 text-cream/60 transition-colors hover:text-gold-light"
+                    aria-label={site.nav.mostraCategorie}
+                    className="ms-1 p-1 text-cream/60 transition-colors hover:text-gold-light"
                   >
                     <ChevronDown
                       size={14}
@@ -123,18 +133,21 @@ export default function Header() {
                       : "text-cream/75 hover:text-gold-light"
                   }`}
                 >
-                  {link.label}
+                  {nav[link.key]}
                 </Link>
-              )
+              ),
             )}
           </nav>
 
           {/* Azioni: ricerca, area riservata, carrello */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-0.5 sm:gap-1">
+            {/* Selettore lingua: visibile anche su telefono */}
+            <LocaleSwitcher />
+
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
-              className="p-2.5 text-cream/75 transition-colors hover:text-gold-light"
+              className="rounded-pill p-2.5 text-cream/75 transition-colors duration-300 hover:bg-white/5 hover:text-gold-light"
               aria-label={site.ricerca.apri}
             >
               <SearchIcon />
@@ -142,9 +155,9 @@ export default function Header() {
 
             <Link
               href="/admin"
-              className="hidden p-2.5 text-cream/75 transition-colors hover:text-gold-light sm:block"
-              aria-label="Area riservata"
-              title="Area riservata"
+              className="hidden rounded-pill p-2.5 text-cream/75 transition-colors duration-300 hover:bg-white/5 hover:text-gold-light sm:block"
+              aria-label={site.nav.areaRiservata}
+              title={site.nav.areaRiservata}
             >
               <UserIcon />
             </Link>
@@ -152,28 +165,31 @@ export default function Header() {
             <button
               type="button"
               onClick={cart.openDrawer}
-              className="relative p-2.5 text-cream/75 transition-colors hover:text-gold-light"
+              className="relative rounded-pill p-2.5 text-cream/75 transition-colors duration-300 hover:bg-white/5 hover:text-gold-light"
               aria-label={`${site.carrello.titolo}${
-                cart.count > 0 ? ` — ${cart.count} articoli` : ""
+                cart.count > 0 ? ` (${cart.count})` : ""
               }`}
             >
               <CartIcon />
               {cart.hydrated && cart.count > 0 && (
-                <span className="absolute right-0.5 top-0.5 flex h-4 min-w-[1rem] items-center justify-center rounded-full bg-gold px-1 text-[0.6rem] font-semibold text-ink">
+                <span className="absolute end-0.5 top-0.5 flex h-4 min-w-[1rem] items-center justify-center rounded-pill px-1 text-[0.6rem] font-semibold text-ink" style={{ backgroundImage: "var(--grad-gold)" }}>
                   {cart.count}
                 </span>
               )}
             </button>
 
-            <Link href="/prenota" className="btn-primary ml-2 hidden !py-3 xl:inline-flex">
-              Prenota
+            <Link
+              href="/prenota"
+              className="btn-primary ms-2 hidden !px-5 !py-3 xl:inline-flex"
+            >
+              {site.nav.prenotaBreve}
             </Link>
 
             <button
               type="button"
               onClick={() => setMenuOpen(true)}
-              className="p-2.5 text-cream/75 transition-colors hover:text-gold-light lg:hidden"
-              aria-label="Apri il menu"
+              className="rounded-pill p-2.5 text-cream/75 transition-colors duration-300 hover:bg-white/5 hover:text-gold-light lg:hidden"
+              aria-label={site.nav.apriMenu}
               aria-expanded={menuOpen}
             >
               <MenuIcon />
@@ -188,7 +204,7 @@ export default function Header() {
 
       {/* Menu mobile a schermo intero */}
       <div
-        className={`fixed inset-0 z-[60] flex flex-col overflow-y-auto bg-ink pattern-lux px-6 pb-28 pt-6 transition-all duration-500 ease-luxe lg:hidden ${
+        className={`glass-strong fixed inset-0 z-[60] flex flex-col overflow-y-auto px-6 pb-28 pt-6 transition-all duration-500 ease-luxe lg:hidden ${
           menuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
@@ -200,14 +216,14 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen(false)}
-            className="p-2 text-cream/75 transition-colors hover:text-gold-light"
-            aria-label="Chiudi il menu"
+            className="rounded-pill p-2 text-cream/75 transition-colors duration-300 hover:bg-white/5 hover:text-gold-light"
+            aria-label={site.nav.chiudiMenu}
           >
             <CloseIcon size={24} />
           </button>
         </div>
 
-        <nav className="mt-10" aria-label="Menu principale mobile">
+        <nav className="mt-10" aria-label={site.nav.menuMobile}>
           <ul className="flex flex-col">
             {mainNav.map((link) => (
               <li key={link.href}>
@@ -215,13 +231,13 @@ export default function Header() {
                   href={link.href}
                   className="block border-b border-ink-line py-4 font-serif text-3xl text-cream"
                 >
-                  {link.label}
+                  {nav[link.key]}
                 </Link>
               </li>
             ))}
           </ul>
 
-          <p className="eyebrow mt-10">Categorie shop</p>
+          <p className="eyebrow mt-10">{site.nav.categorieShop}</p>
           <ul className="mt-4 grid grid-cols-2 gap-x-5 gap-y-3">
             {shopCategories.map((c) => (
               <li key={c.slug}>
@@ -229,12 +245,14 @@ export default function Header() {
                   href={`/shop/${c.slug}`}
                   className="text-sm text-cream/70 transition-colors hover:text-gold-light"
                 >
-                  {c.nome}
+                  {nomeCategoria(site, c)}
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
+
+        <LocaleSwitcher variant="inline" className="mt-10" />
 
         <div className="mt-10 border-t border-ink-line pt-6 text-sm text-cream/55">
           <p>{salon.indirizzo.completo}</p>

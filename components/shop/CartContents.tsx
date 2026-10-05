@@ -1,25 +1,31 @@
 "use client";
 
 import Image from "next/image";
+import { BLUR_DARK } from "@/lib/blur";
 import Link from "next/link";
 import { useCart } from "@/lib/cart/context";
-import { site } from "@/data/site";
-import { salon } from "@/data/salon";
+import { useDict } from "@/lib/intl/client";
 import { formatPrice } from "@/lib/format";
+import { SHOP_ATTIVO } from "@/lib/shop-status";
 import { MinusIcon, PlusIcon, TrashIcon } from "../ui/Icons";
 
 export default function CartContents() {
+  const site = useDict();
   const cart = useCart();
 
   // Prima dell'idratazione il carrello è vuoto per definizione: evitiamo
   // di mostrare "carrello vuoto" per una frazione di secondo.
   if (!cart.hydrated) {
-    return <p className="py-20 text-center text-cream/50">Carico il carrello…</p>;
+    return (
+      <p className="py-20 text-center text-cream/50">
+        {site.common.caricoIlCarrello}
+      </p>
+    );
   }
 
   if (cart.items.length === 0) {
     return (
-      <div className="rounded-card border border-ink-line bg-ink-soft py-20 text-center">
+      <div className="glass-flat rounded-card py-20 text-center">
         <p className="text-cream/60">{site.carrello.vuoto}</p>
         <Link href={site.carrello.vuotoCta.href} className="btn-primary mt-7">
           {site.carrello.vuotoCta.label}
@@ -27,8 +33,6 @@ export default function CartContents() {
       </div>
     );
   }
-
-  const mancante = salon.shop.spedizioneGratuitaDa - cart.subtotale;
 
   return (
     <div className="grid gap-10 lg:grid-cols-[1fr_340px] lg:gap-12">
@@ -45,6 +49,8 @@ export default function CartContents() {
                 fill
                 sizes="112px"
                 className="object-cover"
+                placeholder="blur"
+                blurDataURL={BLUR_DARK}
               />
             </Link>
 
@@ -65,12 +71,14 @@ export default function CartContents() {
               </p>
 
               <div className="mt-auto flex flex-wrap items-center gap-4 pt-4">
-                <div className="flex items-center rounded-luxe border border-ink-line">
+                <div className="flex items-center rounded-pill border border-ink-line">
                   <button
                     type="button"
-                    onClick={() => cart.setQuantity(item.key, item.quantita - 1)}
+                    onClick={() =>
+                      cart.setQuantity(item.key, item.quantita - 1)
+                    }
                     className="px-3 py-2 text-cream/70 transition-colors hover:text-gold-light"
-                    aria-label="Diminuisci quantità"
+                    aria-label={site.common.diminuisciQuantita}
                   >
                     <MinusIcon />
                   </button>
@@ -79,9 +87,11 @@ export default function CartContents() {
                   </span>
                   <button
                     type="button"
-                    onClick={() => cart.setQuantity(item.key, item.quantita + 1)}
+                    onClick={() =>
+                      cart.setQuantity(item.key, item.quantita + 1)
+                    }
                     className="px-3 py-2 text-cream/70 transition-colors hover:text-gold-light"
-                    aria-label="Aumenta quantità"
+                    aria-label={site.common.aumentaQuantita}
                   >
                     <PlusIcon />
                   </button>
@@ -106,16 +116,10 @@ export default function CartContents() {
 
       {/* Riepilogo */}
       <aside className="lg:sticky lg:top-28 lg:self-start">
-        <div className="rounded-card border border-ink-line bg-ink-soft p-6">
+        <div className="glass-flat rounded-card p-6">
           <h2 className="font-serif text-xl text-cream">
             {site.checkout.sezioneRiepilogo}
           </h2>
-
-          {mancante > 0 && (
-            <p className="mt-5 rounded-luxe border border-gold/25 bg-gold/5 px-3 py-2.5 text-center text-xs text-gold-light">
-              {site.carrello.mancanoPerSpedizioneGratuita(formatPrice(mancante))}
-            </p>
-          )}
 
           <dl className="mt-6 space-y-2.5 text-sm">
             <div className="flex justify-between text-cream/70">
@@ -124,11 +128,7 @@ export default function CartContents() {
             </div>
             <div className="flex justify-between text-cream/70">
               <dt>{site.carrello.spedizione}</dt>
-              <dd>
-                {cart.spedizione === 0
-                  ? site.carrello.spedizioneGratuita
-                  : formatPrice(cart.spedizione)}
-              </dd>
+              <dd>{site.carrello.spedizioneComingSoon}</dd>
             </div>
             <div className="flex justify-between border-t border-ink-line pt-3 text-lg">
               <dt className="font-serif text-cream">{site.carrello.totale}</dt>
@@ -136,9 +136,21 @@ export default function CartContents() {
             </div>
           </dl>
 
-          <Link href="/checkout" className="btn-primary mt-7 w-full">
-            {site.carrello.vaiAlCheckout}
-          </Link>
+          {SHOP_ATTIVO ? (
+            <Link href="/checkout" className="btn-primary mt-7 w-full">
+              {site.carrello.vaiAlCheckout}
+            </Link>
+          ) : (
+            <button
+              type="button"
+              className="btn-primary mt-7 w-full"
+              disabled
+              aria-disabled="true"
+              title={site.shop.comingSoonAria}
+            >
+              {site.carrello.vaiAlCheckout} · {site.shop.comingSoon}
+            </button>
+          )}
           <Link
             href="/shop"
             className="mt-4 block text-center text-xs uppercase tracking-wide2 text-cream/55 transition-colors hover:text-gold-light"

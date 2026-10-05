@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Ornament from "@/components/ui/Ornament";
-import { site } from "@/data/site";
+import { getDict } from "@/lib/intl/server";
 
 export default function NotFound() {
+  const site = getDict();
   return (
     <div className="flex min-h-[70vh] items-center justify-center bg-ink pattern-lux px-6 py-24">
       <div className="text-center">
@@ -16,7 +17,10 @@ export default function NotFound() {
           <Link href={site.errore404.cta.href} className="btn-primary">
             {site.errore404.cta.label}
           </Link>
-          <Link href={site.errore404.ctaSecondaria.href} className="btn-outline">
+          <Link
+            href={site.errore404.ctaSecondaria.href}
+            className="btn-outline"
+          >
             {site.errore404.ctaSecondaria.label}
           </Link>
         </div>

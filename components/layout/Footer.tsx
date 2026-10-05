@@ -1,22 +1,26 @@
 import Link from "next/link";
 import { salon, emailUrl, telUrl } from "@/data/salon";
-import { footerNav, legalNav } from "@/data/navigation";
-import { site } from "@/data/site";
+import { footerNav, footerShopCategories, legalNav } from "@/data/navigation";
+import { getDict } from "@/lib/intl/server";
+import { giorno, nomeCategoria, orarioChiuso } from "@/lib/intl/content";
 import BrandLogo from "../ui/BrandLogo";
+import InstagramButton from "../ui/InstagramButton";
 import Newsletter from "./Newsletter";
 import {
-  FacebookIcon,
-  InstagramIcon,
+  TikTokIcon,
+  ThreadsIcon,
   MailIcon,
   PhoneIcon,
   PinIcon,
 } from "../ui/Icons";
 
 export default function Footer() {
-  const anno = new Date().getFullYear();
+  const site = getDict();
+  const navLinks = site.nav.footerLinks as unknown as Record<string, string>;
+  const navLegale = site.nav.legale as unknown as Record<string, string>;
 
   return (
-    <footer className="border-t border-ink-line bg-ink-soft pattern-lux">
+    <footer className="border-t border-gold/10 bg-ink-soft/70 pattern-lux">
       <div className="container-luxe grid gap-12 py-16 lg:grid-cols-4 lg:gap-10">
         {/* Colonna 1 — marchio + newsletter */}
         <div className="lg:col-span-1">
@@ -31,16 +35,27 @@ export default function Footer() {
 
         {/* Colonne 2 e 3 — navigazione */}
         {footerNav.map((col) => (
-          <nav key={col.titolo} aria-label={col.titolo}>
-            <h2 className="eyebrow">{col.titolo}</h2>
+          <nav key={col.titoloKey} aria-label={site.nav[col.titoloKey]}>
+            <h2 className="eyebrow">{site.nav[col.titoloKey]}</h2>
             <ul className="mt-5 space-y-2.5">
               {col.links.map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="link-quiet text-sm">
-                    {l.label}
+                    {navLinks[l.key]}
                   </Link>
                 </li>
               ))}
+              {col.categorie &&
+                footerShopCategories.map((c) => (
+                  <li key={c.slug}>
+                    <Link
+                      href={`/shop/${c.slug}`}
+                      className="link-quiet text-sm"
+                    >
+                      {nomeCategoria(site, c)}
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </nav>
         ))}
@@ -78,42 +93,45 @@ export default function Footer() {
           <ul className="mt-5 space-y-1.5 text-sm">
             {salon.orari.map((o) => (
               <li key={o.giorno} className="flex justify-between gap-4">
-                <span className="text-cream/65">{o.giorno}</span>
-                <span className={o.chiuso ? "text-cream/35" : "text-gold-light"}>
-                  {o.orario}
+                <span className="text-cream/65">{giorno(site, o.giorno)}</span>
+                <span
+                  className={o.chiuso ? "text-cream/35" : "text-gold-light"}
+                >
+                  {orarioChiuso(site, o.orario)}
                 </span>
               </li>
             ))}
           </ul>
 
           <h2 className="eyebrow mt-8">{site.footer.seguici}</h2>
-          <div className="mt-4 flex gap-3">
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <InstagramButton variant="footer" />
             <a
-              href={salon.instagram.url}
+              href={salon.tiktok.url}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Instagram ${salon.instagram.handle}`}
-              className="rounded-luxe border border-ink-line p-2.5 text-cream/70 transition-all duration-300 hover:border-gold/45 hover:text-gold-light"
+              aria-label={`TikTok ${salon.tiktok.handle}`}
+              className="btn-icon h-10 w-10"
             >
-              <InstagramIcon />
+              <TikTokIcon />
             </a>
             <a
-              href={salon.facebook.url}
+              href={salon.threads.url}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Facebook ${salon.facebook.handle}`}
-              className="rounded-luxe border border-ink-line p-2.5 text-cream/70 transition-all duration-300 hover:border-gold/45 hover:text-gold-light"
+              aria-label={`Threads ${salon.threads.handle}`}
+              className="btn-icon h-10 w-10"
             >
-              <FacebookIcon />
+              <ThreadsIcon />
             </a>
           </div>
         </div>
       </div>
 
       <div className="border-t border-ink-line">
-        <div className="container-luxe flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
+        <div className="container-luxe flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-start">
           <p className="text-xs text-cream/40">
-            {site.footer.copyright(anno)} · {site.footer.piva}
+            {site.footer.copyright} · {site.footer.piva}
           </p>
           <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             {legalNav.map((l) => (
@@ -122,7 +140,7 @@ export default function Footer() {
                   href={l.href}
                   className="text-xs text-cream/45 transition-colors hover:text-gold-light"
                 >
-                  {l.label}
+                  {navLegale[l.key]}
                 </Link>
               </li>
             ))}

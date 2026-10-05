@@ -6,7 +6,8 @@ import ProductDetail from "@/components/shop/ProductDetail";
 import ProductCard from "@/components/shop/ProductCard";
 import { products, getProduct, relatedProducts } from "@/data/products";
 import { getCategory } from "@/data/shop-categories";
-import { site } from "@/data/site";
+import { getDict } from "@/lib/intl/server";
+import { descrProdotto, nomeCategoria, nomeProdotto } from "@/lib/intl/content";
 
 type Props = { params: { slug: string } };
 
@@ -16,15 +17,17 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: Props): Metadata {
   const p = getProduct(params.slug);
-  if (!p) return { title: "Prodotto non trovato" };
+  const d = getDict();
+  if (!p) return { title: d.errore404.titolo, robots: { index: false } };
   return {
-    title: p.nome,
-    description: p.descrizioneBreve,
+    title: nomeProdotto(d, p),
+    description: descrProdotto(d, p),
     openGraph: { images: [{ url: p.immagini[0] }] },
   };
 }
 
 export default function ProductPage({ params }: Props) {
+  const site = getDict();
   const product = getProduct(params.slug);
   if (!product) notFound();
 
@@ -35,10 +38,13 @@ export default function ProductPage({ params }: Props) {
     <>
       {/* Percorso di navigazione */}
       <div className="border-b border-ink-line bg-ink-soft py-4">
-        <nav className="container-luxe" aria-label="Percorso di navigazione">
+        <nav className="container-luxe" aria-label={site.nav.percorso}>
           <ol className="flex flex-wrap items-center gap-2 text-xs text-cream/45">
             <li>
-              <Link href="/shop" className="transition-colors hover:text-gold-light">
+              <Link
+                href="/shop"
+                className="transition-colors hover:text-gold-light"
+              >
                 Shop
               </Link>
             </li>
@@ -50,13 +56,13 @@ export default function ProductPage({ params }: Props) {
                     href={`/shop/${categoria.slug}`}
                     className="transition-colors hover:text-gold-light"
                   >
-                    {categoria.nome}
+                    {nomeCategoria(site, categoria)}
                   </Link>
                 </li>
               </>
             )}
             <li aria-hidden="true">·</li>
-            <li className="text-cream/70">{product.nome}</li>
+            <li className="text-cream/70">{nomeProdotto(site, product)}</li>
           </ol>
         </nav>
       </div>
@@ -78,7 +84,12 @@ export default function ProductPage({ params }: Props) {
             </FadeIn>
             <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {correlati.map((p, i) => (
-                <FadeIn key={p.slug} delay={i * 0.07} as="li" className="h-full">
+                <FadeIn
+                  key={p.slug}
+                  delay={i * 0.07}
+                  as="li"
+                  className="h-full"
+                >
                   <ProductCard product={p} />
                 </FadeIn>
               ))}

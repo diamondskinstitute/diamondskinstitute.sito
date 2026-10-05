@@ -23,7 +23,7 @@ export const testimonials: Testimonial[] = [
     id: "t2",
     nome: "Federica M.",
     testo:
-      "Ambiente elegante, pulizia impeccabile e mani d'artista. Ogni appuntamento è un momento di puro benessere. Ho trovato la mia nail artist di fiducia a Milano.",
+      "Ambiente elegante, pulizia impeccabile e mani d'artista. Ogni appuntamento è un momento di puro benessere. Ho trovato la mia nail artist di fiducia a Courtelary.",
     dettaglio: "Ricostruzione Gel",
   },
   {

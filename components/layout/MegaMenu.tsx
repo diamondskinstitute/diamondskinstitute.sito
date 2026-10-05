@@ -1,16 +1,21 @@
 "use client";
 
 import Image from "next/image";
+import { BLUR_DARK } from "@/lib/blur";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { shopCategories } from "@/data/shop-categories";
 import { featuredProducts } from "@/data/products";
 import Price from "../ui/Price";
+import ComingSoonBadge from "../ui/ComingSoonBadge";
+import { useDict } from "@/lib/intl/client";
+import { nomeCategoria, nomeProdotto } from "@/lib/intl/content";
 import { ArrowRight } from "../ui/Icons";
 
 // Pannello a tutta larghezza con tutte le categorie dello shop.
 // Si apre sotto la voce "Shop" del menu principale.
 export default function MegaMenu({ onNavigate }: { onNavigate: () => void }) {
+  const t = useDict();
   const inEvidenza = featuredProducts[0];
 
   return (
@@ -19,18 +24,19 @@ export default function MegaMenu({ onNavigate }: { onNavigate: () => void }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -8 }}
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-      className="absolute inset-x-0 top-full border-y border-ink-line bg-ink-soft shadow-lift"
+      className="absolute inset-x-0 top-full px-3 sm:px-5"
     >
-      <div className="container-luxe grid gap-8 py-9 lg:grid-cols-[1fr_300px]">
+      <div className="glass mx-auto grid w-full max-w-content gap-8 rounded-glass px-6 py-8 lg:grid-cols-[1fr_300px]">
         <div>
           <div className="mb-6 flex items-baseline justify-between">
-            <span className="eyebrow">Categorie</span>
+            <span className="eyebrow">{t.common.categorie}</span>
             <Link
               href="/shop"
               onClick={onNavigate}
               className="inline-flex items-center gap-2 text-xs uppercase tracking-wide2 text-cream/70 transition-colors hover:text-gold-light"
             >
-              Tutto lo shop <ArrowRight size={14} />
+              {t.common.tuttoLoShop}{" "}
+              <ArrowRight size={14} className="rtl:rotate-180" />
             </Link>
           </div>
 
@@ -43,7 +49,7 @@ export default function MegaMenu({ onNavigate }: { onNavigate: () => void }) {
                   className="group block"
                 >
                   <span className="font-serif text-lg text-cream transition-colors group-hover:text-gold-light">
-                    {c.nome}
+                    {nomeCategoria(t, c)}
                   </span>
                   <span className="mt-0.5 block text-xs text-cream/45">
                     {c.esempi.slice(0, 3).join(" · ")}
@@ -64,16 +70,18 @@ export default function MegaMenu({ onNavigate }: { onNavigate: () => void }) {
             <span className="relative block aspect-square overflow-hidden">
               <Image
                 src={inEvidenza.immagini[0]}
-                alt={inEvidenza.nome}
+                alt={nomeProdotto(t, inEvidenza)}
                 fill
                 sizes="300px"
                 className="object-cover transition-transform duration-700 ease-luxe group-hover:scale-105"
+                placeholder="blur"
+                blurDataURL={BLUR_DARK}
               />
             </span>
             <span className="block p-4">
-              <span className="eyebrow">In evidenza</span>
+              <span className="eyebrow">{t.common.inEvidenza}</span>
               <span className="mt-2 block font-serif text-lg text-cream">
-                {inEvidenza.nome}
+                {nomeProdotto(t, inEvidenza)} <ComingSoonBadge />
               </span>
               <Price
                 value={inEvidenza.prezzo}

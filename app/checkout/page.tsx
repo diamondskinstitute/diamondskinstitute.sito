@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/ui/PageHeader";
 import CheckoutForm from "@/components/shop/CheckoutForm";
-import { site } from "@/data/site";
+import { getDict } from "@/lib/intl/server";
 
-export const metadata: Metadata = {
-  title: "Checkout",
-  robots: { index: false, follow: false },
-};
+// Titolo e descrizione seguono la lingua scelta
+export function generateMetadata(): Metadata {
+  const m = getDict().meta.checkout;
+  return { title: m.title, description: m.description };
+}
 
 export default function CheckoutPage() {
+  const site = getDict();
   return (
     <>
       <PageHeader

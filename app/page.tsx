@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BLUR_DARK } from "@/lib/blur";
 import Link from "next/link";
 import Hero from "@/components/home/Hero";
 import Highlights from "@/components/home/Highlights";
@@ -11,36 +12,17 @@ import { featuredProducts } from "@/data/products";
 import { featuredTreatments } from "@/data/treatments";
 import { portfolioPreview } from "@/data/portfolio";
 import { testimonials } from "@/data/testimonials";
-import { site } from "@/data/site";
+import { getDict } from "@/lib/intl/server";
 import { salon } from "@/data/salon";
 import { ArrowRight, InstagramIcon, PinIcon } from "@/components/ui/Icons";
 
-const s = site.sezioniHome;
-
 export default function HomePage() {
+  const site = getDict();
+  const s = site.sezioniHome;
   return (
     <>
       <Hero />
       <Highlights />
-
-      {/* --- Prodotti in evidenza --------------------------------------- */}
-      <section className="bg-ink py-20 sm:py-24">
-        <div className="container-luxe">
-          <SectionHeading
-            eyebrow={s.prodotti.eyebrow}
-            title={s.prodotti.titolo}
-            intro={s.prodotti.intro}
-          />
-          <FadeIn className="mt-14">
-            <ProductCarousel products={featuredProducts} />
-          </FadeIn>
-          <div className="mt-10 text-center">
-            <Link href={s.prodotti.cta.href} className="btn-outline">
-              {s.prodotti.cta.label} <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* --- Trattamenti in evidenza (sezione chiara, per dare ritmo) ---- */}
       <section className="bg-cream-light py-20 sm:py-24">
@@ -60,7 +42,8 @@ export default function HomePage() {
           </div>
           <div className="mt-12 text-center">
             <Link href={s.trattamenti.cta.href} className="btn-outline-dark">
-              {s.trattamenti.cta.label} <ArrowRight size={16} />
+              {s.trattamenti.cta.label}{" "}
+              <ArrowRight size={16} className="rtl:rotate-180" />
             </Link>
           </div>
         </div>
@@ -87,9 +70,11 @@ export default function HomePage() {
                     fill
                     sizes="(min-width: 1024px) 380px, 45vw"
                     className="object-cover transition-transform duration-700 ease-luxe group-hover:scale-105"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DARK}
                   />
                   <span className="absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/40" />
-                  <span className="absolute inset-x-0 bottom-0 translate-y-2 p-4 text-left text-xs uppercase tracking-wide2 text-gold-light opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                  <span className="absolute inset-x-0 bottom-0 translate-y-2 p-4 text-start text-xs uppercase tracking-wide2 text-gold-light opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                     {item.categoria}
                   </span>
                 </Link>
@@ -98,7 +83,8 @@ export default function HomePage() {
           </div>
           <div className="mt-12 text-center">
             <Link href={s.portfolio.cta.href} className="btn-outline">
-              {s.portfolio.cta.label} <ArrowRight size={16} />
+              {s.portfolio.cta.label}{" "}
+              <ArrowRight size={16} className="rtl:rotate-180" />
             </Link>
           </div>
         </div>
@@ -115,6 +101,8 @@ export default function HomePage() {
                 fill
                 sizes="(min-width: 1024px) 560px, 90vw"
                 className="object-cover"
+                placeholder="blur"
+                blurDataURL={BLUR_DARK}
               />
             </div>
           </FadeIn>
@@ -126,7 +114,8 @@ export default function HomePage() {
               {s.chiSiamo.testo}
             </p>
             <Link href={s.chiSiamo.cta.href} className="btn-outline mt-8">
-              {s.chiSiamo.cta.label} <ArrowRight size={16} />
+              {s.chiSiamo.cta.label}{" "}
+              <ArrowRight size={16} className="rtl:rotate-180" />
             </Link>
           </FadeIn>
         </div>
@@ -208,7 +197,8 @@ export default function HomePage() {
               </span>
             </p>
             <Link href={s.mappa.cta.href} className="btn-outline mt-8">
-              {s.mappa.cta.label} <ArrowRight size={16} />
+              {s.mappa.cta.label}{" "}
+              <ArrowRight size={16} className="rtl:rotate-180" />
             </Link>
           </FadeIn>
 
@@ -223,6 +213,27 @@ export default function HomePage() {
               />
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* --- Prodotti in evidenza (lo shop è ancora da completare:
+             resta in fondo alla home) ----------------------------------- */}
+      <section className="border-t border-ink-line bg-ink py-20 sm:py-24">
+        <div className="container-luxe">
+          <SectionHeading
+            eyebrow={s.prodotti.eyebrow}
+            title={s.prodotti.titolo}
+            intro={s.prodotti.intro}
+          />
+          <FadeIn className="mt-14">
+            <ProductCarousel products={featuredProducts} />
+          </FadeIn>
+          <div className="mt-10 text-center">
+            <Link href={s.prodotti.cta.href} className="btn-outline">
+              {s.prodotti.cta.label}{" "}
+              <ArrowRight size={16} className="rtl:rotate-180" />
+            </Link>
+          </div>
         </div>
       </section>
     </>

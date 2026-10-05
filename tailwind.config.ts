@@ -28,10 +28,19 @@ const config: Config = {
         },
         // The gold gradient of the "K", split into stops
         gold: {
+          champagne: "#F7E7B4", // lightest stop of the gradient
           light: "#F6DE8D", // highlight
           DEFAULT: "#D9AE45", // mid gold — the accent colour
+          muted: "#C4A868", // muted gold for small text accents (AA on ink)
           deep: "#A77B24", // shadow gold
           dark: "#6E4E14", // darkest stop, borders
+        },
+        // Liquid-glass surfaces (see .glass / .glass-flat in globals.css)
+        glass: {
+          DEFAULT: "rgba(21,17,12,0.55)",
+          strong: "rgba(11,9,6,0.80)",
+          soft: "rgba(32,26,18,0.42)",
+          line: "rgba(217,174,69,0.22)",
         },
         // The diamond: bright white and cool silver
         diamond: {
@@ -49,13 +58,26 @@ const config: Config = {
         // Metallic gold sheen — headings, buttons, dividers
         "gold-sheen":
           "linear-gradient(105deg, #6E4E14 0%, #A77B24 18%, #D9AE45 38%, #F6DE8D 52%, #D9AE45 68%, #A77B24 86%, #F6DE8D 100%)",
+        // Champagne → warm gold: the fill of primary buttons
+        "gold-grad":
+          "linear-gradient(135deg, #F7E7B4 0%, #E6C977 28%, #D9AE45 58%, #B98C2E 100%)",
         "gold-line":
           "linear-gradient(90deg, transparent, #D9AE45 50%, transparent)",
+        // 1px hairline that fades from gold to nothing (glass borders)
+        "glass-line":
+          "linear-gradient(140deg, rgba(246,222,141,0.55) 0%, rgba(217,174,69,0.22) 35%, rgba(217,174,69,0) 70%)",
       },
       boxShadow: {
         gold: "0 12px 44px -14px rgba(217,174,69,0.45)",
         "gold-sm": "0 6px 22px -10px rgba(217,174,69,0.5)",
         lift: "0 24px 60px -30px rgba(0,0,0,0.85)",
+        // Liquid glass: outer depth + inner top highlight
+        glass:
+          "0 18px 50px -24px rgba(0,0,0,0.9), inset 0 1px 0 rgba(255,255,255,0.07)",
+        "glass-sm":
+          "0 10px 30px -18px rgba(0,0,0,0.85), inset 0 1px 0 rgba(255,255,255,0.06)",
+        glow: "0 10px 34px -12px rgba(217,174,69,0.5)",
+        "glow-lg": "0 18px 54px -14px rgba(217,174,69,0.62)",
       },
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],
@@ -74,9 +96,11 @@ const config: Config = {
         narrow: "820px",
       },
       borderRadius: {
-        // Rounded, never bubbly
-        luxe: "4px",
-        card: "6px",
+        // Modern, generous radii (Apple-like), never bubbly
+        luxe: "12px",
+        card: "20px",
+        glass: "24px",
+        pill: "999px",
       },
       transitionTimingFunction: {
         luxe: "cubic-bezier(0.22, 1, 0.36, 1)",

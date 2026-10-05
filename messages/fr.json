@@ -1,0 +1,1075 @@
+{
+  "topBar": {
+    "testo": "Livraison en {tempiConsegna}",
+    "linkLabel": "Voir la boutique"
+  },
+  "nav": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "trattamenti": "Soins",
+    "lavori": "Réalisations",
+    "prenota": "Réserver",
+    "chiSiamo": "À propos",
+    "contatti": "Contact",
+    "prenotaBreve": "Réserver",
+    "menuPrincipale": "Menu principal",
+    "menuMobile": "Menu principal mobile",
+    "apriMenu": "Ouvrir le menu",
+    "chiudiMenu": "Fermer le menu",
+    "categorieShop": "Catégories boutique",
+    "mostraCategorie": "Afficher les catégories de la boutique",
+    "areaRiservata": "Espace privé",
+    "lingua": "Langue",
+    "cambiaLingua": "Changer de langue",
+    "percorso": "Fil d'Ariane",
+    "colonnaIstituto": "L'institut",
+    "colonnaShop": "La boutique",
+    "footerLinks": {
+      "iTrattamenti": "Les soins",
+      "prenotaAppuntamento": "Prendre rendez-vous",
+      "iNostriLavori": "Nos réalisations",
+      "chiSiamo": "À propos",
+      "doveTrovarci": "Nous trouver",
+      "tuttiIProdotti": "Tous les produits"
+    },
+    "legale": {
+      "privacy": "Confidentialité",
+      "cookie": "Cookies",
+      "termini": "Conditions de vente",
+      "spedizioni": "Livraison et retours"
+    }
+  },
+  "common": {
+    "scopriIlTrattamento": "Découvrir le soin",
+    "tuttiITrattamenti": "Tous les soins",
+    "chiediInformazioni": "Demander des informations",
+    "tornaAlCarrello": "Retour au panier",
+    "caricoIlModulo": "Chargement du formulaire…",
+    "caricoIlCarrello": "Chargement du panier…",
+    "aggiunto": "Ajouté",
+    "categorie": "Catégories",
+    "tuttoLoShop": "Toute la boutique",
+    "inEvidenza": "En vedette",
+    "sfogliaPerCategoria": "Parcourir par catégorie",
+    "ivaInclusa": "TVA incluse",
+    "diminuisciQuantita": "Diminuer la quantité",
+    "aumentaQuantita": "Augmenter la quantité",
+    "chiudiCarrello": "Fermer le panier",
+    "prodottiPrecedenti": "Produits précédents",
+    "prodottiSuccessivi": "Produits suivants",
+    "scriviWhatsapp": "Écrivez-nous sur WhatsApp",
+    "informativaCookie": "Informations sur les cookies",
+    "chiuso": "Fermé",
+    "appuntamentoIn": "Le rendez-vous a lieu à l'institut :",
+    "qualcosaStorto": "Une erreur est survenue.",
+    "connessioneFallita": "Connexion impossible. Réessayez dans un instant.",
+    "tempiConsegna": "2–4 jours ouvrables",
+    "paese": "Suisse"
+  },
+  "giorni": {
+    "Lunedì": "Lundi",
+    "Martedì": "Mardi",
+    "Mercoledì": "Mercredi",
+    "Giovedì": "Jeudi",
+    "Venerdì": "Vendredi",
+    "Sabato": "Samedi",
+    "Domenica": "Dimanche"
+  },
+  "hero": {
+    "eyebrow": "Institut d'ongles & boutique",
+    "titolo": "L'art des ongles,",
+    "titoloAccento": "soigné comme un bijou",
+    "sottotitolo": "Des soins sur mesure dans notre institut et des produits professionnels sélectionnés, pour celles qui travaillent les ongles et pour celles qui les veulent impeccables.",
+    "ctaPrimaria": {
+      "label": "Réserver un soin"
+    },
+    "ctaSecondaria": {
+      "label": "Découvrir la boutique"
+    }
+  },
+  "highlights": [
+    {
+      "titolo": "Produits professionnels",
+      "testo": "Uniquement des références testées à l'institut avant d'arriver en boutique."
+    },
+    {
+      "titolo": "Soins sur mesure",
+      "testo": "Chaque prestation commence par l'analyse de l'ongle : aucun protocole identique pour toutes."
+    },
+    {
+      "titolo": "Hygiène certifiée",
+      "testo": "Instruments stérilisés en autoclave et usage unique pour tout ce qui ne se stérilise pas."
+    },
+    {
+      "titolo": "Livraison rapide",
+      "testo": "Commandes préparées le jour même, livraison en {tempiConsegna}."
+    }
+  ],
+  "sezioniHome": {
+    "prodotti": {
+      "eyebrow": "La boutique",
+      "titolo": "Les produits que nous utilisons chaque jour",
+      "intro": "Pas de catalogue interminable : nous ne vendons que ce que nous utilisons vraiment à l'institut, parce que nous savons comment cela se comporte sous les mains.",
+      "cta": {
+        "label": "Toute la boutique"
+      }
+    },
+    "trattamenti": {
+      "eyebrow": "L'institut",
+      "titolo": "Les soins les plus demandés",
+      "intro": "Du semi-permanent à la pose complète : chaque soin a sa fiche, avec les étapes, la durée et les conseils d'entretien.",
+      "cta": {
+        "label": "Tous les soins"
+      }
+    },
+    "portfolio": {
+      "eyebrow": "Nos réalisations",
+      "titolo": "Réalisés sur de vraies clientes",
+      "intro": "Aucun rendu, aucune photo d'archive : ce sont les mains des personnes qui s'assoient chez nous.",
+      "cta": {
+        "label": "Voir toute la galerie"
+      }
+    },
+    "chiSiamo": {
+      "eyebrow": "À propos",
+      "titolo": "De l'institut à la marque",
+      "testo": "K Institute est né de l'idée qu'un produit doit être compris avant d'être vendu. Tout ce que vous trouvez en boutique passe d'abord par nos postes de travail : si cela ne tient pas une journée à l'institut, cela n'entre pas au catalogue.",
+      "cta": {
+        "label": "Notre histoire"
+      }
+    },
+    "testimonianze": {
+      "eyebrow": "Elles en parlent",
+      "titolo": "Les mots de nos clientes"
+    },
+    "instagram": {
+      "eyebrow": "Instagram",
+      "titolo": "Suivez chaque nouvelle réalisation",
+      "testo": "Nous publions chaque pose terminée, les coulisses et les nouveautés de la boutique.",
+      "cta": {
+        "label": "Suivez-nous sur {instagramHandle}"
+      }
+    },
+    "mappa": {
+      "eyebrow": "Nous trouver",
+      "titolo": "Venez nous voir à l'institut",
+      "cta": {
+        "label": "Contact & plan"
+      }
+    }
+  },
+  "shop": {
+    "eyebrow": "Boutique",
+    "titolo": "Produits professionnels",
+    "intro": "Gels, couleurs, outils et lampes sélectionnés un par un.",
+    "filtri": {
+      "categoria": "Catégorie",
+      "prezzo": "Prix maximum",
+      "ordina": "Trier par",
+      "tutte": "Toutes les catégories",
+      "azzera": "Réinitialiser les filtres",
+      "nessunRisultato": "Aucun produit ne correspond aux filtres sélectionnés. Essayez d'élargir la recherche."
+    },
+    "ordinamenti": [
+      {
+        "id": "rilevanza",
+        "label": "Pertinence"
+      },
+      {
+        "id": "prezzo-asc",
+        "label": "Prix croissant"
+      },
+      {
+        "id": "prezzo-desc",
+        "label": "Prix décroissant"
+      },
+      {
+        "id": "nome",
+        "label": "Nom A–Z"
+      }
+    ],
+    "aggiungiAlCarrello": "Ajouter au panier",
+    "comingSoon": "Bientôt disponible",
+    "comingSoonAria": "La boutique en ligne n'est pas encore active : ce produit n'est pas encore disponible à l'achat",
+    "esaurito": "Épuisé",
+    "correlati": "Cela pourrait aussi vous plaire",
+    "caratteristiche": "Caractéristiques",
+    "quantita": "Quantité",
+    "finoA": "jusqu'à"
+  },
+  "carrello": {
+    "titolo": "Votre panier",
+    "vuoto": "Le panier est vide.",
+    "vuotoCta": {
+      "label": "Découvrir la boutique"
+    },
+    "subtotale": "Sous-total",
+    "spedizione": "Livraison",
+    "spedizioneComingSoon": "Bientôt disponible",
+    "totale": "Total",
+    "vaiAlCheckout": "Passer à la commande",
+    "continuaAcquisti": "Continuer mes achats",
+    "rimuovi": "Retirer"
+  },
+  "checkout": {
+    "titolo": "Commande",
+    "intro": "Remplissez vos coordonnées : vous recevrez un e-mail de confirmation avec le récapitulatif et les instructions de paiement.",
+    "sezioneDati": "Vos coordonnées",
+    "sezioneSpedizione": "Adresse de livraison",
+    "sezioneRiepilogo": "Récapitulatif",
+    "invia": "Envoyer la demande de commande",
+    "inviando": "Envoi en cours…",
+    "notaPagamento": "Le paiement en ligne n'est pas encore actif. Dès réception de la demande, nous vous contactons sous 24 heures avec les modalités de paiement et la confirmation de disponibilité.",
+    "privacyPrefisso": "J'ai lu et j'accepte la",
+    "privacyCongiunzione": "et les",
+    "campi": {
+      "nome": "Nom et prénom *",
+      "telefono": "Téléphone *",
+      "email": "E-mail *",
+      "indirizzo": "Adresse et numéro *",
+      "cap": "NPA *",
+      "citta": "Localité *",
+      "paese": "Pays *"
+    }
+  },
+  "ordineConfermato": {
+    "eyebrow": "Merci",
+    "titolo": "Demande de commande reçue",
+    "testo": "Nous vous avons envoyé un récapitulatif par e-mail. Nous vous contactons sous 24 heures pour confirmer la disponibilité et les modalités de paiement.",
+    "numeroOrdine": "Numéro de la demande",
+    "cta": {
+      "label": "Retour à la boutique"
+    }
+  },
+  "trattamenti": {
+    "eyebrow": "L'institut",
+    "titolo": "Les soins",
+    "intro": "Chaque soin a sa fiche complète : à quoi il sert, comment il se déroule, combien de temps il dure et comment l'entretenir à la maison. Choisissez le vôtre et réservez en ligne.",
+    "prenotaQuesto": "Réserver ce soin",
+    "aCosaServe": "À qui il s'adresse",
+    "comeSiSvolge": "Déroulement",
+    "mantenimento": "L'entretien à la maison",
+    "domande": "Questions fréquentes",
+    "durata": "Durée",
+    "prezzoDa": "Prix",
+    "altriTrattamenti": "Autres soins",
+    "da": "dès",
+    "suRichiesta": "Sur demande",
+    "misureTitolo": "Prix par taille",
+    "nonSaiQuale": "Vous ne savez pas quel soin choisir ?",
+    "nonSaiQualeTesto": "Écrivez-nous : nous vous aidons à trouver le soin adapté à l'état de vos ongles et au résultat souhaité.",
+    "prenotaAppuntamento": "Prendre rendez-vous",
+    "contattaci": "Nous contacter"
+  },
+  "listino": {
+    "eyebrow": "Tarifs",
+    "titolo": "Liste des prix",
+    "intro": "Tous les prix sont en francs suisses. Les prestations indiquées « sur demande » font l'objet d'un devis à l'institut avant de commencer.",
+    "gratis": "Gratuit",
+    "suRichiesta": "Sur demande",
+    "gruppi": {
+      "unghie": {
+        "titolo": "Ongle"
+      },
+      "gel-pose-completa": {
+        "titolo": "Ongle en gel — Pose complète",
+        "sottotitolo": "Prix par taille"
+      },
+      "gel-riempimento": {
+        "titolo": "Ongle en gel — Remplissage",
+        "sottotitolo": "Prix par taille"
+      },
+      "extra": {
+        "titolo": "Extras"
+      },
+      "pedicure": {
+        "titolo": "Pédicures"
+      },
+      "treccine": {
+        "titolo": "Tresses"
+      }
+    },
+    "voci": {
+      "unghie.semipermanente": "Semi permanent",
+      "unghie.manicure-uomo": "Manucure Homme",
+      "unghie.rimozione": "Dépose",
+      "extra.unghia-rotta": "Un ongle cassé",
+      "extra.piu-unghie-rotte": "Plus d'un ongle cassé",
+      "extra.babycolors": "BabyColors",
+      "extra.babyboomer": "BabyBoomer",
+      "extra.french": "French",
+      "extra.strass": "Strass simple",
+      "extra.altri-extra": "Autres extras",
+      "pedicure.semipermanente": "Vernis semi-permanent",
+      "pedicure.acrygel": "Ongle Acrygel",
+      "pedicure.cura-piedi": "Soins des pieds",
+      "treccine.treccine": "Tresses"
+    }
+  },
+  "lavori": {
+    "eyebrow": "Portfolio",
+    "titolo": "Nos réalisations",
+    "intro": "Une sélection de poses réalisées à l'institut. Filtrez par type de travail et cliquez sur une photo pour l'agrandir.",
+    "tutte": "Toutes",
+    "chiudi": "Fermer",
+    "precedente": "Précédente",
+    "successiva": "Suivante"
+  },
+  "galleryCategories": {
+    "Nail Art": "Nail art",
+    "Semipermanente": "Semi permanent",
+    "Ricostruzione": "Pose complète",
+    "Treccine": "Tresses",
+    "Pedicure": "Pédicure"
+  },
+  "treatmentCategories": {
+    "Mani": "Mains",
+    "Colore": "Couleur",
+    "Estensioni": "Extensions",
+    "Piedi": "Pieds",
+    "Capelli": "Cheveux"
+  },
+  "treatments": {
+    "semipermanente": {
+      "nome": "Semi permanent",
+      "descrizioneBreve": "Une couleur éclatante et impeccable qui tient jusqu'à trois semaines.",
+      "descrizione": "Le semi-permanent réunit la simplicité du vernis et la tenue du gel : couleur pleine, brillance du premier jour et aucune bavure pendant au moins trois semaines. L'application est millimétrée, cuticule toujours dégagée et bord scellé pour éviter les décollements.",
+      "perChi": "Parfait pour celles qui ont peu de temps à consacrer à leurs ongles sans renoncer à une couleur toujours impeccable, et pour celles qui travaillent beaucoup avec les mains.",
+      "fasi": [
+        {
+          "titolo": "Préparation de l'ongle",
+          "testo": "Matification délicate et déshydratation : la base de toute tenue longue."
+        },
+        {
+          "titolo": "Base et structure",
+          "testo": "Base rubber appliquée en couche fine, nivelée pour compenser les irrégularités."
+        },
+        {
+          "titolo": "Couleur",
+          "testo": "Deux couches fines, catalysées séparément, pour une couleur pleine sans épaisseur."
+        },
+        {
+          "titolo": "Scellage",
+          "testo": "Top coat brillant et scellage du bord libre contre les décollements."
+        }
+      ],
+      "aftercare": [
+        "Attendez au moins 12 heures avant de laisser longuement les mains dans l'eau chaude",
+        "N'utilisez pas vos ongles comme outil : c'est la première cause de décollement",
+        "Ne retirez jamais le semi-permanent en l'arrachant"
+      ],
+      "faq": [
+        {
+          "domanda": "Le semi-permanent abîme-t-il l'ongle ?",
+          "risposta": "Non, s'il est posé et retiré correctement. Les dégâts viennent presque toujours d'un limage excessif à la préparation ou d'un retrait à l'arrachée."
+        },
+        {
+          "domanda": "À quelle fréquence le refaire ?",
+          "risposta": "Environ toutes les 3 semaines. Au-delà de 4 semaines, la repousse fait levier sur le bord et le risque de décollement augmente."
+        }
+      ]
+    },
+    "ricostruzione-gel": {
+      "nome": "Ongle en gel – Pose complète",
+      "descrizioneBreve": "Structure, résistance et forme sur mesure, construites à la main.",
+      "descrizione": "La pose complète construit l'ongle là où il n'y en a pas : rallongement, apex et courbure sont modelés à la main pour obtenir une forme harmonieuse et, surtout, une structure qui tient. Le résultat est résistant mais fin, naturel au toucher comme au poids.",
+      "perChi": "Pour celles qui ont des ongles fragiles qui cassent avant de pousser, pour celles qui souhaitent un rallongement et pour celles qui veulent une forme que leur ongle naturel ne permettrait pas.",
+      "fasi": [
+        {
+          "titolo": "Préparation",
+          "testo": "Analyse de l'ongle, forme de base et préparation de la surface."
+        },
+        {
+          "titolo": "Construction",
+          "testo": "Application du gel sur chablon ou dual form, avec l'apex construit au point de plus forte sollicitation."
+        },
+        {
+          "titolo": "Limage structurel",
+          "testo": "Finition du profil, de la courbure et des épaisseurs : c'est là que se joue la durée."
+        },
+        {
+          "titolo": "Couleur et finition",
+          "testo": "Couleur, nail art si souhaitée, scellage et huile à cuticules."
+        }
+      ],
+      "aftercare": [
+        "Revenez pour le remplissage sous 3–4 semaines : n'attendez pas que ça décolle",
+        "Si un ongle casse, ne tirez pas dessus : prenez rendez-vous",
+        "Huile à cuticules chaque jour, même sur la pose"
+      ],
+      "faq": [
+        {
+          "domanda": "Combien de temps dure une pose complète ?",
+          "risposta": "La structure tient des mois ; ce qui change, c'est la repousse. C'est pour cela qu'on fait un remplissage toutes les 3–4 semaines au lieu de tout refaire."
+        },
+        {
+          "domanda": "Puis-je revenir aux ongles naturels quand je veux ?",
+          "risposta": "Oui. La dépose se fait à l'institut, en limant l'épaisseur et en laissant un voile protecteur qui s'affine avec la repousse."
+        }
+      ]
+    },
+    "refill": {
+      "nome": "Ongle en gel – Remplissage",
+      "descrizioneBreve": "L'entretien qui garde la pose parfaite dans le temps.",
+      "descrizione": "Le remplissage comble la zone de repousse et rééquilibre la structure, en replaçant l'apex au bon endroit à mesure que l'ongle pousse. Fait régulièrement, c'est ce qui permet de ne jamais refaire la pose depuis le début.",
+      "perChi": "Pour celles qui ont déjà une pose ou un renfort en gel et veulent le garder net, sain et correctement structuré.",
+      "fasi": [
+        {
+          "titolo": "Contrôle",
+          "testo": "Vérification des éventuels décollements et de l'état de l'ongle sous le gel."
+        },
+        {
+          "titolo": "Limage de la repousse",
+          "testo": "Affinage de l'ancien gel et préparation de la zone nouvelle."
+        },
+        {
+          "titolo": "Rééquilibrage",
+          "testo": "Nouveau gel dans la zone de repousse et apex replacé correctement."
+        },
+        {
+          "titolo": "Finition",
+          "testo": "Limage du profil, couleur et scellage final."
+        }
+      ],
+      "aftercare": [
+        "Gardez le rythme de 3–4 semaines : c'est la clé de tout",
+        "Signalez tout de suite une gêne ou un décollement",
+        "Continuez l'huile à cuticules quotidienne"
+      ],
+      "faq": [
+        {
+          "domanda": "Puis-je faire un remplissage sur un travail fait ailleurs ?",
+          "risposta": "Oui, après évaluation. Si la structure précédente n'est pas récupérable, nous proposons une dépose et une nouvelle pose."
+        },
+        {
+          "domanda": "Combien de fois peut-on le répéter ?",
+          "risposta": "Indéfiniment, tant que l'ongle naturel en dessous reste sain. Nous le contrôlons à chaque rendez-vous."
+        }
+      ]
+    },
+    "treccine": {
+      "nome": "Tresses",
+      "descrizioneBreve": "Tresses réalisées à l'institut, sur rendez-vous.",
+      "descrizione": "Nous réalisons les tresses sur rendez-vous. La taille, le nombre et la longueur se décident ensemble avant de commencer, ainsi que le temps nécessaire : le devis est établi lors de la consultation, avant que le travail ne débute.",
+      "perChi": "Pour celles qui souhaitent des tresses soignées et veulent définir ensemble le style et la taille avant de commencer.",
+      "fasi": [
+        {
+          "titolo": "Consultation",
+          "testo": "Nous décidons ensemble la taille, le nombre et la longueur des tresses, et le temps que le travail demande."
+        },
+        {
+          "titolo": "Préparation",
+          "testo": "Lavage et démêlage, puis division en sections nettes sur lesquelles travailler."
+        },
+        {
+          "titolo": "Réalisation",
+          "testo": "Les tresses sont faites une à une, avec une tension maîtrisée pour ne pas solliciter la racine."
+        },
+        {
+          "titolo": "Finition",
+          "testo": "Fermeture des pointes, finition du contour et conseils pour les premiers jours."
+        }
+      ],
+      "aftercare": [
+        "Protégez les tresses la nuit avec un bonnet ou une taie d'oreiller en satin",
+        "Hydratez le cuir chevelu avec une huile légère, sans alourdir",
+        "Évitez de les garder au-delà de la durée conseillée en consultation"
+      ],
+      "faq": [
+        {
+          "domanda": "Combien de temps tiennent les tresses ?",
+          "risposta": "Cela dépend du type de travail et de la pousse des cheveux. La durée conseillée est indiquée en consultation, ainsi que le bon moment pour les refaire."
+        },
+        {
+          "domanda": "Puis-je laver mes cheveux avec les tresses ?",
+          "risposta": "Oui, avec douceur et des produits adaptés. En consultation, nous vous expliquons comment faire sans abîmer le travail."
+        },
+        {
+          "domanda": "Le prix change-t-il selon la longueur ?",
+          "risposta": "Le prix de la liste est de CHF 90. Pour des travaux particuliers, nous établissons ensemble un devis avant de commencer."
+        }
+      ]
+    }
+  },
+  "shopCategories": {
+    "gel-base": {
+      "nome": "Gels & Bases",
+      "sottotitolo": "Gels de construction, bases rubber et top coats"
+    },
+    "nail-art": {
+      "nome": "Nail art",
+      "sottotitolo": "Couleurs, paillettes et décors d'auteur"
+    },
+    "pennelli": {
+      "nome": "Pinceaux",
+      "sottotitolo": "Des fibres choisies pour chaque technique"
+    },
+    "lampade-fresette": {
+      "nome": "Lampes & Ponceuses",
+      "sottotitolo": "Matériel électrique professionnel"
+    },
+    "tips-estensioni": {
+      "nome": "Capsules & Extensions",
+      "sottotitolo": "Capsules, dual forms et chablons"
+    },
+    "lime-buffer": {
+      "nome": "Limes & Buffers",
+      "sottotitolo": "Un grain pour chaque étape du travail"
+    },
+    "attrezzi": {
+      "nome": "Outils",
+      "sottotitolo": "Instruments en acier, stérilisables"
+    },
+    "oli-liquidi": {
+      "nome": "Huiles & Liquides",
+      "sottotitolo": "Soin, préparation et dépose"
+    },
+    "pedicure": {
+      "nome": "Pédicure",
+      "sottotitolo": "Tout pour le soin du pied"
+    }
+  },
+  "products": {
+    "gel-costruttore-diamond-clear": {
+      "nome": "Gel de construction Diamond Clear",
+      "descrizioneBreve": "Gel de construction transparent et auto-nivelant, pour des extensions structurées.",
+      "descrizione": "Un gel de construction moyennement dense qui s'étale tout seul sans couler, parfait pour bâtir l'apex et garder une structure légère. Sa transparence cristalline le rend idéal sous n'importe quelle couleur ou nail art, sans jaunir avec le temps.",
+      "caratteristiche": [
+        "Viscosité moyenne, auto-nivelante",
+        "Catalyse en 60 secondes en lampe LED",
+        "Ne jaunit pas, transparence stable",
+        "Convient aux rallongements jusqu'à 2 tailles"
+      ]
+    },
+    "base-rubber-gold-touch": {
+      "nome": "Base Rubber Gold Touch",
+      "descrizioneBreve": "Base rubber nude aux micro-reflets dorés, nivelante et protectrice.",
+      "descrizione": "Une base élastique qui compense les irrégularités de l'ongle et protège l'ongle naturel. Le micro-reflet doré la rend déjà très belle seule, pour une french douce ou un nude sophistiqué.",
+      "caratteristiche": [
+        "Élastique, ne se décolle pas sur les ongles souples",
+        "Nivelle l'ongle sans limage agressif",
+        "Finition nude aux reflets or",
+        "Tenue jusqu'à 3 semaines"
+      ]
+    },
+    "top-coat-no-wipe-brillante": {
+      "nome": "Top Coat No-Wipe Brillant",
+      "descrizioneBreve": "Finition brillante sans couche collante, résistante aux rayures.",
+      "descrizione": "Le top coat qui clôt le travail avec une brillance de vitrine et sans passage de cleaner. Il résiste aux rayures et garde son éclat pendant toute la durée de la pose.",
+      "caratteristiche": [
+        "Aucune couche collante à retirer",
+        "Brillance miroir immédiate",
+        "Résistant aux rayures et aux détergents",
+        "Ne jaunit pas"
+      ]
+    },
+    "set-glitter-diamond": {
+      "nome": "Set Paillettes Diamond — 12 pcs",
+      "descrizioneBreve": "Douze paillettes ultrafines aux nuances or, champagne et diamant.",
+      "descrizione": "Une palette coordonnée de paillettes très fines qui s'étalent uniformément sans grumeaux. Pensée pour les dégradés, les accents sur un seul doigt ou les couvertures total glitter à l'effet bijou.",
+      "caratteristiche": [
+        "12 teintes coordonnées or / argent / diamant",
+        "Granulométrie ultrafine, se nivelle facilement",
+        "Petits pots refermables de 2 g",
+        "Compatible gel et semi-permanent"
+      ]
+    },
+    "gel-paint-linea-oro": {
+      "nome": "Gel Paint Ligne Or",
+      "descrizioneBreve": "Gel paint dense et couvrant pour des lignes nettes et des décors à main levée.",
+      "descrizione": "Un gel paint à la texture crémeuse qui ne coule pas et couvre dès le premier passage. Parfait pour les lignes fines, les micro-décors et les contours nets, même avec des pinceaux liner très fins.",
+      "caratteristiche": [
+        "Couvrance totale en un passage",
+        "Ne coule pas : la ligne reste où vous la posez",
+        "Catalyse en 30 secondes",
+        "Pot de 5 g"
+      ]
+    },
+    "pennello-gel-oval": {
+      "nome": "Pinceau Gel Oval",
+      "descrizioneBreve": "Pinceau ovale en fibre synthétique pour appliquer le gel de construction.",
+      "descrizione": "La forme ovale répartit le gel uniformément et permet de modeler l'apex en quelques gestes. La fibre synthétique ne retient pas le produit et se nettoie en un instant.",
+      "caratteristiche": [
+        "Fibre synthétique de haute qualité",
+        "Manche en bois laqué avec virole dorée",
+        "Ne perd pas ses poils",
+        "Capuchon de protection inclus"
+      ]
+    },
+    "set-pennelli-nail-art": {
+      "nome": "Set Pinceaux Nail Art — 5 pcs",
+      "descrizioneBreve": "Cinq pinceaux de décor : liner, one stroke, éventail, détail et estompe.",
+      "descrizione": "Le set complet pour débuter la nail art sans les acheter un par un. Chaque pinceau est pensé pour une technique précise et arrive dans un étui rigide qui les protège.",
+      "caratteristiche": [
+        "5 formes : liner, one stroke, éventail, détail, estompe",
+        "Étui rigide inclus",
+        "Fibres synthétiques, adaptées au gel et à l'acrylique",
+        "Virole dorée anticorrosion"
+      ]
+    },
+    "lampada-uv-led-72w-pro": {
+      "nome": "Lampe UV/LED 72W Pro",
+      "descrizioneBreve": "Lampe professionnelle double technologie, avec capteur et écran.",
+      "descrizione": "Catalyse n'importe quel gel ou semi-permanent de façon uniforme grâce aux 36 LED répartis sur toute la coupole. Le capteur de mouvement lance le cycle tout seul et l'écran affiche le temps restant.",
+      "caratteristiche": [
+        "36 LED à double longueur d'onde (UV + LED)",
+        "Cycles de 10 / 30 / 60 / 99 secondes",
+        "Capteur de mouvement et écran LCD",
+        "Fond amovible pour la pédicure"
+      ]
+    },
+    "fresa-professionale-35000": {
+      "nome": "Ponceuse Professionnelle 35 000 tr/min",
+      "descrizioneBreve": "Manipule silencieuse et sans vibrations, avec contrôle continu de la vitesse.",
+      "descrizione": "Une pièce à main légère qui reste froide même après des heures de travail et ne vibre pas : le contrôle du limage est total. La rotation est réversible pour travailler avec la même précision sur les deux mains.",
+      "caratteristiche": [
+        "0 – 35 000 tr/min réglables en continu",
+        "Rotation avant/arrière",
+        "Pièce à main à changement d'embout rapide",
+        "Moins de 55 dB : pratiquement silencieuse"
+      ]
+    },
+    "soft-gel-tips-almond": {
+      "nome": "Capsules Soft Gel Amande — 504 pcs",
+      "descrizioneBreve": "Capsules en soft gel préformées, 12 tailles, pour la pose express.",
+      "descrizione": "Des capsules très fines et déjà matifiées à l'intérieur, prêtes à être collées au gel : l'extension se fait en deux fois moins de temps qu'une construction classique et le résultat est naturel au toucher.",
+      "caratteristiche": [
+        "504 capsules, 12 tailles numérotées",
+        "Intérieur déjà matifié : aucun limage",
+        "Bord ultrafin, invisible sur l'ongle",
+        "Boîte de rangement incluse"
+      ]
+    },
+    "dual-form-popit-12-forme": {
+      "nome": "Dual Form Popit — 12 formes",
+      "descrizioneBreve": "Matrices réutilisables avec apex déjà dessiné, 296 pièces.",
+      "descrizione": "Des dual forms avec la courbure et l'apex déjà construits : remplissez, posez, catalysez et retirez. La structure sort parfaite même sans des années d'expérience en construction à main levée.",
+      "caratteristiche": [
+        "296 matrices en 12 formes différentes",
+        "Apex préformé, structure correcte garantie",
+        "Réutilisables des dizaines de fois",
+        "Repères pour le centrage"
+      ]
+    },
+    "lime-zebra-100-180": {
+      "nome": "Limes Zebra 100/180 — 10 pcs",
+      "descrizioneBreve": "Limes double grain, âme résistante, boîte de dix.",
+      "descrizione": "La lime de tous les jours : grain 100 pour dégrossir la structure et 180 pour finir le profil. L'âme ne plie pas et le revêtement résiste même sur le gel le plus dur.",
+      "caratteristiche": [
+        "Double grain 100 / 180",
+        "Âme rigide qui ne se déforme pas",
+        "Lavables et désinfectables",
+        "Paquet de 10 pièces"
+      ]
+    },
+    "pinza-tronchesina-pro": {
+      "nome": "Pince à Cuticules Professionnelle",
+      "descrizioneBreve": "Acier inox trempé, coupe nette, entièrement stérilisable.",
+      "descrizione": "Une pince affûtée à la main qui coupe la cuticule proprement, sans arracher. L'acier trempé garde le fil longtemps et supporte les cycles en autoclave sans se ternir.",
+      "caratteristiche": [
+        "Acier inox trempé affûté à la main",
+        "Tête de 4 mm pour le travail de précision",
+        "Stérilisable en autoclave",
+        "Ressort à double lame, ouverture douce"
+      ]
+    },
+    "olio-cuticole-argan-oro": {
+      "nome": "Huile à Cuticules Argan & Or",
+      "descrizioneBreve": "Huile nourrissante à absorption rapide avec micro-particules dorées.",
+      "descrizione": "Une huile légère qui pénètre sans laisser de film gras et garde la cuticule souple entre deux rendez-vous. Les micro-particules dorées lui donnent un reflet précieux sur la peau.",
+      "caratteristiche": [
+        "Argan, jojoba et vitamine E",
+        "Absorption rapide, ne graisse pas",
+        "Applicateur pinceau de précision",
+        "Parfum délicat de vanille"
+      ]
+    },
+    "kit-pedicure-curativo": {
+      "nome": "Kit Pédicure Soin",
+      "descrizioneBreve": "Tout le nécessaire pour le soin professionnel du pied.",
+      "descrizione": "Un kit complet avec râpe, dégraissant, crème kératolytique et sépare-orteils, pensé pour la pédicure de soin à l'institut mais adapté aussi à l'entretien à la maison entre deux rendez-vous.",
+      "caratteristiche": [
+        "Râpe en acier avec recharges",
+        "Crème kératolytique 100 ml",
+        "Dégraissant et crème finale",
+        "Sépare-orteils à usage unique inclus"
+      ]
+    }
+  },
+  "chiSiamo": {
+    "eyebrow": "À propos",
+    "titolo": "Notre histoire",
+    "sottotitolo": "Un institut devenu aussi une boutique, sans cesser d'être un institut.",
+    "laStoria": "L'histoire",
+    "comeLavoriamo": "Notre manière de travailler",
+    "iNostriPrincipi": "Nos principes",
+    "spazioEyebrow": "L'espace",
+    "valori": [
+      {
+        "titolo": "La technique avant l'esthétique",
+        "testo": "Une structure correcte tient. Une structure ratée casse, aussi beau soit le décor posé dessus."
+      },
+      {
+        "titolo": "Une sélection, pas un catalogue",
+        "testo": "Nous préférons dix produits que nous connaissons à mille que nous n'avons jamais ouverts."
+      },
+      {
+        "titolo": "Hygiène sans compromis",
+        "testo": "Autoclave pour tout ce qui est stérilisable, usage unique pour le reste. Sans exception."
+      },
+      {
+        "titolo": "Transparence des prix",
+        "testo": "Le devis se décide avant de commencer. Aucune surprise au moment de payer."
+      }
+    ],
+    "spazio": {
+      "testo": "Deux postes de travail, lumière naturelle et aspiration dédiée sur chaque table. Nous travaillons sur rendez-vous pour garantir à chaque cliente le temps que son soin demande.",
+      "titolo": "L'espace"
+    },
+    "certificazioni": {
+      "testo": "Liste provisoire : à remplacer par les certifications réelles (formations, attestations, habilitations).",
+      "elenco": [
+        "Attestation professionnelle de prothésiste ongulaire",
+        "Formation avancée en construction structurelle",
+        "Formation HACCP et stérilisation",
+        "Mise à jour annuelle sur les produits et la sécurité"
+      ],
+      "titolo": "Formation et certifications"
+    },
+    "team": {
+      "testo": "Provisoire : ajoutez ici les membres de l'équipe avec photo et spécialisation.",
+      "membri": [
+        {
+          "nome": "Kara",
+          "ruolo": "Fondatrice & prothésiste ongulaire",
+          "bio": "Spécialisée en construction structurelle et en nail art à main levée.",
+          "foto": "/images/kara-ritratto.svg"
+        },
+        {
+          "nome": "Nom Prénom",
+          "ruolo": "Prothésiste ongulaire",
+          "bio": "Provisoire : à remplacer par la biographie réelle.",
+          "foto": "/images/kara-ritratto.svg"
+        }
+      ],
+      "titolo": "L'équipe"
+    },
+    "paragrafi": [
+      "K Institute est né comme un studio dédié au soin des ongles. Derrière, il y a Kara, qui a appris le métier en partant de la technique : structure, apex, tenue. L'esthétique n'est venue qu'ensuite.",
+      "Au fil des années, la question la plus fréquente des clientes — puis des collègues — est toujours restée la même : « quel produit utilises-tu ? ». De là est née l'idée de la boutique : mettre à disposition les mêmes références que nous utilisons chaque jour, avec la même sélection exigeante.",
+      "Aujourd'hui, l'institut et la boutique se nourrissent l'un l'autre. Chaque nouveau produit est testé pendant des semaines à nos postes de travail avant d'entrer au catalogue. S'il ne convainc pas, il n'arrive pas sur l'étagère."
+    ]
+  },
+  "contatti": {
+    "eyebrow": "Nous trouver",
+    "titolo": "Contact",
+    "intro": "Écrivez-nous pour des informations sur les soins, les produits ou une commande. Nous répondons sous 24 heures les jours d'ouverture.",
+    "form": {
+      "titolo": "Écrivez-nous",
+      "nome": "Nom et prénom",
+      "email": "E-mail",
+      "messaggio": "Votre message",
+      "invia": "Envoyer le message",
+      "inviando": "Envoi en cours…",
+      "successo": "Message envoyé. Nous vous répondons au plus vite, merci !"
+    },
+    "orariTitolo": "Horaires d'ouverture",
+    "indirizzoTitolo": "Adresse",
+    "scriviWhatsapp": "Écrivez-nous sur WhatsApp"
+  },
+  "prenota": {
+    "eyebrow": "Réservation",
+    "titolo": "Réservez votre rendez-vous",
+    "intro": "Choisissez le soin, le jour et l'heure. Vous recevez aussitôt le récapitulatif : nous confirmons en quelques heures."
+  },
+  "booking": {
+    "passi": {
+      "1": "Soin",
+      "2": "Date et heure",
+      "3": "Vos coordonnées",
+      "4": "Confirmation"
+    },
+    "scegliTrattamento": "Choisissez le soin",
+    "scegliData": "Choisissez la date et l'heure",
+    "iTuoiDati": "Vos coordonnées",
+    "selezionaData": "Choisissez d'abord une date",
+    "caricoOrari": "Chargement des horaires disponibles…",
+    "nessunOrario": "Aucun horaire disponible ce jour-là. Essayez une autre date.",
+    "nessunOrarioPrenotato": "Aucun horaire disponible ce jour-là (tout est déjà réservé). Essayez une autre date.",
+    "erroreOrari": "Impossible de charger les horaires disponibles. Réessayez dans un instant.",
+    "mesePrecedente": "Mois précédent",
+    "meseSuccessivo": "Mois suivant",
+    "campoNome": "Nom et prénom *",
+    "campoTelefono": "Téléphone *",
+    "campoEmail": "E-mail *",
+    "campoNote": "Remarques (facultatif)",
+    "notePlaceholder": "Allergies, préférences de couleur, demandes particulières…",
+    "privacyPrefisso": "J'ai lu et j'accepte la",
+    "privacyLink": "politique de confidentialité",
+    "conferma": "Confirmer la réservation",
+    "inviando": "Envoi en cours…",
+    "indietro": "Retour",
+    "continua": "Continuer",
+    "richiestaRicevuta": "Demande reçue",
+    "tiAspettiamo": "Nous vous attendons pour {trattamento} le {data} à {ora}.",
+    "confermaEmail": "Vous recevrez une confirmation par e-mail ou téléphone d'ici quelques heures. En cas d'imprévu, prévenez-nous au moins 24 heures à l'avance.",
+    "tornaHome": "Retour à l'accueil",
+    "scopriShop": "Découvrir la boutique"
+  },
+  "cookie": {
+    "testo": "Nous n'utilisons que des cookies techniques nécessaires au fonctionnement du site (panier et préférences). Aucun cookie de profilage, aucun traçage publicitaire.",
+    "accetta": "J'ai compris",
+    "dettagli": "Lire la politique cookies"
+  },
+  "newsletter": {
+    "titolo": "Nouveautés et offres",
+    "testo": "Les nouvelles références et les promotions, un e-mail par mois. Pas de spam.",
+    "placeholder": "Votre e-mail",
+    "cta": "S'inscrire",
+    "conferma": "Merci ! Vous êtes inscrite à la liste."
+  },
+  "instagramCta": {
+    "lavori": "Découvrez d'autres réalisations sur Instagram",
+    "contatti": "Suivez-nous sur Instagram",
+    "aria": "Ouvrir le profil Instagram dans un nouvel onglet"
+  },
+  "footer": {
+    "claim": "Institut d'ongles et boutique de produits professionnels. Des soins sur mesure et des références sélectionnées, testées chaque jour à nos postes de travail.",
+    "contattiTitolo": "Contact",
+    "orariTitolo": "Horaires",
+    "seguici": "Nous suivre",
+    "copyright": "© {anno} {brand} — {legalName}. Tous droits réservés.",
+    "piva": "N° TVA {piva}"
+  },
+  "errore404": {
+    "titolo": "Page introuvable",
+    "testo": "La page que vous cherchez n'existe pas ou a été déplacée. Retournez à l'accueil ou visitez la boutique.",
+    "cta": {
+      "label": "Retour à l'accueil"
+    },
+    "ctaSecondaria": {
+      "label": "Voir la boutique"
+    }
+  },
+  "ricerca": {
+    "placeholder": "Rechercher un produit ou un soin…",
+    "apri": "Rechercher",
+    "chiudi": "Fermer la recherche",
+    "prodotti": "Produits",
+    "trattamenti": "Soins",
+    "nessunRisultato": "Aucun résultat. Essayez un autre terme.",
+    "suggerimento": "Saisissez au moins deux lettres pour rechercher."
+  },
+  "legale": {
+    "eyebrow": "Informations légales",
+    "aggiornamento": "Dernière mise à jour",
+    "privacy": {
+      "titolo": "Politique de confidentialité",
+      "sottotitolo": "Comment nous traitons les données personnelles des personnes qui utilisent ce site.",
+      "sezioni": [
+        {
+          "titolo": "Responsable du traitement",
+          "paragrafi": [
+            "Le responsable du traitement est {legalName} ({brand}), dont le siège est à {sede}. Pour toute demande concernant vos données, écrivez à {email}."
+          ]
+        },
+        {
+          "titolo": "Quelles données nous collectons",
+          "paragrafi": [
+            "Nous ne collectons que les données que vous nous fournissez volontairement : nom, téléphone, e-mail et remarques lorsque vous réservez un rendez-vous ou remplissez le formulaire de contact ; ainsi que l'adresse de livraison lorsque vous envoyez une demande de commande.",
+            "Nous n'utilisons aucun outil de profilage, nous ne suivons pas la navigation et nous n'achetons pas de listes de contacts."
+          ]
+        },
+        {
+          "titolo": "Pourquoi nous les traitons",
+          "paragrafi": [
+            "Pour gérer la réservation ou la demande de commande, pour vous recontacter en cas de besoin et pour respecter les obligations fiscales et administratives prévues par la loi."
+          ]
+        },
+        {
+          "titolo": "Combien de temps nous les conservons",
+          "paragrafi": [
+            "Le temps nécessaire à la prestation demandée et, dans les cas prévus, pendant les délais légaux. Vous pouvez en demander la suppression à tout moment."
+          ]
+        },
+        {
+          "titolo": "Vos droits",
+          "paragrafi": [
+            "Vous pouvez demander l'accès, la rectification, la suppression, la limitation ou la portabilité de vos données, et vous opposer au traitement, en écrivant à {email}. Vous avez également le droit de déposer une réclamation auprès de l'autorité de contrôle compétente."
+          ]
+        }
+      ]
+    },
+    "cookie": {
+      "titolo": "Politique cookies",
+      "sottotitolo": "Quels cookies ce site utilise et à quoi ils servent.",
+      "sezioni": [
+        {
+          "titolo": "Uniquement des cookies techniques",
+          "paragrafi": [
+            "Ce site n'utilise que des cookies et un stockage local de nature technique, nécessaires au fonctionnement : le contenu du panier et la prise de connaissance du bandeau cookies.",
+            "Il n'y a aucun cookie de profilage, ni outil de suivi publicitaire ou d'analyse de tiers."
+          ]
+        },
+        {
+          "titolo": "Stockage local",
+          "paragrafi": [
+            "Le panier est enregistré dans le navigateur (localStorage) sous la clé « k-institute-cart » et reste sur votre appareil : il n'est envoyé à aucun serveur tant que vous ne finalisez pas volontairement une demande de commande."
+          ]
+        },
+        {
+          "titolo": "Services tiers",
+          "paragrafi": [
+            "La carte de la page contact est un contenu intégré de Google Maps : en la chargeant, Google peut déposer ses propres cookies selon sa propre politique."
+          ]
+        },
+        {
+          "titolo": "Comment les désactiver",
+          "paragrafi": [
+            "Vous pouvez effacer à tout moment les données enregistrées par le site depuis les réglages de votre navigateur. En désactivant le stockage local, le panier ne sera plus conservé d'une visite à l'autre."
+          ]
+        }
+      ]
+    },
+    "termini-di-vendita": {
+      "titolo": "Conditions de vente",
+      "sottotitolo": "Conditions appliquées aux commandes passées sur ce site.",
+      "sezioni": [
+        {
+          "titolo": "Demande de commande",
+          "paragrafi": [
+            "Pour l'instant, l'envoi du formulaire de commande constitue une demande de commande et non un achat conclu. Vous recevrez une confirmation avec la disponibilité des produits et les modalités de paiement sous 24 heures ouvrables."
+          ]
+        },
+        {
+          "titolo": "Prix",
+          "paragrafi": [
+            "Tous les prix sont exprimés en francs suisses (CHF), TVA comprise. Les frais de livraison ne sont pas encore actifs : ils seront communiqués avant la confirmation de la commande."
+          ]
+        },
+        {
+          "titolo": "Paiements",
+          "paragrafi": [
+            "Le paiement en ligne n'est pas encore actif. Les moyens de paiement acceptés sont communiqués dans l'e-mail de confirmation."
+          ]
+        },
+        {
+          "titolo": "Disponibilité",
+          "paragrafi": [
+            "Les produits sont soumis à disponibilité. En cas d'indisponibilité, nous vous proposons une alternative ou annulons la demande sans aucun frais."
+          ]
+        }
+      ]
+    },
+    "spedizioni-e-resi": {
+      "titolo": "Livraison et retours",
+      "sottotitolo": "Délais, frais et modalités de retour d'un produit.",
+      "sezioni": [
+        {
+          "titolo": "Délais de livraison",
+          "paragrafi": [
+            "Les commandes confirmées avant 14h00 les jours d'ouverture sont préparées le jour même. La livraison a lieu en général en {tempiConsegna}."
+          ]
+        },
+        {
+          "titolo": "Frais de livraison",
+          "paragrafi": [
+            "Bientôt disponible : la boutique en ligne n'est pas encore active et les tarifs de livraison ne sont pas encore définis. Ils seront publiés ici avant l'ouverture des commandes."
+          ]
+        },
+        {
+          "titolo": "Droit de rétractation",
+          "paragrafi": [
+            "Vous pouvez retourner les produits intacts et non ouverts dans les {resiEntroGiorni} jours suivant la livraison. Les frais de retour sont à la charge de l'acheteur, sauf produit défectueux ou erroné."
+          ]
+        },
+        {
+          "titolo": "Produits non retournables",
+          "paragrafi": [
+            "Pour des raisons d'hygiène, les produits scellés une fois ouverts (gels, vernis, liquides) et les instruments déjà utilisés ne sont pas retournables."
+          ]
+        },
+        {
+          "titolo": "Comment demander un retour",
+          "paragrafi": [
+            "Écrivez à {emailOrdini} en indiquant le numéro de la demande de commande et le motif du retour : nous vous répondrons avec la marche à suivre."
+          ]
+        }
+      ]
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "K Institute — Nail & Braids Studio à Courtelary",
+      "description": "Institut d'ongles et boutique de produits professionnels à Courtelary (Berne). Semi-permanent, pose complète en gel, tresses et produits sélectionnés. Réservez en ligne."
+    },
+    "shop": {
+      "title": "Boutique",
+      "description": "Gels, couleurs, outils et lampes professionnels sélectionnés un par un."
+    },
+    "trattamenti": {
+      "title": "Soins",
+      "description": "Tous les soins de l'institut, avec durée, prix et déroulement."
+    },
+    "lavori": {
+      "title": "Nos réalisations",
+      "description": "La galerie des poses réalisées à l'institut sur de vraies clientes."
+    },
+    "prenota": {
+      "title": "Réserver",
+      "description": "Réservez votre rendez-vous en ligne : soin, jour et heure."
+    },
+    "chiSiamo": {
+      "title": "À propos",
+      "description": "L'histoire de l'institut, la méthode de travail et l'espace."
+    },
+    "contatti": {
+      "title": "Contact",
+      "description": "Adresse, horaires, téléphone et plan de l'institut à Courtelary."
+    },
+    "carrello": {
+      "title": "Panier",
+      "description": "Les produits que vous avez sélectionnés."
+    },
+    "checkout": {
+      "title": "Commande",
+      "description": "Finalisez votre demande de commande."
+    },
+    "errore404": {
+      "title": "Page introuvable",
+      "description": "La page que vous cherchez n'existe pas ou a été déplacée."
+    }
+  },
+  "galleryAlt": {
+    "p01": "Stiletto longues avec décor vert menthe et pierres bijou",
+    "p02": "Amande bleu électrique avec cœurs de perles et strass",
+    "p03": "Tresses latérales avec baby hair nets",
+    "p04": "Stiletto rouges avec nail art à cœurs sur base nude",
+    "p05": "Nail art façon dessin animé peinte à la main",
+    "p06": "Amande rose et bordeaux avec fleurs 3D et étoiles dorées",
+    "p07": "Pose stiletto avec french blanche et détails transparents",
+    "p08": "Cornrows avec motif en vagues",
+    "p09": "Nail art super-héros avec toiles d'araignée",
+    "p10": "French classique blanche sur forme carrée courte",
+    "p11": "Coffin rouges avec paillettes et dégradé",
+    "p12": "Carrées longues nude avec cristaux holographiques",
+    "p13": "Tresses fines avec cheveux lâchés sur les pointes",
+    "p14": "Stiletto avec french blanche profonde sur base rose",
+    "p15": "Stiletto nude avec détails chromés et charms",
+    "p16": "Carrées avec french rose fluo",
+    "p17": "Nail art rouge avec lèvres et charms dorés",
+    "p18": "Tresses avec motif en cœur",
+    "p19": "Carrées longues avec french pastel et fleurs",
+    "p20": "Stiletto extra longues nude brillantes",
+    "p21": "Amande nude avec pointes léopard rouges",
+    "p22": "French blanche avec détails chromés et lettrages",
+    "p23": "French bordeaux sur forme carrée",
+    "p24": "Coffin nude et brunes avec charms",
+    "p25": "Carrées avec french colorée rouge et orange",
+    "p26": "Amande nude à pois avec pointes orange",
+    "p27": "Stiletto vertes bijou, deuxième angle",
+    "p28": "French blanche avec accents léopard",
+    "p29": "Stiletto french blanche, vue de dessus",
+    "p30": "Nail art rouge et or photographiée au bord du lac"
+  }
+}

@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import Ornament from "@/components/ui/Ornament";
-import { site } from "@/data/site";
+import { getDict } from "@/lib/intl/server";
 import { salon } from "@/data/salon";
 import { CheckIcon } from "@/components/ui/Icons";
 
-export const metadata: Metadata = {
-  title: "Richiesta ricevuta",
-  robots: { index: false, follow: false },
-};
+export function generateMetadata(): Metadata {
+  return { title: getDict().ordineConfermato.titolo };
+}
 
 // Il numero d'ordine arriva dal querystring dopo l'invio della richiesta.
 function OrderNumber({ numero }: { numero?: string }) {
+  const site = getDict();
   if (!numero) return null;
   return (
-    <p className="mt-7 inline-block rounded-luxe border border-gold/30 bg-gold/5 px-5 py-3">
+    <p className="mt-7 inline-block rounded-glass border border-gold/30 bg-gold/5 px-5 py-3">
       <span className="block text-[0.65rem] uppercase tracking-luxe text-cream/50">
         {site.ordineConfermato.numeroOrdine}
       </span>
@@ -31,13 +31,16 @@ export default function GraziePage({
 }: {
   searchParams: { ordine?: string };
 }) {
+  const site = getDict();
   return (
     <div className="bg-ink py-20 sm:py-28">
       <div className="container-luxe max-w-narrow text-center">
         <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-gold/40 text-gold">
           <CheckIcon size={30} />
         </span>
-        <span className="eyebrow mt-8 block">{site.ordineConfermato.eyebrow}</span>
+        <span className="eyebrow mt-8 block">
+          {site.ordineConfermato.eyebrow}
+        </span>
         <h1 className="heading-lg mt-4 text-cream">
           {site.ordineConfermato.titolo}
         </h1>
@@ -61,7 +64,10 @@ export default function GraziePage({
           .
         </p>
 
-        <Link href={site.ordineConfermato.cta.href} className="btn-primary mt-9">
+        <Link
+          href={site.ordineConfermato.cta.href}
+          className="btn-primary mt-9"
+        >
           {site.ordineConfermato.cta.label}
         </Link>
       </div>

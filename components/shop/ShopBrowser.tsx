@@ -5,9 +5,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { products, priceRange, type Product } from "@/data/products";
 import { shopCategories } from "@/data/shop-categories";
-import { site } from "@/data/site";
+import { useDict } from "@/lib/intl/client";
 import { formatPrice } from "@/lib/format";
 import ProductCard from "./ProductCard";
+import { nomeCategoria } from "@/lib/intl/content";
 
 // Griglia con filtri (categoria, prezzo massimo) e ordinamento.
 // Il catalogo è locale: tutto avviene client-side, senza chiamate.
@@ -18,6 +19,7 @@ export default function ShopBrowser({
   // categoria sparisce e resta bloccato su questo slug.
   categoriaFissa?: string;
 }) {
+  const site = useDict();
   const [categoria, setCategoria] = useState(categoriaFissa ?? "tutte");
   const [prezzoMax, setPrezzoMax] = useState(priceRange.max);
   const [ordine, setOrdine] = useState("rilevanza");
@@ -37,7 +39,7 @@ export default function ShopBrowser({
     if (ordine === "nome") sorted.sort((a, b) => a.nome.localeCompare(b.nome));
     if (ordine === "rilevanza")
       sorted.sort(
-        (a, b) => Number(Boolean(b.inEvidenza)) - Number(Boolean(a.inEvidenza))
+        (a, b) => Number(Boolean(b.inEvidenza)) - Number(Boolean(a.inEvidenza)),
       );
     return sorted;
   }, [categoria, categoriaFissa, prezzoMax, ordine]);
@@ -57,7 +59,7 @@ export default function ShopBrowser({
     <div className="grid gap-10 lg:grid-cols-[260px_1fr] lg:gap-12">
       {/* --- Filtri ------------------------------------------------------ */}
       <aside className="lg:sticky lg:top-28 lg:self-start">
-        <div className="rounded-card border border-ink-line bg-ink-soft p-6">
+        <div className="glass-flat rounded-card p-6">
           {!categoriaFissa && (
             <div className="mb-7">
               <h2 className="eyebrow">{site.shop.filtri.categoria}</h2>
@@ -101,7 +103,7 @@ export default function ShopBrowser({
               className="mt-4 w-full accent-[#D9AE45]"
             />
             <p className="mt-2 text-sm text-gold-light">
-              fino a {formatPrice(prezzoMax)}
+              {site.shop.finoA} {formatPrice(prezzoMax)}
             </p>
           </div>
 
@@ -135,15 +137,12 @@ export default function ShopBrowser({
         </div>
 
         {!categoriaFissa && (
-          <nav className="mt-6 rounded-card border border-ink-line bg-ink-soft p-6">
-            <h2 className="eyebrow">Sfoglia per categoria</h2>
+          <nav className="mt-6 glass-flat rounded-card p-6">
+            <h2 className="eyebrow">{site.common.sfogliaPerCategoria}</h2>
             <ul className="mt-4 space-y-2">
               {shopCategories.map((c) => (
                 <li key={c.slug}>
-                  <Link
-                    href={`/shop/${c.slug}`}
-                    className="link-quiet text-sm"
-                  >
+                  <Link href={`/shop/${c.slug}`} className="link-quiet text-sm">
                     {c.nome}
                   </Link>
                 </li>
@@ -160,7 +159,7 @@ export default function ShopBrowser({
         </p>
 
         {visibili.length === 0 ? (
-          <p className="rounded-card border border-ink-line bg-ink-soft p-10 text-center text-cream/55">
+          <p className="glass-flat rounded-card p-10 text-center text-cream/55">
             {site.shop.filtri.nessunRisultato}
           </p>
         ) : (
@@ -200,7 +199,7 @@ function FilterButton({
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className={`flex w-full items-center justify-between rounded-luxe px-3 py-2 text-sm transition-colors duration-300 ${
+      className={`flex w-full items-center justify-between rounded-pill px-3 py-2 text-sm transition-colors duration-300 ${
         active
           ? "bg-gold/12 text-gold-light"
           : "text-cream/65 hover:bg-white/5 hover:text-gold-light"

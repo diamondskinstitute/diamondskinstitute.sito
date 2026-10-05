@@ -27,13 +27,14 @@ export default function SectionHeading({
       {eyebrow && (
         <span className={onLight ? "eyebrow-dark" : "eyebrow"}>{eyebrow}</span>
       )}
-      <h2
-        className={`heading-lg mt-4 ${onLight ? "text-ink" : "text-cream"}`}
-      >
+      <h2 className={`heading-lg mt-4 ${onLight ? "text-ink" : "text-cream"}`}>
         {title}
       </h2>
       {ornament && (
-        <Ornament className={`mt-5 ${isCenter ? "" : "justify-start"}`} width="w-16" />
+        <Ornament
+          className={`mt-5 ${isCenter ? "" : "justify-start"}`}
+          width="w-16"
+        />
       )}
       {intro && (
         <p

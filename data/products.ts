@@ -38,9 +38,14 @@ export type Product = {
   badge?: string; // es. "Novità", "Best seller"
   inEvidenza?: boolean;
   esaurito?: boolean;
+  // false = prodotto ritirato dal sito: sparisce da griglie, categorie,
+  // ricerca, mega-menu e sitemap. Vedi SERVIZI-NASCOSTI.md nella root.
+  attivo?: boolean;
 };
 
-export const products: Product[] = [
+// Catalogo COMPLETO, compresi i prodotti ritirati (`attivo: false`).
+// Il sito usa `products`, che contiene solo quelli attivi.
+export const allProducts: Product[] = [
   // --- Gel & Base ----------------------------------------------------
   {
     slug: "gel-costruttore-diamond-clear",
@@ -418,17 +423,25 @@ export const products: Product[] = [
     varianti: {
       nome: "Importo",
       opzioni: [
-        { id: "50", nome: "€ 50" },
-        { id: "80", nome: "€ 80", prezzoDelta: 30 },
-        { id: "120", nome: "€ 120", prezzoDelta: 70 },
-        { id: "200", nome: "€ 200", prezzoDelta: 150 },
+        { id: "50", nome: "CHF 50" },
+        { id: "80", nome: "CHF 80", prezzoDelta: 30 },
+        { id: "120", nome: "CHF 120", prezzoDelta: 70 },
+        { id: "200", nome: "CHF 200", prezzoDelta: 150 },
       ],
     },
     inEvidenza: true,
+    // Gift card rimosse dal sito su richiesta della titolare.
+    // Per rimetterle in vendita: attivo: true (vedi SERVIZI-NASCOSTI.md)
+    attivo: false,
   },
 ];
 
 // --- Helper ------------------------------------------------------------
+
+// Solo i prodotti attivi: è questo l'elenco usato da tutto il sito.
+export const products: Product[] = allProducts.filter(
+  (p) => p.attivo !== false
+);
 
 export function getProduct(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);

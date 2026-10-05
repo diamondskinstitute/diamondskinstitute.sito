@@ -1,42 +1,37 @@
-"use client";
+import type { CSSProperties, ReactNode } from "react";
 
-import { motion } from "framer-motion";
-import type { ReactNode } from "react";
-
-// Wrapper riutilizzabile: fade + leggero movimento verso l'alto allo scroll.
-// Animazioni sobrie, coerenti in tutto il sito.
+// Dissolvenza verso l'alto, in CSS puro (classe .fade-in-up).
+// Prima era animata da framer-motion con opacity 0 iniziale: su connessioni
+// lente la pagina restava vuota finché non si caricava il JavaScript.
+// Ora il testo è nell'HTML e l'animazione parte da sola; con
+// prefers-reduced-motion l'animazione viene neutralizzata.
 
 type FadeInProps = {
   children: ReactNode;
   delay?: number;
-  y?: number;
   className?: string;
   as?: "div" | "section" | "article" | "li" | "span";
+  // Accettati per compatibilità con le chiamate esistenti
+  y?: number;
   once?: boolean;
 };
 
 export default function FadeIn({
   children,
   delay = 0,
-  y = 20,
-  className,
-  as = "div",
-  once = true,
+  className = "",
+  as: Tag = "div",
 }: FadeInProps) {
-  const MotionTag = motion[as] as typeof motion.div;
+  // Il ritardo a cascata è limitato: con molte card in griglia una
+  // sequenza lunga fa sembrare la pagina lenta ad aprirsi.
+  const ritardo = Math.min(delay, 0.24);
+  const style: CSSProperties | undefined = ritardo
+    ? { animationDelay: `${ritardo}s` }
+    : undefined;
+
   return (
-    <MotionTag
-      className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once, margin: "-60px" }}
-      transition={{
-        duration: 0.8,
-        delay,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-    >
+    <Tag className={`fade-in-up ${className}`} style={style}>
       {children}
-    </MotionTag>
+    </Tag>
   );
 }

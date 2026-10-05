@@ -12,10 +12,51 @@
   --ink-raised: #1e1810;
   --ink-line: #2c241a;
 
+  --gold-champagne: #f7e7b4;
   --gold-light: #f6de8d;
   --gold: #d9ae45;
+  --gold-muted: #c4a868;
   --gold-deep: #a77b24;
   --gold-dark: #6e4e14;
+
+  /* --- Liquid glass ------------------------------------------------
+     `-solid` è la riserva per i browser senza backdrop-filter. */
+  --glass-bg: rgba(21, 17, 12, 0.55);
+  --glass-bg-solid: rgba(18, 14, 10, 0.94);
+  --glass-bg-strong: rgba(11, 9, 6, 0.74);
+  --glass-bg-strong-solid: rgba(11, 9, 6, 0.96);
+  /* Le card compaiono anche sulle sezioni chiare: l'opacità resta alta
+     così restano scure ovunque. L'effetto vetro viene dal filetto oro e
+     dalla luce interna in alto, non dalla trasparenza. */
+  --glass-flat: rgba(20, 16, 11, 0.92);
+  --glass-blur: blur(18px) saturate(140%);
+  --glass-hairline: linear-gradient(
+    140deg,
+    rgba(246, 222, 141, 0.5) 0%,
+    rgba(217, 174, 69, 0.2) 38%,
+    rgba(217, 174, 69, 0) 72%
+  );
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+  /* --- Gradienti oro ---------------------------------------------- */
+  --grad-gold: linear-gradient(
+    135deg,
+    #f7e7b4 0%,
+    #e6c977 28%,
+    #d9ae45 58%,
+    #b98c2e 100%
+  );
+
+  /* --- Ombre -------------------------------------------------------- */
+  --shadow-glass: 0 18px 50px -24px rgba(0, 0, 0, 0.9);
+  --shadow-glow: 0 10px 34px -12px rgba(217, 174, 69, 0.5);
+  --shadow-glow-lg: 0 18px 54px -14px rgba(217, 174, 69, 0.62);
+
+  /* --- Raggi -------------------------------------------------------- */
+  --r-luxe: 12px;
+  --r-card: 20px;
+  --r-glass: 24px;
+  --r-pill: 999px;
 
   --diamond: #f5f5f7;
   --silver: #c8cbd2;
@@ -40,11 +81,54 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Fondo scuro già al primo pixel disegnato: niente lampo bianco.
+       Lo stesso valore è ripetuto inline in app/layout.tsx, perché questo
+       foglio di stile potrebbe non essere ancora arrivato. */
+    background-color: #0b0906;
+    color-scheme: dark;
   }
 
   body {
     @apply bg-ink font-sans text-cream antialiased;
     text-rendering: optimizeLegibility;
+    /* Due aloni caldi molto tenui: danno profondità al nero senza costare
+       nulla (sono gradienti CSS, non immagini, e non sono animati). */
+    background-image: radial-gradient(
+        60rem 40rem at 78% -8%,
+        rgba(217, 174, 69, 0.09),
+        transparent 60%
+      ),
+      radial-gradient(
+        48rem 34rem at -10% 18%,
+        rgba(169, 126, 44, 0.06),
+        transparent 62%
+      );
+    background-repeat: no-repeat;
+  }
+
+  /* Arabo: carattere dedicato (Noto Naskh Arabic) su tutta la pagina,
+     titoli compresi. Le cifre restano occidentali. */
+  html[lang="ar"] body,
+  html[lang="ar"] h1,
+  html[lang="ar"] h2,
+  html[lang="ar"] h3,
+  html[lang="ar"] h4 {
+    font-family: var(--font-arabic), "Noto Naskh Arabic", "Segoe UI", serif;
+  }
+
+  /* In arabo lo spaziamento ampio fra lettere spezza la legatura:
+     lo azzeriamo sulle etichette maiuscole. */
+  html[lang="ar"] .eyebrow,
+  html[lang="ar"] .eyebrow-dark,
+  html[lang="ar"] .btn-primary,
+  html[lang="ar"] .btn-outline,
+  html[lang="ar"] .btn-outline-dark,
+  html[lang="ar"] .btn-ghost,
+  html[lang="ar"] .btn-instagram,
+  html[lang="ar"] .badge-soon,
+  html[lang="ar"] .label-luxe {
+    letter-spacing: 0;
+    text-transform: none;
   }
 
   h1,
@@ -57,7 +141,7 @@
   :focus-visible {
     outline: 2px solid var(--gold);
     outline-offset: 3px;
-    border-radius: 2px;
+    border-radius: 4px;
   }
 
   ::selection {
@@ -87,76 +171,208 @@
     @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-10;
   }
 
-  /* Small spaced uppercase label — boutique style */
+  /* ================================================================
+     LIQUID GLASS
+     .glass        → superfici che si sovrappongono allo scorrimento
+                     (header, menu, drawer): sfocatura dello sfondo.
+     .glass-strong → come sopra, più opaca (pannelli a tutto schermo).
+     .glass-flat   → stessa estetica SENZA sfocatura: per le card, che
+                     compaiono a decine. Niente blur su aree grandi.
+     Regola prestazioni: al massimo 3–4 superfici sfocate per schermata.
+     ================================================================ */
+  .glass,
+  .glass-strong,
+  .glass-flat {
+    @apply relative isolate;
+    background-color: var(--glass-bg-solid);
+    box-shadow: var(--shadow-glass), var(--glass-highlight);
+  }
+
+  .glass-strong {
+    background-color: var(--glass-bg-strong-solid);
+  }
+
+  .glass-flat {
+    background-color: var(--glass-flat);
+    box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.85), var(--glass-highlight);
+  }
+
+  /* Filetto di 1px sfumato oro → trasparente, disegnato in maschera
+     così da seguire qualunque border-radius. */
+  .glass::before,
+  .glass-strong::before,
+  .glass-flat::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--glass-hairline);
+    -webkit-mask: linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Dove il browser sa sfocare, alleggeriamo il fondo. */
+  @supports (
+    (backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))
+  ) {
+    .glass {
+      background-color: var(--glass-bg);
+      -webkit-backdrop-filter: var(--glass-blur);
+      backdrop-filter: var(--glass-blur);
+    }
+    .glass-strong {
+      background-color: var(--glass-bg-strong);
+      -webkit-backdrop-filter: var(--glass-blur);
+      backdrop-filter: var(--glass-blur);
+    }
+  }
+
+  /* --- Etichette e titoli ------------------------------------------ */
+
+  /* Piccola etichetta maiuscola molto spaziata, oro attenuato */
   .eyebrow {
-    @apply inline-block text-[0.68rem] uppercase tracking-luxe text-gold;
+    @apply inline-block text-[0.63rem] font-medium uppercase tracking-[0.3em] text-gold-muted;
   }
 
   .eyebrow-dark {
-    @apply inline-block text-[0.68rem] uppercase tracking-luxe text-gold-deep;
+    @apply inline-block text-[0.63rem] font-medium uppercase tracking-[0.3em] text-gold-deep;
   }
 
   .heading-xl {
-    @apply font-serif font-light leading-[1.05] text-4xl sm:text-5xl lg:text-6xl;
+    @apply font-serif font-light leading-[1.05] tracking-[-0.015em] text-[2.6rem] sm:text-6xl lg:text-7xl;
   }
 
   .heading-lg {
-    @apply font-serif font-light leading-[1.1] text-3xl sm:text-4xl lg:text-5xl;
+    @apply font-serif font-light leading-[1.08] tracking-[-0.012em] text-[2rem] sm:text-5xl lg:text-[3.25rem];
   }
 
   .heading-md {
-    @apply font-serif font-light leading-[1.15] text-2xl sm:text-3xl;
+    @apply font-serif font-light leading-[1.1] tracking-[-0.01em] text-2xl sm:text-[2rem];
   }
 
-  /* --- Buttons ---------------------------------------------------- */
+  /* Parola-chiave dei titoli: corsivo con sfumatura oro */
+  .accent-gold {
+    @apply italic;
+    background-image: var(--grad-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 
-  /* Primary — metallic gold, dark text. The main call to action. */
+  /* --- Pulsanti ----------------------------------------------------- */
+
+  /* Primario — pillola, riempimento oro, testo scuro, alone morbido */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-luxe px-7 py-3.5
-      text-[0.78rem] font-semibold uppercase tracking-wide2 text-ink
-      transition-all duration-500 ease-luxe hover:shadow-gold
-      focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50;
-    background-image: var(--gold-sheen);
-    background-size: 220% auto;
+    @apply inline-flex items-center justify-center gap-2 rounded-pill px-7 py-3.5
+      text-[0.72rem] font-semibold uppercase tracking-wide2 text-ink
+      transition-all duration-300 ease-luxe focus-visible:outline-none
+      disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none;
+    background-image: var(--grad-gold);
+    background-size: 200% auto;
     background-position: 0% center;
+    box-shadow: var(--shadow-glow), inset 0 1px 0 rgba(255, 255, 255, 0.45);
   }
-  .btn-primary:hover {
+  .btn-primary:hover:not(:disabled) {
     background-position: 100% center;
+    box-shadow: var(--shadow-glow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  }
+  .btn-primary:active:not(:disabled) {
+    transform: scale(0.975);
   }
 
-  /* Secondary — gold hairline on dark */
+  /* Secondario — pillola con filetto oro e riempimento vetro */
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 rounded-luxe border border-gold/45 px-7 py-3.5
-      text-[0.78rem] font-semibold uppercase tracking-wide2 text-gold-light
-      transition-all duration-500 ease-luxe hover:border-gold hover:bg-gold/10
-      hover:shadow-gold-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+    @apply inline-flex items-center justify-center gap-2 rounded-pill border border-gold/40
+      bg-gold/[0.06] px-7 py-3.5 text-[0.72rem] font-semibold uppercase tracking-wide2
+      text-gold-light transition-all duration-300 ease-luxe hover:border-gold/80
+      hover:bg-gold/15 hover:shadow-glow focus-visible:outline-none
+      disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-outline:active:not(:disabled) {
+    transform: scale(0.975);
   }
 
-  /* Secondary on cream sections */
+  /* Secondario sulle sezioni chiare */
   .btn-outline-dark {
-    @apply inline-flex items-center justify-center gap-2 rounded-luxe border border-ink/25 px-7 py-3.5
-      text-[0.78rem] font-semibold uppercase tracking-wide2 text-ink
-      transition-all duration-500 ease-luxe hover:border-ink hover:bg-ink hover:text-gold-light
+    @apply inline-flex items-center justify-center gap-2 rounded-pill border border-ink/25
+      px-7 py-3.5 text-[0.72rem] font-semibold uppercase tracking-wide2 text-ink
+      transition-all duration-300 ease-luxe hover:border-ink hover:bg-ink hover:text-gold-light
       focus-visible:outline-none;
+  }
+  .btn-outline-dark:active {
+    transform: scale(0.975);
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-luxe px-5 py-2.5
-      text-[0.78rem] font-medium uppercase tracking-wide2 text-cream/75
+    @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5
+      text-[0.72rem] font-medium uppercase tracking-wide2 text-cream/75
       transition-colors duration-300 hover:bg-white/5 hover:text-gold-light
       focus-visible:outline-none;
   }
 
-  /* --- Surfaces --------------------------------------------------- */
+  /* Pulsante circolare (frecce dei caroselli, azioni icona) */
+  .btn-icon {
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-pill border border-gold/35
+      bg-gold/[0.06] text-gold-light transition-all duration-300 ease-luxe
+      hover:border-gold hover:bg-gold hover:text-ink hover:shadow-glow
+      focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-40;
+  }
 
-  /* Card on the dark ground, with a gold glow on hover */
+  /* Instagram — si distingue dagli altri senza usare i colori del
+     gradiente Instagram: filetto oro e alone più marcato. */
+  .btn-instagram {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-pill border border-gold/50
+      bg-gold/[0.08] px-7 py-3.5 text-[0.72rem] font-semibold uppercase tracking-wide2
+      text-gold-light transition-all duration-300 ease-luxe hover:border-gold
+      hover:bg-gold/20 hover:shadow-glow-lg focus-visible:outline-none;
+  }
+  .btn-instagram:active {
+    transform: scale(0.975);
+  }
+
+  /* Etichetta "Coming soon" — filetto oro, fondo trasparente. */
+  .badge-soon {
+    @apply inline-flex shrink-0 items-center whitespace-nowrap rounded-pill
+      border border-gold/40 bg-transparent px-2.5 py-[0.1rem] align-middle
+      text-[0.55rem] font-medium uppercase leading-[1.5] tracking-[0.18em]
+      text-gold-muted;
+  }
+
+  /* --- Superfici ---------------------------------------------------- */
+
+  /* Card su fondo scuro: vetro senza sfocatura + sollevamento all'hover */
   .card-luxe {
-    @apply relative rounded-card border border-ink-line bg-ink-soft
-      transition-all duration-500 ease-luxe hover:border-gold/45 hover:shadow-gold;
+    @apply relative isolate rounded-card transition-all duration-300 ease-luxe;
+    background-color: var(--glass-flat);
+    box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.85), var(--glass-highlight);
+  }
+  .card-luxe::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--glass-hairline);
+    -webkit-mask: linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .card-luxe:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 60px -28px rgba(0, 0, 0, 0.95), var(--shadow-glow),
+      var(--glass-highlight);
   }
 
   .field {
-    @apply w-full rounded-luxe border border-ink-line bg-ink px-4 py-3 text-sm text-cream
+    @apply w-full rounded-luxe border border-ink-line bg-ink/60 px-4 py-3 text-sm text-cream
       placeholder:text-cream/35 transition-colors duration-300
       focus:border-gold/60 focus:outline-none;
   }
@@ -168,10 +384,10 @@
   }
 
   .label-luxe {
-    @apply mb-2 block text-[0.7rem] uppercase tracking-wide2 text-cream/60;
+    @apply mb-2 block text-[0.68rem] uppercase tracking-[0.16em] text-cream/60;
   }
 
-  /* --- Gold text & rules ------------------------------------------ */
+  /* --- Testo e filetti oro ------------------------------------------ */
 
   .text-gold-gradient {
     background-image: var(--gold-sheen);
@@ -181,7 +397,7 @@
     color: transparent;
   }
 
-  /* Slow travelling sheen — hero headings only, sparingly */
+  /* Riflesso lento — solo i titoli dell'hero, con parsimonia */
   .text-gold-anim {
     background-image: var(--gold-sheen);
     background-size: 220% auto;
@@ -207,6 +423,29 @@
 }
 
 @layer utilities {
+  /* Alone caldo riutilizzabile dietro le sezioni (solo decorazione) */
+  .bokeh-gold {
+    background-image: radial-gradient(
+      38rem 26rem at 50% 0%,
+      rgba(217, 174, 69, 0.12),
+      transparent 68%
+    );
+  }
+
+  /* Arco dorato sottile, pura decorazione */
+  .arc-gold {
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: linear-gradient(var(--ink), var(--ink)) padding-box,
+      linear-gradient(
+          200deg,
+          rgba(246, 222, 141, 0.5),
+          rgba(217, 174, 69, 0.08) 42%,
+          transparent 70%
+        )
+        border-box;
+  }
+
   /* Fine guilloche pattern for dark sections */
   .pattern-lux {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%23D9AE45' stroke-opacity='0.055' stroke-width='0.7'%3E%3Ccircle cx='24' cy='24' r='11'/%3E%3Ccircle cx='0' cy='0' r='11'/%3E%3Ccircle cx='48' cy='0' r='11'/%3E%3Ccircle cx='0' cy='48' r='11'/%3E%3Ccircle cx='48' cy='48' r='11'/%3E%3C/g%3E%3C/svg%3E");
@@ -231,6 +470,47 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+}
+
+/* Comparsa del contenuto di pagina: pura CSS, nessuna dipendenza da
+   JavaScript. Se lo script tarda, il testo resta comunque leggibile. */
+.page-enter {
+  animation: pageEnter 0.34s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Dissolvenza dei blocchi (ex FadeIn con framer-motion). */
+.fade-in-up {
+  animation: fadeInUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  /* opacity e transform soltanto: l'animazione resta sul compositore */
+  will-change: opacity, transform;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Le immagini riservano il loro spazio e poggiano su un fondo scuro:
+   niente rettangoli bianchi mentre caricano. */
+img {
+  background-color: var(--ink-soft);
 }
 
 /* Shimmer used by image placeholders */

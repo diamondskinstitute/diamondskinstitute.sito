@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { useCart } from "@/lib/cart/context";
 import { priceWithVariant, type Product } from "@/data/products";
-import { site } from "@/data/site";
+import { useDict } from "@/lib/intl/client";
 import { CartIcon, CheckIcon } from "../ui/Icons";
+import { SHOP_ATTIVO } from "@/lib/shop-status";
 
 // Aggiunge al carrello. Se il prodotto ha varianti e non ne viene passata
 // una (es. dalla card nella griglia), usa la prima opzione come default.
@@ -21,8 +22,26 @@ export default function AddToCartButton({
   className?: string;
   label?: string;
 }) {
+  const site = useDict();
   const cart = useCart();
   const [added, setAdded] = useState(false);
+
+  // Lo shop online non è ancora attivo: il pulsante resta visibile ma
+  // non cliccabile, con l'etichetta "Coming soon".
+  if (!SHOP_ATTIVO) {
+    return (
+      <button
+        type="button"
+        className={className}
+        disabled
+        aria-disabled="true"
+        title={site.shop.comingSoonAria}
+      >
+        <CartIcon size={16} />
+        {label ?? site.shop.aggiungiAlCarrello} · {site.shop.comingSoon}
+      </button>
+    );
+  }
 
   if (product.esaurito) {
     return (
@@ -45,7 +64,7 @@ export default function AddToCartButton({
         varianteId: selected,
         varianteNome: variante?.nome,
       },
-      quantita
+      quantita,
     );
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1800);
@@ -54,7 +73,7 @@ export default function AddToCartButton({
   return (
     <button type="button" onClick={handleClick} className={className}>
       {added ? <CheckIcon size={16} /> : <CartIcon size={16} />}
-      {added ? "Aggiunto" : label ?? site.shop.aggiungiAlCarrello}
+      {added ? "Aggiunto" : (label ?? site.shop.aggiungiAlCarrello)}
     </button>
   );
 }

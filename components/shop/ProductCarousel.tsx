@@ -4,10 +4,12 @@ import { useRef } from "react";
 import type { Product } from "@/data/products";
 import ProductCard from "./ProductCard";
 import { ArrowRight } from "../ui/Icons";
+import { useDict } from "@/lib/intl/client";
 
 // Carosello orizzontale a scorrimento nativo (scroll-snap): nessuna
 // libreria, funziona con swipe su mobile e con le frecce su desktop.
 export default function ProductCarousel({ products }: { products: Product[] }) {
+  const site = useDict();
   const trackRef = useRef<HTMLUListElement>(null);
 
   const scrollBy = (direction: 1 | -1) => {
@@ -38,18 +40,18 @@ export default function ProductCarousel({ products }: { products: Product[] }) {
         <button
           type="button"
           onClick={() => scrollBy(-1)}
-          className="rounded-luxe border border-ink-line p-3 text-cream/70 transition-all duration-300 hover:border-gold/45 hover:text-gold-light"
-          aria-label="Prodotti precedenti"
+          className="btn-icon"
+          aria-label={site.common.prodottiPrecedenti}
         >
-          <ArrowRight className="rotate-180" />
+          <ArrowRight className="rotate-180 rtl:rotate-0" />
         </button>
         <button
           type="button"
           onClick={() => scrollBy(1)}
-          className="rounded-luxe border border-ink-line p-3 text-cream/70 transition-all duration-300 hover:border-gold/45 hover:text-gold-light"
-          aria-label="Prodotti successivi"
+          className="btn-icon"
+          aria-label={site.common.prodottiSuccessivi}
         >
-          <ArrowRight />
+          <ArrowRight className="rtl:rotate-180" />
         </button>
       </div>
     </div>

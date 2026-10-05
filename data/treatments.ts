@@ -10,9 +10,19 @@
 //  slot consecutivi occupare: tienilo aggiornato con la durata reale.
 // =====================================================================
 
+import { formatPrice } from "@/lib/format";
+import { getPortfolioSrc } from "./portfolio";
+import { site } from "./site";
+
 export type TreatmentFaq = {
   domanda: string;
   risposta: string;
+};
+
+// Prezzo per misura (ricostruzione e refill: S / M / L / XL / XXL)
+export type TreatmentSize = {
+  label: string;
+  prezzo: number;
 };
 
 export type Treatment = {
@@ -25,18 +35,39 @@ export type Treatment = {
   perChi: string;
   durataMin: number; // durata reale in minuti
   durataLabel: string; // come viene mostrata
+  // Prezzo di listino. Se `prezzoSuRichiesta` è true il numero NON viene
+  // mostrato (il servizio non è nel listino ufficiale): resta qui solo come
+  // riferimento storico, in attesa di conferma dalla titolare.
   prezzo: number;
-  prezzoDa?: boolean; // mostra "da €.."
+  prezzoDa?: boolean; // mostra "da CHF .."
+  prezzoSuRichiesta?: boolean; // mostra "Su richiesta" invece del prezzo
+  // Listino per misura, mostrato sulla scheda del trattamento
+  misure?: TreatmentSize[];
   // Le fasi del trattamento, nell'ordine
   fasi: { titolo: string; testo: string }[];
   // Consigli per il mantenimento a casa
   aftercare: string[];
   faq: TreatmentFaq[];
+  // Gold placeholder used only when no gallery photo is referenced below.
   immagine: string;
+  // Cover photo taken from the works gallery (`data/portfolio.ts`), given as
+  // the gallery item id (e.g. "p23"). The path itself lives only in the
+  // gallery, so photos are reused and never duplicated. When set, it wins
+  // over `immagine` on the cards and on the treatment page.
+  galleryPhotoId?: string;
+  // Extra gallery photos shown on the treatment page, referenced the same way.
+  galleryPhotoIds?: string[];
+  // Altre foto mostrate sulla scheda (es. dalla galleria lavori)
+  fotoGalleria?: string[];
   inEvidenza?: boolean;
+  // false = servizio disattivato: sparisce da card, dettaglio, prenotazione,
+  // ricerca e sitemap. Vedi SERVIZI-NASCOSTI.md nella root del progetto.
+  active?: boolean;
 };
 
-export const treatments: Treatment[] = [
+// Elenco COMPLETO, compresi i servizi disattivati (`active: false`).
+// Il sito usa `treatments`, che contiene solo quelli attivi.
+export const allTreatments: Treatment[] = [
   {
     slug: "manicure-classica",
     nome: "Manicure Classica",
@@ -50,6 +81,10 @@ export const treatments: Treatment[] = [
     durataMin: 45,
     durataLabel: "45 min",
     prezzo: 30,
+    prezzoSuRichiesta: true,
+    // Non presente nel listino ufficiale: servizio disattivato.
+    // Per riattivarlo: active: true (vedi SERVIZI-NASCOSTI.md)
+    active: false,
     fasi: [
       {
         titolo: "Analisi e forma",
@@ -104,7 +139,7 @@ export const treatments: Treatment[] = [
       "Perfetto per chi ha poco tempo da dedicare alle unghie ma non rinuncia a un colore sempre in ordine, e per chi lavora molto con le mani.",
     durataMin: 60,
     durataLabel: "60 min",
-    prezzo: 38,
+    prezzo: 40,
     fasi: [
       {
         titolo: "Preparazione della lamina",
@@ -145,6 +180,8 @@ export const treatments: Treatment[] = [
       },
     ],
     immagine: "/images/portfolio/placeholder-06.svg",
+    // p23 — French bordeaux su forma squadrata (gallery category "Semipermanente")
+    galleryPhotoId: "p23",
     inEvidenza: true,
   },
   {
@@ -161,6 +198,13 @@ export const treatments: Treatment[] = [
     durataLabel: "120 min",
     prezzo: 65,
     prezzoDa: true,
+    misure: [
+      { label: "S", prezzo: 65 },
+      { label: "M", prezzo: 73 },
+      { label: "L", prezzo: 85 },
+      { label: "XL", prezzo: 93 },
+      { label: "XXL", prezzo: 100 },
+    ],
     fasi: [
       {
         titolo: "Preparazione",
@@ -201,6 +245,8 @@ export const treatments: Treatment[] = [
       },
     ],
     immagine: "/images/portfolio/placeholder-03.svg",
+    // p20 — Stiletto extra lunghe nude lucide (gallery category "Ricostruzione")
+    galleryPhotoId: "p20",
     inEvidenza: true,
   },
   {
@@ -215,7 +261,15 @@ export const treatments: Treatment[] = [
       "Per chi ha già una ricostruzione o una copertura in gel e vuole mantenerla in ordine, in salute e con la struttura corretta.",
     durataMin: 90,
     durataLabel: "90 min",
-    prezzo: 50,
+    prezzo: 60,
+    prezzoDa: true,
+    misure: [
+      { label: "S", prezzo: 60 },
+      { label: "M", prezzo: 65 },
+      { label: "L", prezzo: 73 },
+      { label: "XL", prezzo: 85 },
+      { label: "XXL", prezzo: 93 },
+    ],
     fasi: [
       {
         titolo: "Controllo",
@@ -255,6 +309,9 @@ export const treatments: Treatment[] = [
       },
     ],
     immagine: "/images/portfolio/placeholder-07.svg",
+    // p25 — Squadrate con french colorata rosso e arancio (gallery category "Ricostruzione")
+    galleryPhotoId: "p25",
+    inEvidenza: true,
   },
   {
     slug: "nail-art",
@@ -269,7 +326,10 @@ export const treatments: Treatment[] = [
     durataMin: 45,
     durataLabel: "+45 min",
     prezzo: 10,
-    prezzoDa: true,
+    prezzoSuRichiesta: true,
+    // Non presente nel listino ufficiale: servizio disattivato.
+    // Per riattivarlo: active: true (vedi SERVIZI-NASCOSTI.md)
+    active: false,
     fasi: [
       {
         titolo: "Progetto",
@@ -300,7 +360,7 @@ export const treatments: Treatment[] = [
       {
         domanda: "Quanto costa la nail art?",
         risposta:
-          "Dipende dalla complessità e da quante dita. Il prezzo parte da €10 per un accento semplice e viene definito insieme prima di iniziare.",
+          "Dipende dalla complessità e da quante dita: il preventivo è su richiesta e viene definito insieme prima di iniziare.",
       },
       {
         domanda: "Posso portare una foto?",
@@ -324,6 +384,10 @@ export const treatments: Treatment[] = [
     durataMin: 60,
     durataLabel: "60 min",
     prezzo: 42,
+    prezzoSuRichiesta: true,
+    // Non presente nel listino ufficiale: servizio disattivato.
+    // Per riattivarlo: active: true (vedi SERVIZI-NASCOSTI.md)
+    active: false,
     fasi: [
       {
         titolo: "Pediluvio",
@@ -375,6 +439,10 @@ export const treatments: Treatment[] = [
     durataMin: 75,
     durataLabel: "75 min",
     prezzo: 58,
+    prezzoSuRichiesta: true,
+    // Non presente nel listino ufficiale: servizio disattivato.
+    // Per riattivarlo: active: true (vedi SERVIZI-NASCOSTI.md)
+    active: false,
     fasi: [
       {
         titolo: "Valutazione",
@@ -427,6 +495,10 @@ export const treatments: Treatment[] = [
     durataMin: 40,
     durataLabel: "40 min",
     prezzo: 30,
+    prezzoSuRichiesta: true,
+    // Non presente nel listino ufficiale: servizio disattivato.
+    // Per riattivarlo: active: true (vedi SERVIZI-NASCOSTI.md)
+    active: false,
     fasi: [
       {
         titolo: "Analisi",
@@ -467,20 +539,122 @@ export const treatments: Treatment[] = [
     ],
     immagine: "/images/portfolio/placeholder-12.svg",
   },
+  {
+    // TESTI DA CONFERMARE CON LA TITOLARE: descrizione, perChi e durata sono
+    // una stesura neutra di servizio. Prezzo: su richiesta (nessun importo
+    // nel listino ufficiale). Le foto arrivano dalla galleria lavori.
+    slug: "treccine",
+    nome: "Treccine",
+    categoria: "Capelli",
+    descrizioneBreve:
+      "Treccine realizzate in istituto, su appuntamento.",
+    descrizione:
+      "Realizziamo treccine su appuntamento. Dimensione, numero e lunghezza si concordano insieme prima di iniziare, insieme al tempo necessario: il preventivo viene definito in consulenza, prima che il lavoro cominci.",
+    perChi:
+      "Per chi desidera delle treccine curate e vuole definire insieme stile e misura prima di iniziare.",
+    durataMin: 90,
+    durataLabel: "90 min",
+    prezzo: 90,
+    fasi: [
+      // TODO: bozza da far confermare alla titolare
+      {
+        titolo: "Consulenza",
+        testo:
+          "Decidiamo insieme dimensione, numero e lunghezza delle treccine, e quanto tempo richiede il lavoro.",
+      },
+      {
+        titolo: "Preparazione",
+        testo:
+          "Detersione e districatura, poi la divisione in sezioni ordinate su cui lavorare.",
+      },
+      {
+        titolo: "Realizzazione",
+        testo:
+          "Le treccine vengono realizzate una a una, con tensione controllata per non sollecitare la radice.",
+      },
+      {
+        titolo: "Finitura",
+        testo:
+          "Chiusura delle punte, rifinitura del contorno e consigli per i primi giorni.",
+      },
+    ],
+    aftercare: [
+      // TODO: bozza da far confermare alla titolare
+      "Proteggi le treccine di notte con una cuffia o una federa in raso",
+      "Idrata la cute con un olio leggero, senza appesantire",
+      "Evita di tenerle oltre il tempo consigliato in consulenza",
+    ],
+    faq: [
+      // TODO: bozza da far confermare alla titolare
+      {
+        domanda: "Quanto durano le treccine?",
+        risposta:
+          "Dipende dal tipo di lavoro e dalla crescita dei capelli. La durata consigliata viene indicata in consulenza, insieme al momento giusto per rifarle.",
+      },
+      {
+        domanda: "Posso lavare i capelli con le treccine?",
+        risposta:
+          "Sì, con delicatezza e con prodotti adatti. In consulenza ti spieghiamo come farlo senza rovinare il lavoro.",
+      },
+      {
+        domanda: "Il prezzo cambia in base alla lunghezza?",
+        risposta:
+          "Il prezzo di listino è CHF 90. Per lavorazioni particolari definiamo insieme un preventivo prima di iniziare.",
+      },
+    ],
+    immagine: "/images/portfolio/placeholder-04.svg",
+    // Same photos as before, now referenced by gallery id (category "Treccine")
+    galleryPhotoId: "p03",
+    galleryPhotoIds: ["p08", "p13", "p18"],
+    inEvidenza: true,
+  },
 ];
 
 // --- Helper ------------------------------------------------------------
 
+// Solo i trattamenti attivi: è questo l'elenco usato da tutto il sito
+// (card, prenotazione, ricerca, sitemap, pagine di dettaglio).
+export const treatments: Treatment[] = allTreatments.filter(
+  (t) => t.active !== false
+);
+
+// Cover photo of a treatment: the referenced gallery photo when there is one,
+// otherwise the gold placeholder kept in `immagine`.
+export function treatmentImage(t: Treatment): string {
+  return (t.galleryPhotoId && getPortfolioSrc(t.galleryPhotoId)) || t.immagine;
+}
+
+// Extra photos shown under the cover on the treatment page.
+export function treatmentGalleryPhotos(t: Treatment): string[] {
+  const fromGallery = (t.galleryPhotoIds ?? [])
+    .map(getPortfolioSrc)
+    .filter((src): src is string => Boolean(src));
+  return fromGallery.length > 0 ? fromGallery : (t.fotoGalleria ?? []);
+}
+
 export function getTreatment(slug: string): Treatment | undefined {
   return treatments.find((t) => t.slug === slug);
+}
+
+// true se lo slug esiste ma il servizio è disattivato: la vecchia URL
+// viene reindirizzata a /trattamenti invece di dare 404.
+export function isHiddenTreatment(slug: string): boolean {
+  return allTreatments.some((t) => t.slug === slug && t.active === false);
 }
 
 export const featuredTreatments: Treatment[] = treatments.filter(
   (t) => t.inEvidenza
 );
 
-export function formatTreatmentPrice(t: Treatment): string {
-  return `${t.prezzoDa ? "da " : ""}€${t.prezzo}`;
+export function formatTreatmentPrice(
+  t: Treatment,
+  labels: { suRichiesta: string; da: string } = {
+    suRichiesta: site.trattamenti.suRichiesta,
+    da: site.trattamenti.da,
+  }
+): string {
+  if (t.prezzoSuRichiesta) return labels.suRichiesta;
+  return `${t.prezzoDa ? labels.da + " " : ""}${formatPrice(t.prezzo)}`;
 }
 
 // Categorie presenti, nell'ordine in cui compaiono

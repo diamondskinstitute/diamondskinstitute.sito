@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BLUR_DARK } from "@/lib/blur";
 import Link from "next/link";
 import { salon } from "@/data/salon";
 
@@ -10,7 +11,9 @@ type BrandLogoProps = {
   static?: boolean;
 };
 
-const SIZES: Record<string, number> = { mark: 44, full: 46, hero: 260 };
+// TODO: il logo dell'hero è passato da 260 a 132 px perché ora divide la
+// riga con la colonna fotografica. Si può alzare se lo vuoi più presente.
+const SIZES: Record<string, number> = { mark: 44, full: 44, hero: 132 };
 
 // Il file del logo ha lo sfondo nero: va sempre su fondo scuro, con
 // `logo-blend` (mix-blend-mode: lighten) per fonderlo con lo sfondo.
@@ -27,7 +30,7 @@ export default function BrandLogo({
     // fondo (impossibile sopra l'alone dorato dell'hero) lo incorniciamo
     // con un filetto oro, così il bordo del riquadro diventa voluto.
     <span
-      className={`relative block shrink-0 overflow-hidden rounded-luxe ring-1 ${
+      className={`relative block shrink-0 overflow-hidden rounded-[18px] ring-1 ${
         isHero ? "shadow-gold ring-gold/35" : "ring-gold/25"
       }`}
       style={{ width: size, height: size }}
@@ -39,6 +42,8 @@ export default function BrandLogo({
         sizes={`${size}px`}
         className="logo-blend object-cover"
         priority={isHero}
+        placeholder="blur"
+        blurDataURL={BLUR_DARK}
       />
     </span>
   );
@@ -46,15 +51,15 @@ export default function BrandLogo({
   const content = isHero ? (
     mark
   ) : (
-    <span className="flex items-center gap-3">
+    <span className="flex shrink-0 items-center gap-3">
       {mark}
       {variant === "full" && (
         <span className="flex flex-col leading-none">
-          <span className="text-gold-gradient font-serif text-xl tracking-wide">
+          <span className="text-gold-gradient whitespace-nowrap font-serif text-xl tracking-wide">
             {salon.brandName}
           </span>
           {/* Il claim occuperebbe tre righe sotto i 640px: lo nascondiamo */}
-          <span className="mt-1 hidden text-[0.55rem] uppercase tracking-luxe text-cream/45 sm:block">
+          <span className="mt-1 hidden whitespace-nowrap text-[0.5rem] uppercase tracking-[0.24em] text-cream/45 2xl:block">
             {salon.claim}
           </span>
         </span>
@@ -65,7 +70,11 @@ export default function BrandLogo({
   if (isStatic) return <span className={className}>{content}</span>;
 
   return (
-    <Link href="/" aria-label={salon.brandName} className={`group ${className}`}>
+    <Link
+      href="/"
+      aria-label={salon.brandName}
+      className={`group ${className}`}
+    >
       {content}
     </Link>
   );

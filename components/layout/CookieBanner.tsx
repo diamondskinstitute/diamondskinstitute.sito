@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { site } from "@/data/site";
+import { useDict } from "@/lib/intl/client";
 
 const STORAGE_KEY = "k-institute-cookie";
 
 // Banner cookie. Il sito usa SOLO cookie tecnici (carrello e preferenze),
 // quindi non c'è nulla da rifiutare: basta la presa visione.
 export default function CookieBanner() {
+  const site = useDict();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -37,9 +38,9 @@ export default function CookieBanner() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 24 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-x-3 bottom-36 z-[65] mx-auto max-w-2xl rounded-card border border-gold/25 bg-ink-soft p-5 shadow-lift lg:bottom-6 lg:inset-x-6"
+          className="glass fixed inset-x-3 bottom-36 z-[65] mx-auto max-w-2xl rounded-glass p-5 shadow-lift lg:bottom-6 lg:inset-x-6"
           role="region"
-          aria-label="Informativa cookie"
+          aria-label={site.common.informativaCookie}
         >
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <p className="flex-1 text-sm leading-relaxed text-cream/70">
@@ -51,7 +52,11 @@ export default function CookieBanner() {
                 {site.cookie.dettagli}
               </Link>
             </p>
-            <button type="button" onClick={accept} className="btn-primary shrink-0">
+            <button
+              type="button"
+              onClick={accept}
+              className="btn-primary shrink-0"
+            >
               {site.cookie.accetta}
             </button>
           </div>

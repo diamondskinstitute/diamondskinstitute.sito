@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/ui/PageHeader";
 import PortfolioGallery from "@/components/portfolio/PortfolioGallery";
-import { site } from "@/data/site";
+import { getDict } from "@/lib/intl/server";
+import InstagramButton from "@/components/ui/InstagramButton";
 
-export const metadata: Metadata = {
-  title: "I nostri lavori",
-  description: site.lavori.intro,
-};
+// Titolo e descrizione seguono la lingua scelta
+export function generateMetadata(): Metadata {
+  const m = getDict().meta.lavori;
+  return { title: m.title, description: m.description };
+}
 
 export default function LavoriPage() {
+  const site = getDict();
   return (
     <>
       <PageHeader
@@ -19,6 +22,11 @@ export default function LavoriPage() {
       <div className="bg-ink py-16 sm:py-20">
         <div className="container-luxe">
           <PortfolioGallery />
+
+          {/* Invito a seguire il profilo, sotto alla galleria */}
+          <div className="mt-14 text-center">
+            <InstagramButton label={site.instagramCta.lavori} />
+          </div>
         </div>
       </div>
     </>

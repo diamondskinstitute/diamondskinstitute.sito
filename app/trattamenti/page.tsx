@@ -3,16 +3,20 @@ import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 import FadeIn from "@/components/FadeIn";
 import TreatmentCard from "@/components/treatments/TreatmentCard";
+import PriceList from "@/components/treatments/PriceList";
 import { treatments, treatmentCategories } from "@/data/treatments";
-import { site } from "@/data/site";
+import { getDict } from "@/lib/intl/server";
+import { categoriaTrattamento } from "@/lib/intl/content";
 import { ArrowRight } from "@/components/ui/Icons";
 
-export const metadata: Metadata = {
-  title: "Trattamenti",
-  description: site.trattamenti.intro,
-};
+// Titolo e descrizione seguono la lingua scelta
+export function generateMetadata(): Metadata {
+  const m = getDict().meta.trattamenti;
+  return { title: m.title, description: m.description };
+}
 
 export default function TrattamentiPage() {
+  const site = getDict();
   return (
     <>
       <PageHeader
@@ -29,7 +33,7 @@ export default function TrattamentiPage() {
               <section key={categoria}>
                 <FadeIn className="mb-8 flex items-center gap-5">
                   <h2 className="heading-md whitespace-nowrap text-cream">
-                    {categoria}
+                    {categoriaTrattamento(site, categoria)}
                   </h2>
                   <span className="gold-rule w-full" />
                 </FadeIn>
@@ -44,20 +48,22 @@ export default function TrattamentiPage() {
             );
           })}
 
+          <PriceList />
+
           <FadeIn className="rounded-card border border-gold/25 bg-ink-soft p-10 text-center">
             <h2 className="heading-md text-cream">
-              Non sai quale trattamento scegliere?
+              {site.trattamenti.nonSaiQuale}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-cream/65">
-              Scrivici: ti aiutiamo a individuare il trattamento giusto per lo
-              stato delle tue unghie e per il risultato che desideri.
+              {site.trattamenti.nonSaiQualeTesto}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link href="/prenota" className="btn-primary">
-                Prenota un appuntamento
+                {site.trattamenti.prenotaAppuntamento}
               </Link>
               <Link href="/contatti" className="btn-outline">
-                Contattaci <ArrowRight size={16} />
+                {site.trattamenti.contattaci}{" "}
+                <ArrowRight size={16} className="rtl:rotate-180" />
               </Link>
             </div>
           </FadeIn>

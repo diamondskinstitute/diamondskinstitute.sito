@@ -14,9 +14,13 @@ export type ShopCategory = {
   esempi: string[];
   // Immagine di copertina della categoria (dentro /public)
   cover: string;
+  // false = categoria ritirata dal sito (menu, /shop, footer, sitemap).
+  // Vedi SERVIZI-NASCOSTI.md nella root.
+  attivo?: boolean;
 };
 
-export const shopCategories: ShopCategory[] = [
+// Elenco COMPLETO, comprese le categorie ritirate (`attivo: false`).
+export const allShopCategories: ShopCategory[] = [
   {
     slug: "gel-base",
     nome: "Gel & Base",
@@ -86,8 +90,16 @@ export const shopCategories: ShopCategory[] = [
     sottotitolo: "Il regalo che non sbaglia mai",
     esempi: ["Trattamenti", "Prodotti", "Importo libero"],
     cover: "/images/products/gift-card-k-institute.svg",
+    // Gift card rimosse dal sito su richiesta della titolare.
+    // Per ripristinarle: attivo: true (vedi SERVIZI-NASCOSTI.md)
+    attivo: false,
   },
 ];
+
+// Solo le categorie attive: è questo l'elenco usato da tutto il sito.
+export const shopCategories: ShopCategory[] = allShopCategories.filter(
+  (c) => c.attivo !== false
+);
 
 export function getCategory(slug: string): ShopCategory | undefined {
   return shopCategories.find((c) => c.slug === slug);

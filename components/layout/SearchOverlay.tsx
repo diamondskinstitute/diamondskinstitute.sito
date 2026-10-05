@@ -2,12 +2,20 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
+import { BLUR_DARK } from "@/lib/blur";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { products } from "@/data/products";
 import { treatments } from "@/data/treatments";
-import { site } from "@/data/site";
+import { useDict } from "@/lib/intl/client";
 import { formatPrice } from "@/lib/format";
+import ComingSoonBadge from "../ui/ComingSoonBadge";
+import {
+  descrProdotto,
+  descrTrattamento,
+  nomeProdotto,
+  nomeTrattamento,
+} from "@/lib/intl/content";
 import { CloseIcon, SearchIcon } from "../ui/Icons";
 
 // Ricerca client-side su prodotti e trattamenti: il catalogo è locale,
@@ -19,6 +27,7 @@ export default function SearchOverlay({
   open: boolean;
   onClose: () => void;
 }) {
+  const site = useDict();
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -51,10 +60,16 @@ export default function SearchOverlay({
     const match = (text: string) => text.toLowerCase().includes(q);
     return {
       prodotti: products
-        .filter((p) => match(p.nome) || match(p.descrizioneBreve) || match(p.categoria))
+        .filter(
+          (p) =>
+            match(p.nome) || match(p.descrizioneBreve) || match(p.categoria),
+        )
         .slice(0, 6),
       trattamenti: treatments
-        .filter((t) => match(t.nome) || match(t.descrizioneBreve) || match(t.categoria))
+        .filter(
+          (t) =>
+            match(t.nome) || match(t.descrizioneBreve) || match(t.categoria),
+        )
         .slice(0, 4),
     };
   }, [q]);
@@ -72,7 +87,7 @@ export default function SearchOverlay({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-[70] bg-ink/95 backdrop-blur-sm"
+          className="glass-strong fixed inset-0 z-[70]"
           role="dialog"
           aria-modal="true"
           aria-label={site.ricerca.apri}
@@ -132,14 +147,16 @@ export default function SearchOverlay({
                                 fill
                                 sizes="56px"
                                 className="object-cover"
+                                placeholder="blur"
+                                blurDataURL={BLUR_DARK}
                               />
                             </span>
                             <span className="min-w-0 flex-1">
                               <span className="block truncate font-serif text-lg text-cream transition-colors group-hover:text-gold-light">
-                                {p.nome}
+                                {nomeProdotto(site, p)} <ComingSoonBadge />
                               </span>
                               <span className="block truncate text-xs text-cream/45">
-                                {p.descrizioneBreve}
+                                {descrProdotto(site, p)}
                               </span>
                             </span>
                             <span className="shrink-0 text-sm text-gold-light">
@@ -165,10 +182,10 @@ export default function SearchOverlay({
                           >
                             <span className="min-w-0">
                               <span className="block truncate font-serif text-lg text-cream transition-colors group-hover:text-gold-light">
-                                {t.nome}
+                                {nomeTrattamento(site, t)}
                               </span>
                               <span className="block truncate text-xs text-cream/45">
-                                {t.descrizioneBreve}
+                                {descrTrattamento(site, t)}
                               </span>
                             </span>
                             <span className="shrink-0 text-xs uppercase tracking-wide2 text-gold/80">

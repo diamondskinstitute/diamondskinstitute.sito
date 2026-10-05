@@ -1,0 +1,1075 @@
+{
+  "topBar": {
+    "testo": "Delivery in {tempiConsegna}",
+    "linkLabel": "Go to the shop"
+  },
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "trattamenti": "Treatments",
+    "lavori": "Our work",
+    "prenota": "Book",
+    "chiSiamo": "About us",
+    "contatti": "Contact",
+    "prenotaBreve": "Book",
+    "menuPrincipale": "Main menu",
+    "menuMobile": "Main mobile menu",
+    "apriMenu": "Open the menu",
+    "chiudiMenu": "Close the menu",
+    "categorieShop": "Shop categories",
+    "mostraCategorie": "Show shop categories",
+    "areaRiservata": "Private area",
+    "lingua": "Language",
+    "cambiaLingua": "Change language",
+    "percorso": "Breadcrumb",
+    "colonnaIstituto": "The studio",
+    "colonnaShop": "The shop",
+    "footerLinks": {
+      "iTrattamenti": "Treatments",
+      "prenotaAppuntamento": "Book an appointment",
+      "iNostriLavori": "Our work",
+      "chiSiamo": "About us",
+      "doveTrovarci": "Find us",
+      "tuttiIProdotti": "All products"
+    },
+    "legale": {
+      "privacy": "Privacy",
+      "cookie": "Cookies",
+      "termini": "Terms of sale",
+      "spedizioni": "Shipping and returns"
+    }
+  },
+  "common": {
+    "scopriIlTrattamento": "Discover the treatment",
+    "tuttiITrattamenti": "All treatments",
+    "chiediInformazioni": "Ask for information",
+    "tornaAlCarrello": "Back to the cart",
+    "caricoIlModulo": "Loading the form…",
+    "caricoIlCarrello": "Loading the cart…",
+    "aggiunto": "Added",
+    "categorie": "Categories",
+    "tuttoLoShop": "The whole shop",
+    "inEvidenza": "Featured",
+    "sfogliaPerCategoria": "Browse by category",
+    "ivaInclusa": "VAT included",
+    "diminuisciQuantita": "Decrease quantity",
+    "aumentaQuantita": "Increase quantity",
+    "chiudiCarrello": "Close the cart",
+    "prodottiPrecedenti": "Previous products",
+    "prodottiSuccessivi": "Next products",
+    "scriviWhatsapp": "Message us on WhatsApp",
+    "informativaCookie": "Cookie notice",
+    "chiuso": "Closed",
+    "appuntamentoIn": "The appointment takes place at the studio:",
+    "qualcosaStorto": "Something went wrong.",
+    "connessioneFallita": "Connection failed. Please try again shortly.",
+    "tempiConsegna": "2–4 working days",
+    "paese": "Switzerland"
+  },
+  "giorni": {
+    "Lunedì": "Monday",
+    "Martedì": "Tuesday",
+    "Mercoledì": "Wednesday",
+    "Giovedì": "Thursday",
+    "Venerdì": "Friday",
+    "Sabato": "Saturday",
+    "Domenica": "Sunday"
+  },
+  "hero": {
+    "eyebrow": "Nail studio & shop",
+    "titolo": "The art of nails,",
+    "titoloAccento": "crafted like a jewel",
+    "sottotitolo": "Tailored treatments in our studio and selected professional products, for those who work with nails and those who want them flawless.",
+    "ctaPrimaria": {
+      "label": "Book a treatment"
+    },
+    "ctaSecondaria": {
+      "label": "Discover the shop"
+    }
+  },
+  "highlights": [
+    {
+      "titolo": "Professional products",
+      "testo": "Only products tested in the studio before they reach the shop shelves."
+    },
+    {
+      "titolo": "Tailored treatments",
+      "testo": "Every service starts with reading the nail plate: no two protocols are the same."
+    },
+    {
+      "titolo": "Certified hygiene",
+      "testo": "Autoclave-sterilised tools and single-use items for everything that cannot be sterilised."
+    },
+    {
+      "titolo": "Fast delivery",
+      "testo": "Orders prepared same day, delivery in {tempiConsegna}."
+    }
+  ],
+  "sezioniHome": {
+    "prodotti": {
+      "eyebrow": "The shop",
+      "titolo": "The products we use every day",
+      "intro": "No endless catalogue: we only sell what we genuinely use in the studio, because we know how it behaves under our hands.",
+      "cta": {
+        "label": "The whole shop"
+      }
+    },
+    "trattamenti": {
+      "eyebrow": "The studio",
+      "titolo": "The most requested treatments",
+      "intro": "From semi-permanent polish to full structural gel: every treatment has its own page, with steps, duration and aftercare advice.",
+      "cta": {
+        "label": "All treatments"
+      }
+    },
+    "portfolio": {
+      "eyebrow": "Our work",
+      "titolo": "Done on real clients",
+      "intro": "No renders, no stock photos: these are the hands of the people who sit with us.",
+      "cta": {
+        "label": "See the full gallery"
+      }
+    },
+    "chiSiamo": {
+      "eyebrow": "About us",
+      "titolo": "From the studio to the brand",
+      "testo": "K Institute was born from the idea that a product must be understood before it is sold. Everything you find in the shop goes through our workstations first: if it cannot survive a day in the studio, it never reaches the catalogue.",
+      "cta": {
+        "label": "Our story"
+      }
+    },
+    "testimonianze": {
+      "eyebrow": "What they say",
+      "titolo": "Words from our clients"
+    },
+    "instagram": {
+      "eyebrow": "Instagram",
+      "titolo": "Follow every new set",
+      "testo": "We post every finished set, the behind the scenes and the shop news.",
+      "cta": {
+        "label": "Follow us on {instagramHandle}"
+      }
+    },
+    "mappa": {
+      "eyebrow": "Find us",
+      "titolo": "Come and see us at the studio",
+      "cta": {
+        "label": "Contact & map"
+      }
+    }
+  },
+  "shop": {
+    "eyebrow": "Shop",
+    "titolo": "Professional products",
+    "intro": "Gels, colours, tools and lamps selected one by one.",
+    "filtri": {
+      "categoria": "Category",
+      "prezzo": "Maximum price",
+      "ordina": "Sort by",
+      "tutte": "All categories",
+      "azzera": "Clear filters",
+      "nessunRisultato": "No product matches the selected filters. Try widening your search."
+    },
+    "ordinamenti": [
+      {
+        "id": "rilevanza",
+        "label": "Relevance"
+      },
+      {
+        "id": "prezzo-asc",
+        "label": "Price, low to high"
+      },
+      {
+        "id": "prezzo-desc",
+        "label": "Price, high to low"
+      },
+      {
+        "id": "nome",
+        "label": "Name A–Z"
+      }
+    ],
+    "aggiungiAlCarrello": "Add to cart",
+    "comingSoon": "Coming soon",
+    "comingSoonAria": "The online shop is not active yet: this product cannot be purchased",
+    "esaurito": "Sold out",
+    "correlati": "You might also like",
+    "caratteristiche": "Features",
+    "quantita": "Quantity",
+    "finoA": "up to"
+  },
+  "carrello": {
+    "titolo": "Your cart",
+    "vuoto": "Your cart is empty.",
+    "vuotoCta": {
+      "label": "Discover the shop"
+    },
+    "subtotale": "Subtotal",
+    "spedizione": "Shipping",
+    "spedizioneComingSoon": "Coming soon",
+    "totale": "Total",
+    "vaiAlCheckout": "Go to checkout",
+    "continuaAcquisti": "Continue shopping",
+    "rimuovi": "Remove"
+  },
+  "checkout": {
+    "titolo": "Checkout",
+    "intro": "Fill in your details: you will receive a confirmation email with the summary and the payment instructions.",
+    "sezioneDati": "Your details",
+    "sezioneSpedizione": "Shipping address",
+    "sezioneRiepilogo": "Order summary",
+    "invia": "Send the order request",
+    "inviando": "Sending…",
+    "notaPagamento": "Online payment is not active yet. Once we receive your request we will contact you within 24 hours with the payment details and availability confirmation.",
+    "privacyPrefisso": "I have read and accept the",
+    "privacyCongiunzione": "and the",
+    "campi": {
+      "nome": "Full name *",
+      "telefono": "Phone *",
+      "email": "Email *",
+      "indirizzo": "Street and number *",
+      "cap": "Postcode *",
+      "citta": "Town *",
+      "paese": "Country *"
+    }
+  },
+  "ordineConfermato": {
+    "eyebrow": "Thank you",
+    "titolo": "Order request received",
+    "testo": "We have emailed you a summary. We will contact you within 24 hours to confirm availability and payment details.",
+    "numeroOrdine": "Request number",
+    "cta": {
+      "label": "Back to the shop"
+    }
+  },
+  "trattamenti": {
+    "eyebrow": "The studio",
+    "titolo": "Treatments",
+    "intro": "Every treatment has a full page: what it is for, how it works, how long it takes and how to maintain it at home. Choose yours and book online.",
+    "prenotaQuesto": "Book this treatment",
+    "aCosaServe": "Who it is for",
+    "comeSiSvolge": "How it works",
+    "mantenimento": "Aftercare at home",
+    "domande": "Frequently asked questions",
+    "durata": "Duration",
+    "prezzoDa": "Price",
+    "altriTrattamenti": "Other treatments",
+    "da": "from",
+    "suRichiesta": "On request",
+    "misureTitolo": "Prices by size",
+    "nonSaiQuale": "Not sure which treatment to choose?",
+    "nonSaiQualeTesto": "Write to us: we will help you find the right treatment for the state of your nails and the result you want.",
+    "prenotaAppuntamento": "Book an appointment",
+    "contattaci": "Contact us"
+  },
+  "listino": {
+    "eyebrow": "Price list",
+    "titolo": "Price list",
+    "intro": "All prices are in Swiss francs. Items marked “on request” are quoted at the studio before we start.",
+    "gratis": "Free",
+    "suRichiesta": "On request",
+    "gruppi": {
+      "unghie": {
+        "titolo": "Nails"
+      },
+      "gel-pose-completa": {
+        "titolo": "Gel nails — Full set",
+        "sottotitolo": "Price by size"
+      },
+      "gel-riempimento": {
+        "titolo": "Gel nails — Refill",
+        "sottotitolo": "Price by size"
+      },
+      "extra": {
+        "titolo": "Extras"
+      },
+      "pedicure": {
+        "titolo": "Pedicures"
+      },
+      "treccine": {
+        "titolo": "Braids"
+      }
+    },
+    "voci": {
+      "unghie.semipermanente": "Semi-permanent polish",
+      "unghie.manicure-uomo": "Men's manicure",
+      "unghie.rimozione": "Removal",
+      "extra.unghia-rotta": "One broken nail",
+      "extra.piu-unghie-rotte": "More than one broken nail",
+      "extra.babycolors": "BabyColors",
+      "extra.babyboomer": "BabyBoomer",
+      "extra.french": "French",
+      "extra.strass": "Single rhinestone",
+      "extra.altri-extra": "Other extras",
+      "pedicure.semipermanente": "Semi-permanent polish",
+      "pedicure.acrygel": "Acrygel nails",
+      "pedicure.cura-piedi": "Foot care",
+      "treccine.treccine": "Braids"
+    }
+  },
+  "lavori": {
+    "eyebrow": "Portfolio",
+    "titolo": "Our work",
+    "intro": "A selection of sets made in the studio. Filter by type of work and click a photo to enlarge it.",
+    "tutte": "All",
+    "chiudi": "Close",
+    "precedente": "Previous",
+    "successiva": "Next"
+  },
+  "galleryCategories": {
+    "Nail Art": "Nail art",
+    "Semipermanente": "Semi-permanent",
+    "Ricostruzione": "Full set",
+    "Treccine": "Braids",
+    "Pedicure": "Pedicure"
+  },
+  "treatmentCategories": {
+    "Mani": "Hands",
+    "Colore": "Colour",
+    "Estensioni": "Extensions",
+    "Piedi": "Feet",
+    "Capelli": "Hair"
+  },
+  "treatments": {
+    "semipermanente": {
+      "nome": "Semi-permanent polish",
+      "descrizioneBreve": "Bright, flawless colour that lasts up to three weeks.",
+      "descrizione": "Semi-permanent polish combines the convenience of nail polish with the hold of gel: full colour, day-one shine and no smudging for at least three weeks. The application is millimetre-precise, with the cuticle always left clear and the edge sealed to prevent lifting.",
+      "perChi": "Perfect for anyone with little time for their nails who still wants colour that always looks neat, and for anyone who works a lot with their hands.",
+      "fasi": [
+        {
+          "titolo": "Preparing the nail plate",
+          "testo": "Gentle buffing and dehydration: the foundation of any long-lasting hold."
+        },
+        {
+          "titolo": "Base and structure",
+          "testo": "Rubber base applied thinly and levelled to even out any irregularities."
+        },
+        {
+          "titolo": "Colour",
+          "testo": "Two thin coats, each cured separately, for full colour without bulk."
+        },
+        {
+          "titolo": "Sealing",
+          "testo": "Glossy top coat and free-edge sealing to prevent lifting."
+        }
+      ],
+      "aftercare": [
+        "Wait at least 12 hours before soaking your hands in hot water",
+        "Do not use your nails as a tool: it is the number one cause of lifting",
+        "Never peel semi-permanent polish off"
+      ],
+      "faq": [
+        {
+          "domanda": "Does semi-permanent polish damage the nail?",
+          "risposta": "No, when it is applied and removed correctly. Damage almost always comes from over-filing during preparation or from peeling it off."
+        },
+        {
+          "domanda": "How often should it be redone?",
+          "risposta": "About every 3 weeks. Beyond 4 weeks the regrowth levers on the edge and the risk of lifting increases."
+        }
+      ]
+    },
+    "ricostruzione-gel": {
+      "nome": "Gel nails – Full set",
+      "descrizioneBreve": "Structure, strength and a made-to-measure shape, built by hand.",
+      "descrizione": "A full set builds the nail where there isn't one: length, apex and curve are shaped by hand to achieve a harmonious form and, above all, a structure that holds. The result is strong but thin, natural to the touch and in weight.",
+      "perChi": "For anyone with fragile nails that break before they grow, for anyone who wants length, and for anyone who wants a shape their natural nail would not allow.",
+      "fasi": [
+        {
+          "titolo": "Preparation",
+          "testo": "Reading the nail plate, basic shaping and surface preparation."
+        },
+        {
+          "titolo": "Building",
+          "testo": "Gel applied on a form or dual form, with the apex built at the point of greatest stress."
+        },
+        {
+          "titolo": "Structural filing",
+          "testo": "Refining the profile, the curve and the thickness: this is what decides how long it lasts."
+        },
+        {
+          "titolo": "Colour and finish",
+          "testo": "Colour, nail art if you want it, sealing and cuticle oil."
+        }
+      ],
+      "aftercare": [
+        "Come back for a refill within 3–4 weeks: don't wait for lifting",
+        "If a nail breaks, don't pull it: book an appointment",
+        "Cuticle oil every day, on the enhancement too"
+      ],
+      "faq": [
+        {
+          "domanda": "How long does a full set last?",
+          "risposta": "The structure holds for months; what changes is the regrowth. That is why we do a refill every 3–4 weeks instead of starting over."
+        },
+        {
+          "domanda": "Can I go back to natural nails whenever I want?",
+          "risposta": "Yes. Removal is done in the studio, filing down the thickness and leaving a protective veil that thins out as the nail grows."
+        }
+      ]
+    },
+    "refill": {
+      "nome": "Gel nails – Refill",
+      "descrizioneBreve": "The maintenance that keeps the set perfect over time.",
+      "descrizione": "A refill fills the regrowth area and rebalances the structure, moving the apex back to the right place as the nail grows. Done regularly, it is what means you never have to rebuild the set from scratch.",
+      "perChi": "For anyone who already has a full set or a gel overlay and wants to keep it neat, healthy and correctly structured.",
+      "fasi": [
+        {
+          "titolo": "Check-up",
+          "testo": "Checking for lifting and the state of the nail plate under the gel."
+        },
+        {
+          "titolo": "Filing the regrowth",
+          "testo": "Thinning the old gel and preparing the new area."
+        },
+        {
+          "titolo": "Rebalancing",
+          "testo": "New gel in the regrowth area and the apex moved back into the right position."
+        },
+        {
+          "titolo": "Finishing",
+          "testo": "Profile filing, colour and final sealing."
+        }
+      ],
+      "aftercare": [
+        "Keep to the 3–4 week rhythm: that is the key to everything",
+        "Tell us straight away about any discomfort or lifting",
+        "Keep using cuticle oil daily"
+      ],
+      "faq": [
+        {
+          "domanda": "Can I have a refill on work done elsewhere?",
+          "risposta": "Yes, after an assessment. If the previous structure cannot be saved, we suggest removal and a new full set."
+        },
+        {
+          "domanda": "How many times can it be repeated?",
+          "risposta": "Indefinitely, as long as the natural nail underneath stays healthy. We check it at every appointment."
+        }
+      ]
+    },
+    "treccine": {
+      "nome": "Braids",
+      "descrizioneBreve": "Braids done in the studio, by appointment.",
+      "descrizione": "We do braids by appointment. Size, number and length are agreed together before we start, along with the time needed: the quote is set during the consultation, before the work begins.",
+      "perChi": "For anyone who wants well-made braids and likes to agree on style and size together before starting.",
+      "fasi": [
+        {
+          "titolo": "Consultation",
+          "testo": "We decide together the size, number and length of the braids, and how long the work will take."
+        },
+        {
+          "titolo": "Preparation",
+          "testo": "Washing and detangling, then dividing the hair into neat sections to work on."
+        },
+        {
+          "titolo": "Braiding",
+          "testo": "The braids are made one by one, with controlled tension so the roots are not stressed."
+        },
+        {
+          "titolo": "Finishing",
+          "testo": "Sealing the ends, tidying the hairline and advice for the first few days."
+        }
+      ],
+      "aftercare": [
+        "Protect the braids at night with a bonnet or a satin pillowcase",
+        "Moisturise the scalp with a light oil, without weighing it down",
+        "Avoid keeping them in beyond the time advised at the consultation"
+      ],
+      "faq": [
+        {
+          "domanda": "How long do braids last?",
+          "risposta": "It depends on the type of work and on how fast your hair grows. The recommended time is given at the consultation, along with the right moment to redo them."
+        },
+        {
+          "domanda": "Can I wash my hair with braids in?",
+          "risposta": "Yes, gently and with suitable products. At the consultation we explain how to do it without spoiling the work."
+        },
+        {
+          "domanda": "Does the price change with length?",
+          "risposta": "The list price is CHF 90. For special work we agree a quote together before starting."
+        }
+      ]
+    }
+  },
+  "shopCategories": {
+    "gel-base": {
+      "nome": "Gels & Bases",
+      "sottotitolo": "Builders, rubber bases and top coats"
+    },
+    "nail-art": {
+      "nome": "Nail art",
+      "sottotitolo": "Colours, glitter and signature decoration"
+    },
+    "pennelli": {
+      "nome": "Brushes",
+      "sottotitolo": "Selected bristles for every technique"
+    },
+    "lampade-fresette": {
+      "nome": "Lamps & E-files",
+      "sottotitolo": "Professional electrical equipment"
+    },
+    "tips-estensioni": {
+      "nome": "Tips & Extensions",
+      "sottotitolo": "Tips, dual forms and nail forms"
+    },
+    "lime-buffer": {
+      "nome": "Files & Buffers",
+      "sottotitolo": "A grit for every stage of the work"
+    },
+    "attrezzi": {
+      "nome": "Tools",
+      "sottotitolo": "Steel instruments, sterilisable"
+    },
+    "oli-liquidi": {
+      "nome": "Oils & Liquids",
+      "sottotitolo": "Care, preparation and removal"
+    },
+    "pedicure": {
+      "nome": "Pedicure",
+      "sottotitolo": "Everything for foot treatment"
+    }
+  },
+  "products": {
+    "gel-costruttore-diamond-clear": {
+      "nome": "Diamond Clear Builder Gel",
+      "descrizioneBreve": "Clear, self-levelling builder gel for structured extensions.",
+      "descrizione": "A medium-thick builder that self-levels without running, perfect for building the apex and keeping the structure light. Its crystal clarity makes it ideal under any colour or nail art, and it does not yellow over time.",
+      "caratteristiche": [
+        "Medium viscosity, self-levelling",
+        "Cures in 60 seconds in a LED lamp",
+        "Does not yellow, stable clarity",
+        "Suitable for extensions up to 2 sizes"
+      ]
+    },
+    "base-rubber-gold-touch": {
+      "nome": "Gold Touch Rubber Base",
+      "descrizioneBreve": "Nude rubber base with a golden micro-shimmer, levelling and protective.",
+      "descrizione": "An elastic base that evens out irregularities in the nail plate and protects the natural nail. The golden micro-shimmer makes it beautiful on its own, for a soft french or a sophisticated nude.",
+      "caratteristiche": [
+        "Elastic, does not lift on flexible nails",
+        "Levels the nail without aggressive filing",
+        "Nude finish with a gold shimmer",
+        "Holds for up to 3 weeks"
+      ]
+    },
+    "top-coat-no-wipe-brillante": {
+      "nome": "No-Wipe Glossy Top Coat",
+      "descrizioneBreve": "Glossy sealer with no sticky layer and a mirror shine.",
+      "descrizione": "The top coat that finishes the work with a shop-window shine and needs no cleanser wipe. It resists scratches and keeps its gloss for the whole life of the set.",
+      "caratteristiche": [
+        "No sticky layer to remove",
+        "Instant mirror shine",
+        "Resistant to scratches and detergents",
+        "Does not yellow"
+      ]
+    },
+    "set-glitter-diamond": {
+      "nome": "Diamond Glitter Set — 12 pcs",
+      "descrizioneBreve": "Twelve ultra-fine glitters in gold, champagne and diamond shades.",
+      "descrizione": "A coordinated palette of very fine glitters that spread evenly without clumping. Made for ombré fades, single-finger accents or full glitter coverage with a jewel effect.",
+      "caratteristiche": [
+        "12 coordinated gold / silver / diamond shades",
+        "Ultra-fine grain, levels easily",
+        "Resealable 2 g pots",
+        "Works with gel and semi-permanent polish"
+      ]
+    },
+    "gel-paint-linea-oro": {
+      "nome": "Gold Line Gel Paint",
+      "descrizioneBreve": "Dense, opaque gel paint for crisp lines and freehand decoration.",
+      "descrizione": "A gel paint with a creamy texture that does not run and covers in a single pass. Perfect for fine lines, micro-details and crisp outlines, even with very thin liner brushes.",
+      "caratteristiche": [
+        "Full coverage in one coat",
+        "Does not run: the line stays where you put it",
+        "Cures in 30 seconds",
+        "5 g pot"
+      ]
+    },
+    "pennello-gel-oval": {
+      "nome": "Oval Gel Brush",
+      "descrizioneBreve": "Oval synthetic-fibre brush for applying builder gel.",
+      "descrizione": "The oval shape spreads the gel evenly and lets you shape the apex in just a few strokes. The synthetic fibre does not hold on to product and cleans in seconds.",
+      "caratteristiche": [
+        "High-quality synthetic fibre",
+        "Lacquered wooden handle with gold ferrule",
+        "Does not shed bristles",
+        "Protective cap included"
+      ]
+    },
+    "set-pennelli-nail-art": {
+      "nome": "Nail Art Brush Set — 5 pcs",
+      "descrizioneBreve": "Five decorating brushes: liner, one stroke, fan, detail and blending.",
+      "descrizione": "The complete set to start with nail art without buying brushes one at a time. Each brush is made for a specific technique and comes in a hard case that protects them.",
+      "caratteristiche": [
+        "5 shapes: liner, one stroke, fan, detail, blending",
+        "Hard case included",
+        "Synthetic fibres, suitable for gel and acrylic",
+        "Anti-corrosion gold ferrule"
+      ]
+    },
+    "lampada-uv-led-72w-pro": {
+      "nome": "UV/LED Lamp 72W Pro",
+      "descrizioneBreve": "Professional dual-technology lamp with sensor and display.",
+      "descrizione": "Cures any gel or semi-permanent polish evenly thanks to the 36 LEDs set all around the dome. The motion sensor starts the cycle on its own and the display shows the time left.",
+      "caratteristiche": [
+        "36 dual-wavelength LEDs (UV + LED)",
+        "10 / 30 / 60 / 99 second cycles",
+        "Motion sensor and LCD display",
+        "Removable base for pedicures"
+      ]
+    },
+    "fresa-professionale-35000": {
+      "nome": "Professional E-file 35,000 rpm",
+      "descrizioneBreve": "Quiet, vibration-free handpiece with continuous speed control.",
+      "descrizione": "A light handpiece that stays cool even after hours of work and does not vibrate, so you have complete control over the filing. The rotation is reversible, for the same precision on both hands.",
+      "caratteristiche": [
+        "0 – 35,000 rpm, continuously adjustable",
+        "Forward/reverse rotation",
+        "Handpiece with quick bit change",
+        "Under 55 dB: practically silent"
+      ]
+    },
+    "soft-gel-tips-almond": {
+      "nome": "Almond Soft Gel Tips — 504 pcs",
+      "descrizioneBreve": "Pre-shaped soft gel tips, 12 sizes, for express application.",
+      "descrizione": "Very thin tips, already etched inside and ready to be glued with gel: the extension takes half the time of a traditional build and the result feels natural.",
+      "caratteristiche": [
+        "504 tips, 12 numbered sizes",
+        "Pre-etched inside: no filing needed",
+        "Ultra-thin edge, invisible on the nail",
+        "Organiser box included"
+      ]
+    },
+    "dual-form-popit-12-forme": {
+      "nome": "Popit Dual Forms — 12 shapes",
+      "descrizioneBreve": "Reusable forms with the apex already shaped, 296 pieces.",
+      "descrizione": "Dual forms with the curve and the apex already built in: fill, press on, cure and pop off. The structure comes out perfect even without years of freehand experience.",
+      "caratteristiche": [
+        "296 forms in 12 different shapes",
+        "Pre-shaped apex, correct structure guaranteed",
+        "Reusable dozens of times",
+        "Reference marks for centring"
+      ]
+    },
+    "lime-zebra-100-180": {
+      "nome": "Zebra Files 100/180 — 10 pcs",
+      "descrizioneBreve": "Double-grit files with a sturdy core, pack of ten.",
+      "descrizione": "The everyday file: 100 grit to shape the structure and 180 to refine the profile. The core does not bend and the coating holds up even on the hardest gel.",
+      "caratteristiche": [
+        "Double grit 100 / 180",
+        "Rigid core that does not warp",
+        "Washable and disinfectable",
+        "Pack of 10"
+      ]
+    },
+    "pinza-tronchesina-pro": {
+      "nome": "Professional Cuticle Nipper",
+      "descrizioneBreve": "Tempered stainless steel, clean cut, fully sterilisable.",
+      "descrizione": "A hand-sharpened nipper that cuts the cuticle cleanly, without tearing. The tempered steel keeps its edge for a long time and withstands autoclave cycles without dulling.",
+      "caratteristiche": [
+        "Hand-sharpened tempered stainless steel",
+        "4 mm jaw for precision work",
+        "Autoclave sterilisable",
+        "Double leaf spring, soft opening"
+      ]
+    },
+    "olio-cuticole-argan-oro": {
+      "nome": "Argan & Gold Cuticle Oil",
+      "descrizioneBreve": "Fast-absorbing nourishing oil with golden micro-particles.",
+      "descrizione": "A light oil that absorbs without leaving a greasy film and keeps the cuticle soft between appointments. The golden micro-particles leave a precious shimmer on the skin.",
+      "caratteristiche": [
+        "Argan, jojoba and vitamin E",
+        "Fast absorbing, not greasy",
+        "Precision brush applicator",
+        "Delicate vanilla scent"
+      ]
+    },
+    "kit-pedicure-curativo": {
+      "nome": "Treatment Pedicure Kit",
+      "descrizioneBreve": "Everything you need for professional foot treatment.",
+      "descrizione": "A complete kit with foot file, degreaser, keratolytic cream and toe separators, made for treatment pedicures in the studio but also suitable for upkeep at home between appointments.",
+      "caratteristiche": [
+        "Steel foot file with replacement heads",
+        "100 ml keratolytic cream",
+        "Degreaser and finishing cream",
+        "Disposable toe separators included"
+      ]
+    }
+  },
+  "chiSiamo": {
+    "eyebrow": "About us",
+    "titolo": "Our story",
+    "sottotitolo": "A studio that became a shop too, without ever stopping being a studio.",
+    "laStoria": "The story",
+    "comeLavoriamo": "How we work",
+    "iNostriPrincipi": "Our principles",
+    "spazioEyebrow": "The space",
+    "valori": [
+      {
+        "titolo": "Technique before aesthetics",
+        "testo": "A correct structure lasts. A wrong one breaks, however beautiful the nail art on top."
+      },
+      {
+        "titolo": "A selection, not a catalogue",
+        "testo": "We would rather have ten products we know than a thousand we have never opened."
+      },
+      {
+        "titolo": "Hygiene with no compromises",
+        "testo": "Autoclave for everything that can be sterilised, single use for the rest. No exceptions."
+      },
+      {
+        "titolo": "Clear pricing",
+        "testo": "The quote is agreed before we start. No surprises when it is time to pay."
+      }
+    ],
+    "spazio": {
+      "testo": "Two workstations, natural light and dedicated extraction on every table. We work by appointment so that every client gets the time their treatment needs.",
+      "titolo": "The space"
+    },
+    "certificazioni": {
+      "testo": "Placeholder list: replace with the real certifications (courses, diplomas, qualifications).",
+      "elenco": [
+        "Professional nail technician diploma",
+        "Advanced course in structural nail building",
+        "HACCP and sterilisation training",
+        "Annual refresher on products and safety"
+      ],
+      "titolo": "Training and certifications"
+    },
+    "team": {
+      "testo": "Placeholder: add the team members here with photo and specialisation.",
+      "membri": [
+        {
+          "nome": "Kara",
+          "ruolo": "Founder & nail technician",
+          "bio": "Specialised in structural nail building and freehand nail art.",
+          "foto": "/images/kara-ritratto.svg"
+        },
+        {
+          "nome": "Name Surname",
+          "ruolo": "Nail technician",
+          "bio": "Placeholder: replace with the real biography.",
+          "foto": "/images/kara-ritratto.svg"
+        }
+      ],
+      "titolo": "The team"
+    },
+    "paragrafi": [
+      "K Institute started as a studio dedicated to nail care. Behind it is Kara, who learned the craft starting from the technique: structure, apex, hold. The aesthetics came afterwards.",
+      "Over the years the question clients — and then colleagues — asked most often was always the same: “what product do you use?”. That is where the shop came from: offering the very same products we use every day, with the same strict selection.",
+      "Today the studio and the shop feed each other. Every new product is tested for weeks at our workstations before it enters the catalogue. If it does not convince us, it never reaches the shelf."
+    ]
+  },
+  "contatti": {
+    "eyebrow": "Find us",
+    "titolo": "Contact",
+    "intro": "Write to us for information about treatments, products or an order. We reply within 24 hours on opening days.",
+    "form": {
+      "titolo": "Write to us",
+      "nome": "Full name",
+      "email": "Email",
+      "messaggio": "Your message",
+      "invia": "Send message",
+      "inviando": "Sending…",
+      "successo": "Message sent. We will reply as soon as possible, thank you!"
+    },
+    "orariTitolo": "Opening hours",
+    "indirizzoTitolo": "Address",
+    "scriviWhatsapp": "Message us on WhatsApp"
+  },
+  "prenota": {
+    "eyebrow": "Booking",
+    "titolo": "Book your appointment",
+    "intro": "Choose the treatment, the day and the time. You get the summary straight away: we confirm within a few hours."
+  },
+  "booking": {
+    "passi": {
+      "1": "Treatment",
+      "2": "Date and time",
+      "3": "Your details",
+      "4": "Confirmation"
+    },
+    "scegliTrattamento": "Choose the treatment",
+    "scegliData": "Choose date and time",
+    "iTuoiDati": "Your details",
+    "selezionaData": "Pick a date first",
+    "caricoOrari": "Loading available times…",
+    "nessunOrario": "No times available on this day. Try another date.",
+    "nessunOrarioPrenotato": "No times available on this day (fully booked). Try another date.",
+    "erroreOrari": "We cannot load the available times. Please try again shortly.",
+    "mesePrecedente": "Previous month",
+    "meseSuccessivo": "Next month",
+    "campoNome": "Full name *",
+    "campoTelefono": "Phone *",
+    "campoEmail": "Email *",
+    "campoNote": "Notes (optional)",
+    "notePlaceholder": "Allergies, colour preferences, special requests…",
+    "privacyPrefisso": "I have read and accept the",
+    "privacyLink": "privacy policy",
+    "conferma": "Confirm the booking",
+    "inviando": "Sending…",
+    "indietro": "Back",
+    "continua": "Continue",
+    "richiestaRicevuta": "Request received",
+    "tiAspettiamo": "We look forward to seeing you for {trattamento} on {data} at {ora}.",
+    "confermaEmail": "You will receive a confirmation by email or phone within a few hours. If something comes up, let us know at least 24 hours in advance.",
+    "tornaHome": "Back to the home page",
+    "scopriShop": "Discover the shop"
+  },
+  "cookie": {
+    "testo": "We only use technical cookies needed for the site to work (cart and preferences). No profiling cookies, no advertising tracking.",
+    "accetta": "Got it",
+    "dettagli": "Read the cookie policy"
+  },
+  "newsletter": {
+    "titolo": "News and offers",
+    "testo": "New products and promotions, one email a month. No spam.",
+    "placeholder": "Your email",
+    "cta": "Subscribe",
+    "conferma": "Thank you! You have been added to the list."
+  },
+  "instagramCta": {
+    "lavori": "Discover more of our work on Instagram",
+    "contatti": "Follow us on Instagram",
+    "aria": "Open the Instagram profile in a new tab"
+  },
+  "footer": {
+    "claim": "Nail studio and shop for professional products. Tailored treatments and selected products, tested every day at our workstations.",
+    "contattiTitolo": "Contact",
+    "orariTitolo": "Opening hours",
+    "seguici": "Follow us",
+    "copyright": "© {anno} {brand} — {legalName}. All rights reserved.",
+    "piva": "VAT no. {piva}"
+  },
+  "errore404": {
+    "titolo": "Page not found",
+    "testo": "The page you are looking for does not exist or has been moved. Go back home or visit the shop.",
+    "cta": {
+      "label": "Back to the home page"
+    },
+    "ctaSecondaria": {
+      "label": "Go to the shop"
+    }
+  },
+  "ricerca": {
+    "placeholder": "Search for a product or a treatment…",
+    "apri": "Search",
+    "chiudi": "Close the search",
+    "prodotti": "Products",
+    "trattamenti": "Treatments",
+    "nessunRisultato": "No results. Try another term.",
+    "suggerimento": "Type at least two letters to search."
+  },
+  "legale": {
+    "eyebrow": "Legal information",
+    "aggiornamento": "Last updated",
+    "privacy": {
+      "titolo": "Privacy policy",
+      "sottotitolo": "How we handle the personal data of people who use this site.",
+      "sezioni": [
+        {
+          "titolo": "Data controller",
+          "paragrafi": [
+            "The data controller is {legalName} ({brand}), with registered offices at {sede}. For any request about your data, write to {email}."
+          ]
+        },
+        {
+          "titolo": "What data we collect",
+          "paragrafi": [
+            "We only collect the data you give us voluntarily: name, phone, email and notes when you book an appointment or fill in the contact form; plus the delivery address when you send an order request.",
+            "We use no profiling tools, we do not track browsing and we do not buy contact lists."
+          ]
+        },
+        {
+          "titolo": "Why we process it",
+          "paragrafi": [
+            "To handle the booking or the order request, to get back to you if needed, and to meet the tax and administrative obligations required by law."
+          ]
+        },
+        {
+          "titolo": "How long we keep it",
+          "paragrafi": [
+            "For as long as it takes to provide the service requested and, where required, for the legal retention periods. You can ask for it to be deleted at any time."
+          ]
+        },
+        {
+          "titolo": "Your rights",
+          "paragrafi": [
+            "You can request access, rectification, erasure, restriction or portability of your data, and object to processing, by writing to {email}. You also have the right to lodge a complaint with the competent supervisory authority."
+          ]
+        }
+      ]
+    },
+    "cookie": {
+      "titolo": "Cookie policy",
+      "sottotitolo": "Which cookies this site uses and what they are for.",
+      "sezioni": [
+        {
+          "titolo": "Technical cookies only",
+          "paragrafi": [
+            "This site uses only technical cookies and local storage needed for it to work: the contents of the cart and your acknowledgement of the cookie banner.",
+            "There are no profiling cookies, no advertising trackers and no third-party analytics."
+          ]
+        },
+        {
+          "titolo": "Local storage",
+          "paragrafi": [
+            "The cart is saved in your browser (localStorage) under the key “k-institute-cart” and stays on your device: it is not sent to any server unless you voluntarily complete an order request."
+          ]
+        },
+        {
+          "titolo": "Third-party services",
+          "paragrafi": [
+            "The map on the contact page is embedded content from Google Maps: by loading it, Google may set its own cookies according to its own policy."
+          ]
+        },
+        {
+          "titolo": "How to disable them",
+          "paragrafi": [
+            "You can delete the data saved by the site at any time from your browser settings. If you disable local storage, the cart will no longer be kept between visits."
+          ]
+        }
+      ]
+    },
+    "termini-di-vendita": {
+      "titolo": "Terms of sale",
+      "sottotitolo": "Conditions applied to orders placed on this site.",
+      "sezioni": [
+        {
+          "titolo": "Order request",
+          "paragrafi": [
+            "For now, submitting the checkout form is an order request and not a completed purchase. You will receive a confirmation with product availability and payment details within 24 working hours."
+          ]
+        },
+        {
+          "titolo": "Prices",
+          "paragrafi": [
+            "All prices are in Swiss francs (CHF) and include VAT. Shipping costs are not active yet: they will be communicated before the order is confirmed."
+          ]
+        },
+        {
+          "titolo": "Payments",
+          "paragrafi": [
+            "Online payment is not active yet. The accepted payment methods are given in the confirmation email."
+          ]
+        },
+        {
+          "titolo": "Availability",
+          "paragrafi": [
+            "Products are subject to availability. If something is unavailable we will offer an alternative or cancel the request at no charge."
+          ]
+        }
+      ]
+    },
+    "spedizioni-e-resi": {
+      "titolo": "Shipping and returns",
+      "sottotitolo": "Times, costs and how to return a product.",
+      "sezioni": [
+        {
+          "titolo": "Delivery times",
+          "paragrafi": [
+            "Orders confirmed before 2 pm on opening days are prepared the same day. Delivery usually takes {tempiConsegna}."
+          ]
+        },
+        {
+          "titolo": "Shipping costs",
+          "paragrafi": [
+            "Coming soon: the online shop is not active yet and shipping rates have not been set. They will be published here before orders open."
+          ]
+        },
+        {
+          "titolo": "Right of withdrawal",
+          "paragrafi": [
+            "You can return intact, unopened products within {resiEntroGiorni} days of delivery. Return postage is at the buyer's expense unless the product is faulty or incorrect."
+          ]
+        },
+        {
+          "titolo": "Non-returnable products",
+          "paragrafi": [
+            "For hygiene reasons, sealed products that have been opened (gels, polishes, liquids) and tools that have been used cannot be returned."
+          ]
+        },
+        {
+          "titolo": "How to request a return",
+          "paragrafi": [
+            "Write to {emailOrdini} quoting the order request number and the reason for the return: we will reply with the instructions."
+          ]
+        }
+      ]
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "K Institute — Nail & Braids Studio in Courtelary",
+      "description": "Nail studio and professional nail products shop in Courtelary (Bern). Semi-permanent polish, gel full sets, braids and selected products. Book online."
+    },
+    "shop": {
+      "title": "Shop",
+      "description": "Professional gels, colours, tools and lamps selected one by one."
+    },
+    "trattamenti": {
+      "title": "Treatments",
+      "description": "All the studio treatments, with duration, price and how they work."
+    },
+    "lavori": {
+      "title": "Our work",
+      "description": "The gallery of sets made in the studio on real clients."
+    },
+    "prenota": {
+      "title": "Book",
+      "description": "Book your appointment online: choose treatment, day and time."
+    },
+    "chiSiamo": {
+      "title": "About us",
+      "description": "The story of the studio, how we work and the space."
+    },
+    "contatti": {
+      "title": "Contact",
+      "description": "Address, opening hours, phone and map of the studio in Courtelary."
+    },
+    "carrello": {
+      "title": "Cart",
+      "description": "The products you have selected."
+    },
+    "checkout": {
+      "title": "Checkout",
+      "description": "Complete your order request."
+    },
+    "errore404": {
+      "title": "Page not found",
+      "description": "The page you are looking for does not exist or has been moved."
+    }
+  },
+  "galleryAlt": {
+    "p01": "Long stiletto nails with mint green decoration and jewel stones",
+    "p02": "Electric blue almond nails with pearl hearts and rhinestones",
+    "p03": "Side braids with defined baby hair",
+    "p04": "Red stiletto nails with heart nail art on a nude base",
+    "p05": "Hand-painted cartoon-themed nail art",
+    "p06": "Pink and burgundy almond nails with 3D flowers and gold stars",
+    "p07": "Stiletto full set with white french and clear details",
+    "p08": "Cornrows with a wave pattern",
+    "p09": "Superhero-themed nail art with spider webs",
+    "p10": "Classic white french on a short square shape",
+    "p11": "Red coffin nails with glitter and ombré",
+    "p12": "Long nude square nails with holographic crystals",
+    "p13": "Fine braids with hair loose at the ends",
+    "p14": "Stiletto nails with a deep white french on a pink base",
+    "p15": "Nude stiletto nails with chrome details and charms",
+    "p16": "Square nails with neon pink french",
+    "p17": "Red nail art with lips and gold charms",
+    "p18": "Braids with a heart pattern",
+    "p19": "Long square nails with pastel french and flowers",
+    "p20": "Extra long glossy nude stiletto nails",
+    "p21": "Nude almond nails with red leopard tips",
+    "p22": "White french with chrome details and lettering",
+    "p23": "Burgundy french on a square shape",
+    "p24": "Nude and brown coffin nails with charms",
+    "p25": "Square nails with red and orange coloured french",
+    "p26": "Nude almond nails with polka dots and orange tips",
+    "p27": "Jewel green stiletto nails, second angle",
+    "p28": "White french with leopard accents",
+    "p29": "White french stiletto nails, seen from above",
+    "p30": "Red and gold nail art photographed by the lake"
+  }
+}

@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import PageHeader from "@/components/ui/PageHeader";
 import FadeIn from "@/components/FadeIn";
 import { legalPages, legalSlugs } from "@/data/legal";
+import { getDict } from "@/lib/intl/server";
+import { sezioniLegali } from "@/lib/intl/content";
 
 type Props = { params: { slug: string } };
 
@@ -14,20 +16,37 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: Props): Metadata {
   const page = legalPages[params.slug];
-  if (!page) return { title: "Pagina non trovata" };
-  return { title: page.titolo, description: page.sottotitolo };
+  const d = getDict();
+  if (!page) return { title: d.errore404.titolo, robots: { index: false } };
+  const tr = (
+    d.legale as unknown as Record<
+      string,
+      { titolo: string; sottotitolo: string }
+    >
+  )[params.slug];
+  return {
+    title: tr?.titolo ?? page.titolo,
+    description: tr?.sottotitolo ?? page.sottotitolo,
+  };
 }
 
 export default function LegalPage({ params }: Props) {
   const page = legalPages[params.slug];
   if (!page) notFound();
+  const site = getDict();
+  const tr = (
+    site.legale as unknown as Record<
+      string,
+      { titolo: string; sottotitolo: string }
+    >
+  )[params.slug];
 
   return (
     <>
       <PageHeader
-        eyebrow="Informazioni legali"
-        title={page.titolo}
-        intro={page.sottotitolo}
+        eyebrow={site.legale.eyebrow}
+        title={tr?.titolo ?? page.titolo}
+        intro={tr?.sottotitolo ?? page.sottotitolo}
       />
       <div className="bg-ink py-14 sm:py-20">
         <div className="container-luxe max-w-narrow">
@@ -36,7 +55,7 @@ export default function LegalPage({ params }: Props) {
           </p>
 
           <div className="mt-10 space-y-10">
-            {page.sezioni.map((s, i) => (
+            {sezioniLegali(site, params.slug, page.sezioni).map((s, i) => (
               <FadeIn key={s.titolo} delay={i * 0.05} as="section">
                 <h2 className="font-serif text-2xl text-cream">{s.titolo}</h2>
                 <span className="gold-rule mt-4 block w-16" />

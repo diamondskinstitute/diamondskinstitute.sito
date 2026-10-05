@@ -2,21 +2,30 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { BLUR_DARK } from "@/lib/blur";
 import { motion } from "framer-motion";
 import { priceWithVariant, type Product } from "@/data/products";
-import { site } from "@/data/site";
+import { useDict } from "@/lib/intl/client";
 import { salon } from "@/data/salon";
 import { formatPrice } from "@/lib/format";
 import AddToCartButton from "./AddToCartButton";
+import ComingSoonBadge from "../ui/ComingSoonBadge";
+import {
+  descrProdotto,
+  nomeProdotto,
+  prodottoLungo,
+} from "@/lib/intl/content";
 import Ornament from "../ui/Ornament";
 import { CheckIcon, MinusIcon, PlusIcon } from "../ui/Icons";
 
 // Galleria + varianti + quantità: tutta la parte interattiva della
 // scheda prodotto. I testi statici restano nel componente pagina.
 export default function ProductDetail({ product }: { product: Product }) {
+  const site = useDict();
+  const testi = prodottoLungo(site, product);
   const [immagine, setImmagine] = useState(0);
   const [varianteId, setVarianteId] = useState(
-    product.varianti?.opzioni[0]?.id
+    product.varianti?.opzioni[0]?.id,
   );
   const [quantita, setQuantita] = useState(1);
 
@@ -39,14 +48,16 @@ export default function ProductDetail({ product }: { product: Product }) {
         >
           <Image
             src={product.immagini[immagine]}
-            alt={product.nome}
+            alt={nomeProdotto(site, product)}
             fill
             sizes="(min-width: 1024px) 560px, 90vw"
             className="object-cover"
             priority
+            placeholder="blur"
+            blurDataURL={BLUR_DARK}
           />
           {product.badge && (
-            <span className="absolute left-4 top-4 rounded-luxe bg-gold px-3 py-1.5 text-[0.62rem] font-semibold uppercase tracking-wide2 text-ink">
+            <span className="absolute start-4 top-4 rounded-pill bg-gold px-3 py-1.5 text-[0.62rem] font-semibold uppercase tracking-wide2 text-ink">
               {product.badge}
             </span>
           )}
@@ -67,7 +78,15 @@ export default function ProductDetail({ product }: { product: Product }) {
                       : "border-ink-line hover:border-gold/45"
                   }`}
                 >
-                  <Image src={src} alt="" fill sizes="80px" className="object-cover" />
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    sizes="80px"
+                    className="object-cover"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DARK}
+                  />
                 </button>
               </li>
             ))}
@@ -77,7 +96,10 @@ export default function ProductDetail({ product }: { product: Product }) {
 
       {/* --- Informazioni e acquisto ------------------------------------- */}
       <div>
-        <h1 className="heading-lg text-cream">{product.nome}</h1>
+        <h1 className="heading-lg text-cream">
+          {nomeProdotto(site, product)}{" "}
+          <ComingSoonBadge className="ms-1 translate-y-[-0.35em]" />
+        </h1>
         <Ornament className="mt-5 justify-start" width="w-14" />
 
         <div className="mt-6 flex items-baseline gap-3">
@@ -90,10 +112,10 @@ export default function ProductDetail({ product }: { product: Product }) {
             </span>
           )}
         </div>
-        <p className="mt-1 text-xs text-cream/40">IVA inclusa</p>
+        <p className="mt-1 text-xs text-cream/40">{site.common.ivaInclusa}</p>
 
         <p className="mt-6 text-base leading-relaxed text-cream/70">
-          {product.descrizione}
+          {testi.descrizione}
         </p>
 
         {/* Varianti */}
@@ -109,7 +131,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                       type="button"
                       onClick={() => setVarianteId(o.id)}
                       aria-pressed={attivo}
-                      className={`rounded-luxe border px-4 py-2.5 text-sm transition-all duration-300 ${
+                      className={`rounded-pill border px-4 py-2.5 text-sm transition-all duration-300 ${
                         attivo
                           ? "border-gold bg-gold/12 text-gold-light"
                           : "border-ink-line text-cream/70 hover:border-gold/45 hover:text-gold-light"
@@ -128,12 +150,12 @@ export default function ProductDetail({ product }: { product: Product }) {
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <div>
             <span className="label-luxe">{site.shop.quantita}</span>
-            <div className="flex items-center rounded-luxe border border-ink-line">
+            <div className="flex items-center rounded-pill border border-ink-line">
               <button
                 type="button"
                 onClick={() => setQuantita((q) => Math.max(1, q - 1))}
                 className="px-3.5 py-3 text-cream/70 transition-colors hover:text-gold-light"
-                aria-label="Diminuisci quantità"
+                aria-label={site.common.diminuisciQuantita}
               >
                 <MinusIcon />
               </button>
@@ -144,7 +166,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                 type="button"
                 onClick={() => setQuantita((q) => Math.min(99, q + 1))}
                 className="px-3.5 py-3 text-cream/70 transition-colors hover:text-gold-light"
-                aria-label="Aumenta quantità"
+                aria-label={site.common.aumentaQuantita}
               >
                 <PlusIcon />
               </button>
@@ -162,9 +184,8 @@ export default function ProductDetail({ product }: { product: Product }) {
         </div>
 
         <p className="mt-5 text-xs text-cream/45">
-          Spedizione gratuita da {formatPrice(salon.shop.spedizioneGratuitaDa)} ·
-          Consegna in {salon.shop.tempiConsegna} · Reso entro{" "}
-          {salon.shop.resiEntroGiorni} giorni
+          Spedizione: Coming soon · Consegna in {salon.shop.tempiConsegna} ·
+          Reso entro {salon.shop.resiEntroGiorni} giorni
           {sconto !== undefined && " · Prezzo promozionale"}
         </p>
 
@@ -172,7 +193,7 @@ export default function ProductDetail({ product }: { product: Product }) {
         <div className="mt-9 border-t border-ink-line pt-8">
           <h2 className="eyebrow">{site.shop.caratteristiche}</h2>
           <ul className="mt-5 space-y-3">
-            {product.caratteristiche.map((c) => (
+            {testi.caratteristiche.map((c) => (
               <li key={c} className="flex gap-3 text-sm text-cream/70">
                 <CheckIcon size={17} className="mt-0.5 shrink-0 text-gold" />
                 <span>{c}</span>

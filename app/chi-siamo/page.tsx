@@ -1,29 +1,27 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { BLUR_DARK } from "@/lib/blur";
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 import FadeIn from "@/components/FadeIn";
 import Ornament from "@/components/ui/Ornament";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { site } from "@/data/site";
+import { getDict } from "@/lib/intl/server";
 import { salon } from "@/data/salon";
 import { ArrowRight, CheckIcon } from "@/components/ui/Icons";
 
-export const metadata: Metadata = {
-  title: "Chi siamo",
-  description: site.chiSiamo.sottotitolo,
-};
-
-const c = site.chiSiamo;
+// Titolo e descrizione seguono la lingua scelta
+export function generateMetadata(): Metadata {
+  const m = getDict().meta.chiSiamo;
+  return { title: m.title, description: m.description };
+}
 
 export default function ChiSiamoPage() {
+  const site = getDict();
+  const c = site.chiSiamo;
   return (
     <>
-      <PageHeader
-        eyebrow={c.eyebrow}
-        title={c.titolo}
-        intro={c.sottotitolo}
-      />
+      <PageHeader eyebrow={c.eyebrow} title={c.titolo} intro={c.sottotitolo} />
 
       {/* --- La storia --------------------------------------------------- */}
       <section className="bg-ink py-16 sm:py-20">
@@ -37,16 +35,21 @@ export default function ChiSiamoPage() {
                 sizes="(min-width: 1024px) 560px, 90vw"
                 className="object-cover"
                 priority
+                placeholder="blur"
+                blurDataURL={BLUR_DARK}
               />
             </div>
           </FadeIn>
 
           <FadeIn delay={0.1} className="flex flex-col justify-center">
-            <span className="eyebrow">La storia</span>
+            <span className="eyebrow">{c.laStoria}</span>
             <Ornament className="mt-5 justify-start" width="w-14" />
             <div className="mt-6 space-y-5">
               {c.paragrafi.map((p) => (
-                <p key={p.slice(0, 24)} className="text-base leading-relaxed text-cream/70 sm:text-lg">
+                <p
+                  key={p.slice(0, 24)}
+                  className="text-base leading-relaxed text-cream/70 sm:text-lg"
+                >
                   {p}
                 </p>
               ))}
@@ -58,10 +61,15 @@ export default function ChiSiamoPage() {
       {/* --- I valori ---------------------------------------------------- */}
       <section className="border-y border-ink-line bg-ink-soft py-18 sm:py-24">
         <div className="container-luxe">
-          <SectionHeading eyebrow="I nostri principi" title="Come lavoriamo" />
+          <SectionHeading eyebrow={c.iNostriPrincipi} title={c.comeLavoriamo} />
           <ul className="mt-14 grid gap-6 sm:grid-cols-2">
             {c.valori.map((v, i) => (
-              <FadeIn key={v.titolo} delay={i * 0.08} as="li" className="h-full">
+              <FadeIn
+                key={v.titolo}
+                delay={i * 0.08}
+                as="li"
+                className="h-full"
+              >
                 <div className="card-luxe h-full p-7">
                   <svg
                     width="16"
@@ -89,7 +97,7 @@ export default function ChiSiamoPage() {
       <section className="bg-cream-light py-18 sm:py-24">
         <div className="container-luxe grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <FadeIn>
-            <span className="eyebrow-dark">Lo spazio</span>
+            <span className="eyebrow-dark">{c.spazioEyebrow}</span>
             <h2 className="heading-lg mt-4 text-ink">{c.spazio.titolo}</h2>
             <p className="mt-6 text-base leading-relaxed text-ink/70 sm:text-lg">
               {c.spazio.testo}
@@ -106,6 +114,8 @@ export default function ChiSiamoPage() {
                 fill
                 sizes="(min-width: 1024px) 560px, 90vw"
                 className="object-cover"
+                placeholder="blur"
+                blurDataURL={BLUR_DARK}
               />
             </div>
           </FadeIn>
@@ -122,7 +132,12 @@ export default function ChiSiamoPage() {
           />
           <ul className="mx-auto mt-14 grid max-w-3xl gap-6 sm:grid-cols-2">
             {c.team.membri.map((m, i) => (
-              <FadeIn key={m.nome + i} delay={i * 0.08} as="li" className="h-full">
+              <FadeIn
+                key={m.nome + i}
+                delay={i * 0.08}
+                as="li"
+                className="h-full"
+              >
                 <article className="card-luxe h-full overflow-hidden">
                   <span className="relative block aspect-[4/5]">
                     <Image
@@ -131,6 +146,8 @@ export default function ChiSiamoPage() {
                       fill
                       sizes="(min-width: 640px) 340px, 90vw"
                       className="object-cover"
+                      placeholder="blur"
+                      blurDataURL={BLUR_DARK}
                     />
                   </span>
                   <span className="block p-6">

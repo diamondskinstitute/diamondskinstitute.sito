@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/ui/PageHeader";
 import CartContents from "@/components/shop/CartContents";
-import { site } from "@/data/site";
+import { getDict } from "@/lib/intl/server";
 
-export const metadata: Metadata = {
-  title: "Carrello",
-  robots: { index: false, follow: false },
-};
+// Titolo e descrizione seguono la lingua scelta
+export function generateMetadata(): Metadata {
+  const m = getDict().meta.carrello;
+  return { title: m.title, description: m.description };
+}
 
 export default function CarrelloPage() {
+  const site = getDict();
   return (
     <>
       <PageHeader eyebrow="Shop" title={site.carrello.titolo} />

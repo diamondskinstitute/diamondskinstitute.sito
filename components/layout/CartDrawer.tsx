@@ -2,17 +2,19 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import { BLUR_DARK } from "@/lib/blur";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCart } from "@/lib/cart/context";
-import { site } from "@/data/site";
-import { salon } from "@/data/salon";
+import { useDict } from "@/lib/intl/client";
 import { formatPrice } from "@/lib/format";
+import { SHOP_ATTIVO } from "@/lib/shop-status";
 import { CloseIcon, MinusIcon, PlusIcon, TrashIcon } from "../ui/Icons";
 
 // Cassetto laterale del carrello: si apre aggiungendo un prodotto o dal
 // pulsante nell'header.
 export default function CartDrawer() {
+  const site = useDict();
   const cart = useCart();
   const { drawerOpen, closeDrawer } = cart;
 
@@ -28,8 +30,6 @@ export default function CartDrawer() {
       document.body.style.overflow = "";
     };
   }, [drawerOpen, closeDrawer]);
-
-  const mancante = salon.shop.spedizioneGratuitaDa - cart.subtotale;
 
   return (
     <AnimatePresence>
@@ -49,7 +49,7 @@ export default function CartDrawer() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-y-0 right-0 z-[81] flex w-full max-w-md flex-col border-l border-ink-line bg-ink-soft"
+            className="glass-strong fixed inset-y-0 end-0 z-[81] flex w-full max-w-md flex-col"
             role="dialog"
             aria-modal="true"
             aria-label={site.carrello.titolo}
@@ -58,14 +58,14 @@ export default function CartDrawer() {
               <h2 className="font-serif text-xl text-cream">
                 {site.carrello.titolo}
                 {cart.count > 0 && (
-                  <span className="ml-2 text-sm text-gold">({cart.count})</span>
+                  <span className="ms-2 text-sm text-gold">({cart.count})</span>
                 )}
               </h2>
               <button
                 type="button"
                 onClick={closeDrawer}
                 className="p-2 text-cream/70 transition-colors hover:text-gold-light"
-                aria-label="Chiudi il carrello"
+                aria-label={site.common.chiudiCarrello}
               >
                 <CloseIcon />
               </button>
@@ -94,6 +94,8 @@ export default function CartDrawer() {
                           fill
                           sizes="80px"
                           className="object-cover"
+                          placeholder="blur"
+                          blurDataURL={BLUR_DARK}
                         />
                       </span>
                       <div className="min-w-0 flex-1">
@@ -110,14 +112,14 @@ export default function CartDrawer() {
                           </p>
                         )}
                         <div className="mt-3 flex items-center justify-between gap-3">
-                          <div className="flex items-center rounded-luxe border border-ink-line">
+                          <div className="flex items-center rounded-pill border border-ink-line">
                             <button
                               type="button"
                               onClick={() =>
                                 cart.setQuantity(item.key, item.quantita - 1)
                               }
                               className="px-2.5 py-1.5 text-cream/70 transition-colors hover:text-gold-light"
-                              aria-label="Diminuisci quantità"
+                              aria-label={site.common.diminuisciQuantita}
                             >
                               <MinusIcon />
                             </button>
@@ -130,7 +132,7 @@ export default function CartDrawer() {
                                 cart.setQuantity(item.key, item.quantita + 1)
                               }
                               className="px-2.5 py-1.5 text-cream/70 transition-colors hover:text-gold-light"
-                              aria-label="Aumenta quantità"
+                              aria-label={site.common.aumentaQuantita}
                             >
                               <PlusIcon />
                             </button>
@@ -153,13 +155,6 @@ export default function CartDrawer() {
                 </ul>
 
                 <footer className="border-t border-ink-line px-6 py-5">
-                  {mancante > 0 && (
-                    <p className="mb-4 rounded-luxe border border-gold/25 bg-gold/5 px-3 py-2 text-center text-xs text-gold-light">
-                      {site.carrello.mancanoPerSpedizioneGratuita(
-                        formatPrice(mancante)
-                      )}
-                    </p>
-                  )}
                   <dl className="space-y-1.5 text-sm">
                     <div className="flex justify-between text-cream/70">
                       <dt>{site.carrello.subtotale}</dt>
@@ -167,11 +162,7 @@ export default function CartDrawer() {
                     </div>
                     <div className="flex justify-between text-cream/70">
                       <dt>{site.carrello.spedizione}</dt>
-                      <dd>
-                        {cart.spedizione === 0
-                          ? site.carrello.spedizioneGratuita
-                          : formatPrice(cart.spedizione)}
-                      </dd>
+                      <dd>{site.carrello.spedizioneComingSoon}</dd>
                     </div>
                     <div className="flex justify-between border-t border-ink-line pt-2 text-base text-cream">
                       <dt className="font-serif">{site.carrello.totale}</dt>
@@ -180,13 +171,25 @@ export default function CartDrawer() {
                       </dd>
                     </div>
                   </dl>
-                  <Link
-                    href="/checkout"
-                    onClick={closeDrawer}
-                    className="btn-primary mt-5 w-full"
-                  >
-                    {site.carrello.vaiAlCheckout}
-                  </Link>
+                  {SHOP_ATTIVO ? (
+                    <Link
+                      href="/checkout"
+                      onClick={closeDrawer}
+                      className="btn-primary mt-5 w-full"
+                    >
+                      {site.carrello.vaiAlCheckout}
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      className="btn-primary mt-5 w-full"
+                      disabled
+                      aria-disabled="true"
+                      title={site.shop.comingSoonAria}
+                    >
+                      {site.carrello.vaiAlCheckout} · {site.shop.comingSoon}
+                    </button>
+                  )}
                   <Link
                     href="/carrello"
                     onClick={closeDrawer}

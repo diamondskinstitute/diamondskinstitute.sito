@@ -79,7 +79,8 @@ export default function AdminPage() {
           <h1 className="heading-md text-cream">Area riservata</h1>
           <Ornament className="mt-5" width="w-14" />
           <p className="mt-5 text-sm text-cream/55">
-            Inserisci la password per vedere prenotazioni e richieste d&apos;ordine.
+            Inserisci la password per vedere prenotazioni e richieste
+            d&apos;ordine.
           </p>
 
           <label htmlFor="admin-pw" className="sr-only">
@@ -101,7 +102,11 @@ export default function AdminPage() {
             </p>
           )}
 
-          <button type="submit" className="btn-primary mt-6 w-full" disabled={caricamento}>
+          <button
+            type="submit"
+            className="btn-primary mt-6 w-full"
+            disabled={caricamento}
+          >
             {caricamento ? "Verifico…" : "Entra"}
           </button>
         </form>
@@ -259,7 +264,8 @@ export default function AdminPage() {
                         <li key={i} className="flex justify-between gap-4 py-2">
                           <span className="text-cream/70">
                             {r.nome}
-                            {r.variante ? ` — ${r.variante}` : ""} × {r.quantita}
+                            {r.variante ? ` — ${r.variante}` : ""} ×{" "}
+                            {r.quantita}
                           </span>
                           <span className="text-cream/55">
                             {formatPrice(r.prezzoUnitario * r.quantita)}
@@ -269,7 +275,9 @@ export default function AdminPage() {
                     </ul>
                     <p className="mt-2 text-xs text-cream/40">
                       Spedizione:{" "}
-                      {o.spedizione === 0 ? "gratuita" : formatPrice(o.spedizione)}{" "}
+                      {o.spedizione === 0
+                        ? "gratuita"
+                        : formatPrice(o.spedizione)}{" "}
                       · Pagamento: {o.pagamento.metodo} ({o.pagamento.stato})
                     </p>
                     {o.cliente.note && (

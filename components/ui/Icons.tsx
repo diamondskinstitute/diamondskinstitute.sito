@@ -192,3 +192,33 @@ export function FacebookIcon({ size = 20, className = "" }: IconProps) {
     </svg>
   );
 }
+
+export function TikTokIcon({ size = 20, className = "" }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M16.5 3h-2.7v12.1a2.3 2.3 0 1 1-1.9-2.26V10.1a5.2 5.2 0 1 0 4.6 5.16V8.9a6.3 6.3 0 0 0 3.6 1.14V7.3a3.6 3.6 0 0 1-3.6-3.6V3Z" />
+    </svg>
+  );
+}
+
+export function ThreadsIcon({ size = 20, className = "" }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M12.2 2C6.9 2 3.9 5.1 3.9 11.9c0 6.9 3 10.1 8.3 10.1 3 0 5.1-1 6.4-2.7l-1.7-1.3c-1 1.3-2.5 2-4.7 2-3.9 0-6-2.4-6.1-8.1C6.1 6.3 8.2 4 12.2 4c3.5 0 5.5 1.7 6 5l2-.4C19.5 4.2 16.7 2 12.2 2Zm.5 7c-2.3 0-3.9 1.2-3.9 3.1 0 1.9 1.5 3.1 3.6 3.1 2.4 0 4-1.6 4.2-4.3.7.4 1.1 1.1 1.1 2 0 1.2-.6 2.2-1.5 2.9l1.2 1.6c1.5-1.1 2.3-2.6 2.3-4.5 0-2.9-2-4.8-5.2-4.8-.6 0-1.2.1-1.8.2l.3 1.9c.5-.1 1-.2 1.5-.2 2 0 3.2 1 3.2 2.6v.1c-.5-.2-1.1-.3-1.8-.3Zm-.2 1.8c.7 0 1.3.1 1.8.3-.1 1.6-1 2.3-2.2 2.3-1 0-1.6-.5-1.6-1.2 0-.8.7-1.4 2-1.4Z" />
+    </svg>
+  );
+}
