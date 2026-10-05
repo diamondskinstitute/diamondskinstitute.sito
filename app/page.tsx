@@ -160,6 +160,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* --- Prodotti in evidenza (lo shop è ancora da completare:
+             resta in fondo alla home) ----------------------------------- */}
+      <section className="border-t border-ink-line bg-ink py-20 sm:py-24">
+        <div className="container-luxe">
+          <SectionHeading
+            eyebrow={s.prodotti.eyebrow}
+            title={s.prodotti.titolo}
+            intro={s.prodotti.intro}
+          />
+          <FadeIn className="mt-14">
+            <ProductCarousel products={featuredProducts} />
+          </FadeIn>
+          <div className="mt-10 text-center">
+            <Link href={s.prodotti.cta.href} className="btn-outline">
+              {s.prodotti.cta.label}{" "}
+              <ArrowRight size={16} className="rtl:rotate-180" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* --- Instagram --------------------------------------------------- */}
       <section className="border-y border-ink-line bg-ink-soft pattern-diamond py-20">
         <FadeIn className="container-luxe text-center">
@@ -213,27 +234,6 @@ export default function HomePage() {
               />
             </div>
           </FadeIn>
-        </div>
-      </section>
-
-      {/* --- Prodotti in evidenza (lo shop è ancora da completare:
-             resta in fondo alla home) ----------------------------------- */}
-      <section className="border-t border-ink-line bg-ink py-20 sm:py-24">
-        <div className="container-luxe">
-          <SectionHeading
-            eyebrow={s.prodotti.eyebrow}
-            title={s.prodotti.titolo}
-            intro={s.prodotti.intro}
-          />
-          <FadeIn className="mt-14">
-            <ProductCarousel products={featuredProducts} />
-          </FadeIn>
-          <div className="mt-10 text-center">
-            <Link href={s.prodotti.cta.href} className="btn-outline">
-              {s.prodotti.cta.label}{" "}
-              <ArrowRight size={16} className="rtl:rotate-180" />
-            </Link>
-          </div>
         </div>
       </section>
     </>

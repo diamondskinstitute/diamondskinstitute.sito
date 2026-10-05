@@ -28,7 +28,10 @@ export const LOCALES: LocaleMeta[] = [
   { code: "ar", short: "AR", label: "العربية", dir: "rtl", ogLocale: "ar_AR" },
 ];
 
-export const DEFAULT_LOCALE: Locale = "it";
+// Lingua mostrata a chi arriva sul sito senza aver ancora scelto.
+// L'italiano resta la lingua di riferimento del dizionario (vedi
+// dictionary.ts): fa da riserva per le chiavi che mancano altrove.
+export const DEFAULT_LOCALE: Locale = "fr";
 
 // Nome del cookie che ricorda la lingua scelta (un anno).
 export const LOCALE_COOKIE = "kara-locale";
