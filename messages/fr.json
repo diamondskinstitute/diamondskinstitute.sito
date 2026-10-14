@@ -780,7 +780,9 @@
   "prenota": {
     "eyebrow": "Réservation",
     "titolo": "Réservez votre rendez-vous",
-    "intro": "Choisissez le soin, le jour et l'heure. Vous recevez aussitôt le récapitulatif : nous confirmons en quelques heures."
+    "intro": "Les réservations se font en ligne sur Fresha : choisissez le soin, le jour et l'heure, et recevez aussitôt la confirmation.",
+    "online": "Réservez en ligne en quelques secondes",
+    "onlineTesto": "Fresha s'ouvre dans un nouvel onglet : le site reste ouvert derrière."
   },
   "booking": {
     "passi": {

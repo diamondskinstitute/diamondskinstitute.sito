@@ -99,6 +99,13 @@ export const salon = {
     6: { apertura: "09:30", chiusura: "18:00" }, // Sabato
   } as Record<number, { apertura: string; chiusura: string } | null>,
 
+  // --- Prenotazioni ----------------------------------------------------
+  // Gli appuntamenti si gestiscono SOLO su Fresha. Tutti i pulsanti
+  // "Prenota" del sito aprono questo indirizzo in una nuova scheda:
+  // per cambiarlo basta modificare questa riga.
+  bookingUrl:
+    "https://www.fresha.com/book-now/diamonds-k-institute-ka8wx46u/services?lid=3152577&eid=5495693&share=true&pId=3050039",
+
   mappaEmbedUrl:
     "https://www.google.com/maps?q=Le+Moulin+1,+2608+Courtelary&output=embed",
   mappaLink:

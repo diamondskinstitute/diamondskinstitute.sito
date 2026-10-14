@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import PageHeader from "@/components/ui/PageHeader";
-import BookingForm from "@/components/booking/BookingForm";
+import FadeIn from "@/components/FadeIn";
 import { getDict } from "@/lib/intl/server";
 import { salon } from "@/data/salon";
+import { BOOKING_LINK_PROPS } from "@/lib/booking";
 import { PinIcon } from "@/components/ui/Icons";
 
 // Titolo e descrizione seguono la lingua scelta
@@ -23,16 +23,18 @@ export default function PrenotaPage() {
       />
       <div className="bg-ink py-16 sm:py-20">
         <div className="container-luxe">
-          {/* useSearchParams richiede un confine Suspense */}
-          <Suspense
-            fallback={
-              <p className="text-center text-cream/50">
-                {site.common.caricoIlModulo}
-              </p>
-            }
-          >
-            <BookingForm />
-          </Suspense>
+          <FadeIn className="card-luxe mx-auto max-w-narrow p-8 text-center sm:p-12">
+            <h2 className="heading-md text-cream">{site.prenota.online}</h2>
+            <p className="mt-4 text-sm leading-relaxed text-cream/60">
+              {site.prenota.onlineTesto}
+            </p>
+            <a
+              {...BOOKING_LINK_PROPS}
+              className="btn-primary btn-book mt-8 inline-flex"
+            >
+              {site.trattamenti.prenotaAppuntamento}
+            </a>
+          </FadeIn>
 
           {/* Dove si svolge l'appuntamento */}
           <p className="mt-10 flex items-center justify-center gap-2 text-center text-sm text-cream/55">

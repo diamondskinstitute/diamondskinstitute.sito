@@ -780,7 +780,9 @@
   "prenota": {
     "eyebrow": "Booking",
     "titolo": "Book your appointment",
-    "intro": "Choose the treatment, the day and the time. You get the summary straight away: we confirm within a few hours."
+    "intro": "Bookings are handled online on Fresha: choose the treatment, the day and the time, and get your confirmation straight away.",
+    "online": "Book online in seconds",
+    "onlineTesto": "Fresha opens in a new tab, so the site stays open behind it."
   },
   "booking": {
     "passi": {

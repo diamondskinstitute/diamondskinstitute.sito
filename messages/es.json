@@ -780,7 +780,9 @@
   "prenota": {
     "eyebrow": "Reserva",
     "titolo": "Reserva tu cita",
-    "intro": "Elige el tratamiento, el día y la hora. Recibes el resumen al instante: confirmamos en pocas horas."
+    "intro": "Las reservas se gestionan online en Fresha: elige el tratamiento, el día y la hora, y recibes la confirmación al instante.",
+    "online": "Reserva online en pocos segundos",
+    "onlineTesto": "Fresha se abre en una pestaña nueva: la web sigue abierta detrás."
   },
   "booking": {
     "passi": {

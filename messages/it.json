@@ -791,7 +791,9 @@
   "prenota": {
     "eyebrow": "Prenotazione",
     "titolo": "Prenota il tuo appuntamento",
-    "intro": "Scegli il trattamento, il giorno e l'orario. Ricevi subito il riepilogo: confermiamo entro poche ore."
+    "intro": "Le prenotazioni si gestiscono online su Fresha: scegli trattamento, giorno e orario e ricevi subito la conferma.",
+    "online": "Prenota online in pochi secondi",
+    "onlineTesto": "Si apre Fresha in una nuova scheda: il sito resta aperto qui dietro."
   },
   "booking": {
     "passi": {

@@ -1,11 +1,13 @@
 // =====================================================================
-//  PRENOTAZIONE ONLINE — UNICO PUNTO DA MODIFICARE
-//  Tutti i pulsanti e i link "Prenota" del sito puntano qui.
-//  Per cambiare destinazione basta cambiare questa riga.
+//  PRENOTAZIONE ONLINE
+//  L'indirizzo vive in data/salon.ts (`salon.bookingUrl`), insieme agli
+//  altri dati dell'attività: qui ci sono solo le scorciatoie usate dai
+//  componenti. Per cambiare destinazione si modifica salon.ts.
 // =====================================================================
 
-export const BOOKING_URL =
-  "https://www.fresha.com/book-now/diamonds-k-institute-ka8wx46u/services?lid=3152577&eid=5495693&share=true&pId=3050039";
+import { salon } from "@/data/salon";
+
+export const BOOKING_URL = salon.bookingUrl;
 
 // Attributi da applicare a ogni link di prenotazione: si apre in una
 // nuova scheda, senza dare alla pagina di destinazione accesso a questa.

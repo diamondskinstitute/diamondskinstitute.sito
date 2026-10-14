@@ -780,7 +780,9 @@
   "prenota": {
     "eyebrow": "Terminbuchung",
     "titolo": "Buchen Sie Ihren Termin",
-    "intro": "Wählen Sie Behandlung, Tag und Uhrzeit. Sie erhalten sofort die Übersicht – wir bestätigen innerhalb weniger Stunden."
+    "intro": "Termine werden online über Fresha gebucht: Behandlung, Tag und Uhrzeit wählen und sofort die Bestätigung erhalten.",
+    "online": "Buchen Sie online in wenigen Sekunden",
+    "onlineTesto": "Fresha öffnet sich in einem neuen Tab – die Website bleibt dahinter geöffnet."
   },
   "booking": {
     "passi": {

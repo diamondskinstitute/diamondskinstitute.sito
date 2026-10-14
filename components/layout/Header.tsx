@@ -244,6 +244,9 @@ export default function Header() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    /* Si apre in una scheda nuova: il percorso non cambia,
+                       quindi il menu va chiuso a mano. */
+                    onClick={() => setMenuOpen(false)}
                     className="block border-b border-ink-line py-4 font-serif text-3xl text-cream"
                   >
                     {nav[link.key]}

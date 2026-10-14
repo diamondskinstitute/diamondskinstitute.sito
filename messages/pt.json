@@ -780,7 +780,9 @@
   "prenota": {
     "eyebrow": "Marcação",
     "titolo": "Marque a sua consulta",
-    "intro": "Escolha o tratamento, o dia e a hora. Recebe logo o resumo: confirmamos em poucas horas."
+    "intro": "As marcações são feitas online no Fresha: escolha o tratamento, o dia e a hora, e recebe logo a confirmação.",
+    "online": "Marque online em poucos segundos",
+    "onlineTesto": "O Fresha abre num separador novo: o site fica aberto por trás."
   },
   "booking": {
     "passi": {
