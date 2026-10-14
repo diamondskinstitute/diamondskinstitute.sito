@@ -15,6 +15,7 @@ import {
   treatmentGalleryPhotos,
 } from "@/data/treatments";
 import { getDict } from "@/lib/intl/server";
+import { BOOKING_LINK_PROPS } from "@/lib/booking";
 import {
   categoriaTrattamento,
   descrTrattamento,
@@ -59,8 +60,6 @@ export default function TreatmentPage({ params }: Props) {
   // Testi lunghi nella lingua scelta (con riserva all'italiano)
   const testi = trattamentoLungo(site, t);
   const galleryPhotos = treatmentGalleryPhotos(t);
-  // Il link di prenotazione arriva già con il trattamento selezionato
-  const prenotaHref = `/prenota?trattamento=${t.slug}`;
 
   return (
     <>
@@ -131,9 +130,9 @@ export default function TreatmentPage({ params }: Props) {
             )}
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href={prenotaHref} className="btn-primary">
+              <a {...BOOKING_LINK_PROPS} className="btn-primary btn-book">
                 {site.trattamenti.prenotaQuesto}
-              </Link>
+              </a>
               <a
                 href={whatsappUrlFor(
                   `${salon.whatsappMessaggio} — ${nomeTrattamento(site, t)}`,

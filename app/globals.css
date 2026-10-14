@@ -281,6 +281,40 @@
     background-position: 100% center;
     box-shadow: var(--shadow-glow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.55);
   }
+
+  /* Pulsante di prenotazione (Fresha). Si usa SEMPRE insieme a .btn-primary:
+     da lì prende forma, padding, font e posizione, che restano identici.
+     Qui cambia soltanto il colore: rosa -> fucsia.
+
+     Tonalità scelte per il contrasto: con il testo bianco il rosa chiaro
+     di partenza (#ff6fb5) arrivava solo a 2,56:1, sotto la soglia AA.
+     Questa sfumatura sta fra 4,50:1 e 6,81:1 in ogni suo punto. */
+  .btn-book {
+    color: #fff;
+    background-image: linear-gradient(135deg, #e6007e 0%, #b3005f 100%);
+    background-size: 200% auto;
+    background-position: 0% center;
+    box-shadow: 0 4px 14px rgba(230, 0, 126, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    transition: all 0.25s ease;
+  }
+  .btn-book:hover:not(:disabled) {
+    background-image: linear-gradient(135deg, #e6007e 0%, #c8006c 100%);
+    background-position: 100% center;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(230, 0, 126, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  }
+  .btn-book:focus-visible {
+    outline: 2px solid #ff9ed0;
+    outline-offset: 3px;
+  }
+  /* Con prefers-reduced-motion il sollevamento viene annullato */
+  @media (prefers-reduced-motion: reduce) {
+    .btn-book:hover:not(:disabled) {
+      transform: none;
+    }
+  }
   .btn-primary:active:not(:disabled) {
     transform: scale(0.975);
   }

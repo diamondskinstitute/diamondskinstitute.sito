@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { mainNav } from "@/data/navigation";
+import { BOOKING_LINK_PROPS } from "@/lib/booking";
 import { shopCategories } from "@/data/shop-categories";
 import { salon } from "@/data/salon";
 import { useDict } from "@/lib/intl/client";
@@ -122,6 +123,17 @@ export default function Header() {
                     />
                   </button>
                 </div>
+              ) : link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setMegaOpen(false)}
+                  className="whitespace-nowrap text-sm tracking-wide2 text-cream/75 transition-colors duration-300 hover:text-gold-light"
+                >
+                  {nav[link.key]}
+                </a>
               ) : (
                 <Link
                   key={link.href}
@@ -178,12 +190,12 @@ export default function Header() {
               )}
             </button>
 
-            <Link
-              href="/prenota"
-              className="btn-primary ms-2 hidden !px-5 !py-3 xl:inline-flex"
+            <a
+              {...BOOKING_LINK_PROPS}
+              className="btn-primary btn-book ms-2 hidden !px-5 !py-3 xl:inline-flex"
             >
               {site.nav.prenotaBreve}
-            </Link>
+            </a>
 
             <button
               type="button"
@@ -227,12 +239,23 @@ export default function Header() {
           <ul className="flex flex-col">
             {mainNav.map((link) => (
               <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="block border-b border-ink-line py-4 font-serif text-3xl text-cream"
-                >
-                  {nav[link.key]}
-                </Link>
+                {link.external ? (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block border-b border-ink-line py-4 font-serif text-3xl text-cream"
+                  >
+                    {nav[link.key]}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className="block border-b border-ink-line py-4 font-serif text-3xl text-cream"
+                  >
+                    {nav[link.key]}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

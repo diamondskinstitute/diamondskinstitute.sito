@@ -40,9 +40,20 @@ export default function Footer() {
             <ul className="mt-5 space-y-2.5">
               {col.links.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="link-quiet text-sm">
-                    {navLinks[l.key]}
-                  </Link>
+                  {l.external ? (
+                    <a
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-quiet text-sm"
+                    >
+                      {navLinks[l.key]}
+                    </a>
+                  ) : (
+                    <Link href={l.href} className="link-quiet text-sm">
+                      {navLinks[l.key]}
+                    </Link>
+                  )}
                 </li>
               ))}
               {col.categorie &&

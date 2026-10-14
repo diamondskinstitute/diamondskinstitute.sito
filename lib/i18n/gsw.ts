@@ -6,7 +6,7 @@ import type { LocaleDict } from "./deep";
 export const gsw: LocaleDict = {
   nav: {
     home: "Home",
-    chiSono: "Über d’Kara",
+    chiSono: "Über d’Kahra",
     servizi: "Behandlige",
     galleria: "Galerie",
     contatti: "Kontakt",
@@ -73,7 +73,7 @@ export const gsw: LocaleDict = {
   },
   about: {
     eyebrow: "D’Nageldesignerin",
-    title: "Hoi, ich bi d’Kara",
+    title: "Hoi, ich bi d’Kahra",
     p1: "Uufgwachse bin ich i de Dominikanische Republik, mit de Liebi zu Farbe und Details. Mini Idee vo Schönheit han ich uf Züri broocht: Nägel, pflegt wie chlini Kunschtwärk, i eme Ambiente, wo du di deheim fühlsch.",
     p2: "Ich verbinde karibischi Wärmi und Läbesfröhd mit europäischer Raffinesse – nach ere Regle, wo ich nie brich: Präzision, Hygiene und Produkt vo höchschter Qualität.",
     badgeNumber: "10+",
@@ -93,7 +93,7 @@ export const gsw: LocaleDict = {
   },
   pillars: {
     eyebrow: "De Mehrwert",
-    title: "Warum d’Kara wähle",
+    title: "Warum d’Kahra wähle",
     intro: "Vier Verspreche, wo du bi jedem einzelne Termin wieder findsch.",
     items: [
       {
@@ -125,7 +125,7 @@ export const gsw: LocaleDict = {
   testimonials: {
     t1: {
       testo:
-        "So vill Liebi zum Detail han ich no nie erläbt. D’Kara ghört zue, berootet und setzt genau das um, wo mer sich vorstellt. Mini Nägel hend no nie so lang ghalte.",
+        "So vill Liebi zum Detail han ich no nie erläbt. D’Kahra ghört zue, berootet und setzt genau das um, wo mer sich vorstellt. Mini Nägel hend no nie so lang ghalte.",
       dettaglio: "Shellac & Nailart",
     },
     t2: {
@@ -135,7 +135,7 @@ export const gsw: LocaleDict = {
     },
     t3: {
       testo:
-        "D’Berootig zu Farb und Form het de Underschied gmacht. D’Kara het en unverwächselbare Stil, warm und raffiniert zteich. Sehr z’empfähle.",
+        "D’Berootig zu Farb und Form het de Underschied gmacht. D’Kahra het en unverwächselbare Stil, warm und raffiniert zteich. Sehr z’empfähle.",
       dettaglio: "Maniküre Signature",
     },
   },
@@ -172,7 +172,7 @@ export const gsw: LocaleDict = {
   chiSono: {
     header: {
       eyebrow: "D’Nageldesignerin",
-      title: "D’Gschicht vo de Kara",
+      title: "D’Gschicht vo de Kahra",
       intro:
         "Vo de Farbe vo de Karibik zur Eleganz vo Züri: Mini Idee vo Schönheit chunt us de Leidenschaft und de Sorgfalt für jedes Detail.",
     },
@@ -192,7 +192,7 @@ export const gsw: LocaleDict = {
     },
     metodo: {
       eyebrow: "Wie ich schaffe",
-      title: "D’Kara-Methode",
+      title: "D’Kahra-Methode",
       intro:
         "Vier Schritt, wo ich bi jeder Chundin mach, für es makelloses Resultat vo de erschte bis zur letschte Fiile.",
       steps: [

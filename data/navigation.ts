@@ -5,6 +5,7 @@
 // =====================================================================
 
 import { shopCategories } from "./shop-categories";
+import { BOOKING_URL } from "@/lib/booking";
 
 export type NavLink = {
   href: string;
@@ -12,6 +13,8 @@ export type NavLink = {
   key: string;
   // true = la voce apre il mega-menu delle categorie shop
   megaMenu?: boolean;
+  // true = indirizzo fuori dal sito: si apre in una nuova scheda
+  external?: boolean;
 };
 
 export const mainNav: NavLink[] = [
@@ -19,7 +22,7 @@ export const mainNav: NavLink[] = [
   { href: "/shop", key: "shop", megaMenu: true },
   { href: "/trattamenti", key: "trattamenti" },
   { href: "/lavori", key: "lavori" },
-  { href: "/prenota", key: "prenota" },
+  { href: BOOKING_URL, key: "prenota", external: true },
   { href: "/chi-siamo", key: "chiSiamo" },
   { href: "/contatti", key: "contatti" },
 ];
@@ -35,7 +38,7 @@ export const footerNav: {
     titoloKey: "colonnaIstituto",
     links: [
       { href: "/trattamenti", key: "iTrattamenti" },
-      { href: "/prenota", key: "prenotaAppuntamento" },
+      { href: BOOKING_URL, key: "prenotaAppuntamento", external: true },
       { href: "/lavori", key: "iNostriLavori" },
       { href: "/chi-siamo", key: "chiSiamo" },
       { href: "/contatti", key: "doveTrovarci" },

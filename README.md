@@ -1,6 +1,6 @@
 # K Institute — nail institute & shop
 
-Sito dell'istituto **K Institute** (ragione sociale: Kara Nails Studio):
+Sito dell'istituto **K Institute** (ragione sociale: Kahra Nails Studio):
 vetrina dei trattamenti, prenotazione online, portfolio dei lavori e shop
 di prodotti professionali per unghie.
 

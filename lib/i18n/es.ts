@@ -4,7 +4,7 @@ import type { LocaleDict } from "./deep";
 export const es: LocaleDict = {
   nav: {
     home: "Inicio",
-    chiSono: "Sobre Kara",
+    chiSono: "Sobre Kahra",
     servizi: "Servicios",
     galleria: "Galería",
     contatti: "Contacto",
@@ -71,7 +71,7 @@ export const es: LocaleDict = {
   },
   about: {
     eyebrow: "La nail artist",
-    title: "Hola, soy Kara",
+    title: "Hola, soy Kahra",
     p1: "Nacida en la República Dominicana y criada con el amor por los colores y el detalle, traje a Zúrich mi idea de belleza: uñas cuidadas como pequeñas obras de arte, en un ambiente donde te sientes como en casa.",
     p2: "Uno el calor y la vivacidad caribeña con el refinamiento europeo, con una regla que nunca traiciono: precisión, higiene y productos de altísima calidad.",
     badgeNumber: "10+",
@@ -91,7 +91,7 @@ export const es: LocaleDict = {
   },
   pillars: {
     eyebrow: "El valor añadido",
-    title: "Por qué elegir a Kara",
+    title: "Por qué elegir a Kahra",
     intro: "Cuatro promesas que encuentras en cada cita.",
     items: [
       {
@@ -123,7 +123,7 @@ export const es: LocaleDict = {
   testimonials: {
     t1: {
       testo:
-        "Nunca había visto un cuidado tan minucioso por el detalle. Kara escucha, aconseja y realiza exactamente lo que imaginas. Mis uñas nunca habían durado tanto.",
+        "Nunca había visto un cuidado tan minucioso por el detalle. Kahra escucha, aconseja y realiza exactamente lo que imaginas. Mis uñas nunca habían durado tanto.",
       dettaglio: "Semipermanente y Nail Art",
     },
     t2: {
@@ -133,7 +133,7 @@ export const es: LocaleDict = {
     },
     t3: {
       testo:
-        "El asesoramiento sobre el color y la forma marcó la diferencia. Kara tiene un estilo inconfundible, cálido y refinado a la vez. Muy recomendable.",
+        "El asesoramiento sobre el color y la forma marcó la diferencia. Kahra tiene un estilo inconfundible, cálido y refinado a la vez. Muy recomendable.",
       dettaglio: "Manicura Signature",
     },
   },
@@ -170,7 +170,7 @@ export const es: LocaleDict = {
   chiSono: {
     header: {
       eyebrow: "La nail artist",
-      title: "La historia de Kara",
+      title: "La historia de Kahra",
       intro:
         "De los colores del Caribe a la elegancia de Zúrich: mi idea de belleza nace de la pasión y del cuidado por cada detalle.",
     },
@@ -190,7 +190,7 @@ export const es: LocaleDict = {
     },
     metodo: {
       eyebrow: "Cómo trabajo",
-      title: "El método Kara",
+      title: "El método Kahra",
       intro:
         "Cuatro pasos que sigo con cada clienta, para un resultado impecable desde la primera hasta la última limada.",
       steps: [

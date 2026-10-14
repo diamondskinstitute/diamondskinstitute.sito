@@ -4,7 +4,7 @@ import type { LocaleDict } from "./deep";
 export const de: LocaleDict = {
   nav: {
     home: "Home",
-    chiSono: "Über Kara",
+    chiSono: "Über Kahra",
     servizi: "Leistungen",
     galleria: "Galerie",
     contatti: "Kontakt",
@@ -71,7 +71,7 @@ export const de: LocaleDict = {
   },
   about: {
     eyebrow: "Die Nageldesignerin",
-    title: "Hallo, ich bin Kara",
+    title: "Hallo, ich bin Kahra",
     p1: "Geboren in der Dominikanischen Republik und aufgewachsen mit der Liebe zu Farben und Details, habe ich meine Idee von Schönheit nach Zürich gebracht: Nägel, gepflegt wie kleine Kunstwerke, in einem Ambiente, in dem du dich zu Hause fühlst.",
     p2: "Ich verbinde karibische Wärme und Lebendigkeit mit europäischer Raffinesse – nach einer Regel, die ich nie breche: Präzision, Hygiene und Produkte von höchster Qualität.",
     badgeNumber: "10+",
@@ -91,7 +91,7 @@ export const de: LocaleDict = {
   },
   pillars: {
     eyebrow: "Der Mehrwert",
-    title: "Warum Kara wählen",
+    title: "Warum Kahra wählen",
     intro: "Vier Versprechen, die du bei jedem einzelnen Termin wiederfindest.",
     items: [
       {
@@ -123,7 +123,7 @@ export const de: LocaleDict = {
   testimonials: {
     t1: {
       testo:
-        "So viel Liebe zum Detail hatte ich noch nie erlebt. Kara hört zu, berät und setzt genau das um, was man sich vorstellt. Meine Nägel haben noch nie so lange gehalten.",
+        "So viel Liebe zum Detail hatte ich noch nie erlebt. Kahra hört zu, berät und setzt genau das um, was man sich vorstellt. Meine Nägel haben noch nie so lange gehalten.",
       dettaglio: "Shellac & Nailart",
     },
     t2: {
@@ -133,7 +133,7 @@ export const de: LocaleDict = {
     },
     t3: {
       testo:
-        "Die Beratung zu Farbe und Form hat den Unterschied gemacht. Kara hat einen unverwechselbaren Stil, warm und raffiniert zugleich. Sehr zu empfehlen.",
+        "Die Beratung zu Farbe und Form hat den Unterschied gemacht. Kahra hat einen unverwechselbaren Stil, warm und raffiniert zugleich. Sehr zu empfehlen.",
       dettaglio: "Maniküre Signature",
     },
   },
@@ -170,7 +170,7 @@ export const de: LocaleDict = {
   chiSono: {
     header: {
       eyebrow: "Die Nageldesignerin",
-      title: "Die Geschichte von Kara",
+      title: "Die Geschichte von Kahra",
       intro:
         "Von den Farben der Karibik zur Eleganz von Zürich: Meine Idee von Schönheit entspringt der Leidenschaft und der Sorgfalt für jedes Detail.",
     },
@@ -190,7 +190,7 @@ export const de: LocaleDict = {
     },
     metodo: {
       eyebrow: "Wie ich arbeite",
-      title: "Die Kara-Methode",
+      title: "Die Kahra-Methode",
       intro:
         "Vier Schritte, die ich bei jeder Kundin befolge, für ein makelloses Ergebnis von der ersten bis zur letzten Feile.",
       steps: [

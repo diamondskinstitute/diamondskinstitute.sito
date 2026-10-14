@@ -16,7 +16,7 @@ export const salon = {
   // Nome commerciale mostrato ovunque nel sito (header, footer, SEO…).
   brandName: "K Institute",
   // Ragione sociale / nome storico dell'attività, usato nei testi legali.
-  legalName: "Kara Nails Studio",
+  legalName: "Kahra Nails Studio",
 
   claim: "Nail institute & shop professionale",
   // Tagline ufficiale dal profilo Instagram. Non è ancora mostrata nel sito
@@ -39,14 +39,14 @@ export const salon = {
   logoMarkSrc: "/brand/logo-mark.svg",
 
   indirizzo: {
-    via: "Rue le Moulin 1",
+    via: "Le Moulin 1",
     cap: "2608",
     citta: "Courtelary",
     provincia: "BE", // Canton Berna
     paese: "Svizzera",
     paeseCodice: "CH",
-    completo: "Rue le Moulin 1, 2608 Courtelary",
-    completoConPaese: "Rue le Moulin 1, 2608 Courtelary, Svizzera",
+    completo: "Le Moulin 1, 2608 Courtelary",
+    completoConPaese: "Le Moulin 1, 2608 Courtelary, Svizzera",
   },
 
   // Telefono in formato internazionale, senza spazi, per link tel: e WhatsApp
@@ -100,9 +100,9 @@ export const salon = {
   } as Record<number, { apertura: string; chiusura: string } | null>,
 
   mappaEmbedUrl:
-    "https://www.google.com/maps?q=Rue+le+Moulin+1,+2608+Courtelary&output=embed",
+    "https://www.google.com/maps?q=Le+Moulin+1,+2608+Courtelary&output=embed",
   mappaLink:
-    "https://www.google.com/maps/search/?api=1&query=Rue+le+Moulin+1,+2608+Courtelary",
+    "https://www.google.com/maps/search/?api=1&query=Le+Moulin+1,+2608+Courtelary",
 
   // --- Shop ------------------------------------------------------------
   shop: {
@@ -119,7 +119,7 @@ export const salon = {
     // TODO: dati segnaposto — sostituire con IDE/IVA reali.
     partitaIva: "CHE-000.000.000",
     rea: "",
-    sede: "Rue le Moulin 1, 2608 Courtelary, Svizzera",
+    sede: "Le Moulin 1, 2608 Courtelary, Svizzera",
   },
 
   seo: {

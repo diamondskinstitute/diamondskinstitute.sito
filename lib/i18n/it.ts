@@ -4,7 +4,7 @@
 export const it = {
   nav: {
     home: "Home",
-    chiSono: "Chi è Kara",
+    chiSono: "Chi è Kahra",
     servizi: "Servizi",
     galleria: "Galleria",
     contatti: "Contatti",
@@ -74,7 +74,7 @@ export const it = {
   },
   about: {
     eyebrow: "La nail artist",
-    title: "Ciao, sono Kara",
+    title: "Ciao, sono Kahra",
     p1: "Nata nella Repubblica Dominicana e cresciuta con l’amore per i colori e il dettaglio, ho portato a Zurigo la mia idea di bellezza: unghie curate come piccole opere d’arte, in un ambiente dove ti senti a casa.",
     p2: "Unisco il calore e la vivacità caraibica alla raffinatezza europea, con una regola che non tradisco mai: precisione, igiene e prodotti di altissima qualità.",
     badgeNumber: "10+",
@@ -94,7 +94,7 @@ export const it = {
   },
   pillars: {
     eyebrow: "Il valore aggiunto",
-    title: "Perché scegliere Kara",
+    title: "Perché scegliere Kahra",
     intro: "Quattro promesse che ritrovi in ogni singolo appuntamento.",
     items: [
       {
@@ -126,7 +126,7 @@ export const it = {
   testimonials: {
     t1: {
       testo:
-        "Non avevo mai visto una cura così maniacale del dettaglio. Kara ascolta, consiglia e realizza esattamente ciò che immagini. Le mie unghie non erano mai durate così a lungo.",
+        "Non avevo mai visto una cura così maniacale del dettaglio. Kahra ascolta, consiglia e realizza esattamente ciò che immagini. Le mie unghie non erano mai durate così a lungo.",
       dettaglio: "Semipermanente & Nail Art",
     },
     t2: {
@@ -136,7 +136,7 @@ export const it = {
     },
     t3: {
       testo:
-        "La consulenza sul colore e sulla forma ha fatto la differenza. Kara ha uno stile inconfondibile, caldo e raffinato allo stesso tempo. Consigliatissima.",
+        "La consulenza sul colore e sulla forma ha fatto la differenza. Kahra ha uno stile inconfondibile, caldo e raffinato allo stesso tempo. Consigliatissima.",
       dettaglio: "Manicure Signature",
     },
   } as Record<string, { testo: string; dettaglio: string }>,
@@ -173,7 +173,7 @@ export const it = {
   chiSono: {
     header: {
       eyebrow: "La nail artist",
-      title: "La storia di Kara",
+      title: "La storia di Kahra",
       intro:
         "Dai colori dei Caraibi all’eleganza di Zurigo: la mia idea di bellezza nasce dalla passione e dalla cura per ogni dettaglio.",
     },
@@ -193,7 +193,7 @@ export const it = {
     },
     metodo: {
       eyebrow: "Come lavoro",
-      title: "Il metodo Kara",
+      title: "Il metodo Kahra",
       intro:
         "Quattro passaggi che seguo con ogni cliente, per un risultato impeccabile dalla prima all’ultima limatura.",
       steps: [

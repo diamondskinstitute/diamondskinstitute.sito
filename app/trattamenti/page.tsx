@@ -6,6 +6,7 @@ import TreatmentCard from "@/components/treatments/TreatmentCard";
 import PriceList from "@/components/treatments/PriceList";
 import { treatments, treatmentCategories } from "@/data/treatments";
 import { getDict } from "@/lib/intl/server";
+import { BOOKING_LINK_PROPS } from "@/lib/booking";
 import { categoriaTrattamento } from "@/lib/intl/content";
 import { ArrowRight } from "@/components/ui/Icons";
 
@@ -58,9 +59,9 @@ export default function TrattamentiPage() {
               {site.trattamenti.nonSaiQualeTesto}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/prenota" className="btn-primary">
+              <a {...BOOKING_LINK_PROPS} className="btn-primary btn-book">
                 {site.trattamenti.prenotaAppuntamento}
-              </Link>
+              </a>
               <Link href="/contatti" className="btn-outline">
                 {site.trattamenti.contattaci}{" "}
                 <ArrowRight size={16} className="rtl:rotate-180" />

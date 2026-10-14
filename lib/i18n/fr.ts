@@ -4,7 +4,7 @@ import type { LocaleDict } from "./deep";
 export const fr: LocaleDict = {
   nav: {
     home: "Accueil",
-    chiSono: "À propos de Kara",
+    chiSono: "À propos de Kahra",
     servizi: "Prestations",
     galleria: "Galerie",
     contatti: "Contact",
@@ -71,7 +71,7 @@ export const fr: LocaleDict = {
   },
   about: {
     eyebrow: "La prothésiste ongulaire",
-    title: "Bonjour, je suis Kara",
+    title: "Bonjour, je suis Kahra",
     p1: "Née en République dominicaine et bercée par l’amour des couleurs et du détail, j’ai apporté à Zurich mon idée de la beauté : des ongles soignés comme de petites œuvres d’art, dans un cadre où l’on se sent chez soi.",
     p2: "J’unis la chaleur et la vivacité caribéennes au raffinement européen, avec une règle que je ne trahis jamais : précision, hygiène et produits de très haute qualité.",
     badgeNumber: "10+",
@@ -91,7 +91,7 @@ export const fr: LocaleDict = {
   },
   pillars: {
     eyebrow: "La valeur ajoutée",
-    title: "Pourquoi choisir Kara",
+    title: "Pourquoi choisir Kahra",
     intro: "Quatre promesses que vous retrouvez à chaque rendez-vous.",
     items: [
       {
@@ -123,7 +123,7 @@ export const fr: LocaleDict = {
   testimonials: {
     t1: {
       testo:
-        "Je n’avais jamais vu un tel souci du détail. Kara écoute, conseille et réalise exactement ce que l’on imagine. Mes ongles n’avaient jamais tenu aussi longtemps.",
+        "Je n’avais jamais vu un tel souci du détail. Kahra écoute, conseille et réalise exactement ce que l’on imagine. Mes ongles n’avaient jamais tenu aussi longtemps.",
       dettaglio: "Semi-permanent & Nail art",
     },
     t2: {
@@ -133,7 +133,7 @@ export const fr: LocaleDict = {
     },
     t3: {
       testo:
-        "Le conseil sur la couleur et la forme a tout changé. Kara a un style unique, à la fois chaleureux et raffiné. Je recommande vivement.",
+        "Le conseil sur la couleur et la forme a tout changé. Kahra a un style unique, à la fois chaleureux et raffiné. Je recommande vivement.",
       dettaglio: "Manucure Signature",
     },
   },
@@ -170,7 +170,7 @@ export const fr: LocaleDict = {
   chiSono: {
     header: {
       eyebrow: "La prothésiste ongulaire",
-      title: "L’histoire de Kara",
+      title: "L’histoire de Kahra",
       intro:
         "Des couleurs des Caraïbes à l’élégance de Zurich : mon idée de la beauté naît de la passion et du soin du moindre détail.",
     },
@@ -190,7 +190,7 @@ export const fr: LocaleDict = {
     },
     metodo: {
       eyebrow: "Comment je travaille",
-      title: "La méthode Kara",
+      title: "La méthode Kahra",
       intro:
         "Quatre étapes que je suis avec chaque cliente, pour un résultat impeccable de la première à la dernière lime.",
       steps: [

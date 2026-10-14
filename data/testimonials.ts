@@ -16,7 +16,7 @@ export const testimonials: Testimonial[] = [
     id: "t1",
     nome: "Giulia R.",
     testo:
-      "Non avevo mai visto una cura così maniacale del dettaglio. Kara ascolta, consiglia e realizza esattamente ciò che immagini. Le mie unghie non erano mai durate così a lungo.",
+      "Non avevo mai visto una cura così maniacale del dettaglio. Kahra ascolta, consiglia e realizza esattamente ciò che immagini. Le mie unghie non erano mai durate così a lungo.",
     dettaglio: "Semipermanente & Nail Art",
   },
   {
@@ -30,7 +30,7 @@ export const testimonials: Testimonial[] = [
     id: "t3",
     nome: "Sara T.",
     testo:
-      "La consulenza sul colore e sulla forma ha fatto la differenza. Kara ha uno stile inconfondibile, caldo e raffinato allo stesso tempo. Consigliatissima.",
+      "La consulenza sul colore e sulla forma ha fatto la differenza. Kahra ha uno stile inconfondibile, caldo e raffinato allo stesso tempo. Consigliatissima.",
     dettaglio: "Manicure Signature",
   },
 ];

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getDict } from "@/lib/intl/server";
 import { BLUR_DARK } from "@/lib/blur";
+import { BOOKING_LINK_PROPS } from "@/lib/booking";
 import BrandLogo from "../ui/BrandLogo";
 import Ornament from "../ui/Ornament";
 import Sparkle from "../ui/Sparkle";
@@ -82,10 +83,10 @@ export default function Hero() {
             className="fade-in-up mt-10 flex flex-col items-center gap-3 sm:flex-row"
             {...rise(0.3)}
           >
-            <Link href={site.hero.ctaPrimaria.href} className="btn-primary">
+            <a {...BOOKING_LINK_PROPS} className="btn-primary btn-book">
               {site.hero.ctaPrimaria.label}
               <ArrowRight size={15} className="rtl:rotate-180" />
-            </Link>
+            </a>
             <Link href={site.hero.ctaSecondaria.href} className="btn-outline">
               {site.hero.ctaSecondaria.label}{" "}
               <ArrowRight size={15} className="rtl:rotate-180" />
